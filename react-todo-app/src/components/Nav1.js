@@ -1,7 +1,7 @@
 import React from "react";
 import "./../css/App.css";
 
-function Nav1() {
+export default function Nav1() {
     return (
         <header>
             <div id="header">
@@ -15,7 +15,7 @@ function Nav1() {
                             <a href='#'> Αρχικη</a>
                         </li>
                         <li>
-                            <a href='#'> Συνδεση</a>
+                            <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUIcmlja3JvbGw%3D'> Συνδεση</a>
                         </li>
                         <li>
                             <a href='#'> Βοηθεια</a>
