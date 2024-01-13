@@ -15,7 +15,7 @@ export default function Nav1() {
                             <a href='#'> Αρχικη</a>
                         </li>
                         <li>
-                            <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUIcmlja3JvbGw%3D'> Συνδεση</a>
+                            <a href='#'> Συνδεση</a>
                         </li>
                         <li>
                             <a href='#'> Βοηθεια</a>
