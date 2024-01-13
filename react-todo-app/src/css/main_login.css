@@ -58,8 +58,23 @@
 .image-placeholder1-icon {
   left: 25%;
 }
+
+.user-group-images {
+  position: relative;
+  vertical-align: middle;
+}
+.user-group-icon {
+  margin: 20px;
+  position: relative;
+  object-fit:cover;
+  width: 234px;
+  height: 219px;
+
+}
+
 .user-groupslogin {
   position: relative;
+
   left: 0;
   background-color: #f0f0f0;
   width: 100%;
