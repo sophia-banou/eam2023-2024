@@ -9,16 +9,24 @@
 	padding: none;
 }
 
+#image-text{
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  font-family: 'Roboto';
+  color: #ffffff;
+  transform: translate(-15%, 500%);
+  text-align: center;
+}
+
 /*************************/
 /* Styling Header */
 /*************************/
 header{
-	
 	overflow: hidden;
 }
 
 #top-header{
-		
 	text-align: center;
 	height: 60px;
 }
@@ -32,13 +40,13 @@ header{
 	margin: none;
 	height: 30px;
 	width: 30%;
-
 }
 
 #logo img{
 	width: 60%;
   height: 70px;
 	float: left;
+  
 } 
 
 /***************************/
@@ -62,35 +70,20 @@ header{
 	display: inline-block;
 	padding: none;
 	margin: none;
+
 }
 	
-#menu li a, #menu li span{
+#menu li a {
 	display: inline-block;
 	padding: 0em 1.5em;
 	text-decoration: none;
 	font-weight: 600;
 	text-transform: uppercase;
 	line-height: 60px;
-}
-	
-#menu li a{
-	color: #000000;
-}
-	
-#menu li:hover a, #menu li span{
-  cursor: grab;
-	background: #FFF;
-	color: #0074D9;
-	border-left: 1px solid #0074D9;
-	text-decoration: none;
+  color: black;
+ 
 }
 
-#image-text{
-  position: absolute;
-  top: 60%;
-  left: 60%;
-  font-family: 'Roboto';
-  color: #ffffff;
-  transform: translate(-15%, 500%);
-  text-align: center;
-}
+
+
+
