@@ -49,21 +49,9 @@
     position: relative;
     left: 0;
     background-color: var(--color-darkslategray-100);
-    width: 100%;
+    width: 1440px;
     height: 77px;
     overflow: hidden;
     color: var(--color-white);
     margin: 0px;
-  }
-
-  :root {
-    /* Colors */
-    --color-white: #fff;
-    --color-darkslategray-100: #404040;
-  }
-
-  :root {
-    /* Colors */
-    --color-white: #fff;
-    --color-darkslategray-100: #404040;
   }
