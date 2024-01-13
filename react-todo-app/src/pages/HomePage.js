@@ -5,15 +5,16 @@ import Footer from "./../components/footer.js"
 
 export default function HomePage() {
   return (
-    <header>
+    <div>
       <Nav1 />
       <div id="header-image-menu">
-        <img src="header-image.png" alt="Image of the National and Kapodistrian University of Athens" />
+        <img src="header-image.png" alt="National and Kapodistrian University of Athens" />
         <h2 id="image-text">
-          Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών
+          Γραμματείες Πανεπιστημίου<br></br> Αθηνών
         </h2>
       </div>
+
       <Footer />
-    </header>
+    </div>
   );
 }
