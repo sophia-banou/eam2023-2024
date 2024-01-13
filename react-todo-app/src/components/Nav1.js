@@ -1,7 +1,7 @@
 import React from "react";
 import "./../css/App.css";
 
-function Nav1() {
+export default function Nav1() {
     return (
         <header>
             <div id="header">
