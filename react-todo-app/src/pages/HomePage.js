@@ -2,6 +2,7 @@ import React from "react"
 import './../css/App.css';
 import Nav1 from "./../components/Nav1.js"
 import Footer from "./../components/footer.js"
+import Login from "./../components/main_login.js"
 
 export default function HomePage() {
   return (
@@ -13,7 +14,7 @@ export default function HomePage() {
           Γραμματείες Πανεπιστημίου<br></br> Αθηνών
         </h2>
       </div>
-
+      <Login  />
       <Footer />
     </div>
   );
