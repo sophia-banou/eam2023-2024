@@ -1,24 +1,18 @@
 import React from "react";
 import "./../css/App.css";
+import Button from "./../components/Button1.js";
 
 export default function Nav1() {
     return (
         <header>
             <div id="header">
                 <div id="logo">
-                    <img src="logo.jpeg" alt="Logo" />
+                    <img src="logo.png" alt="Logo" />
                 </div>
-
                 <nav id="menu">
                     <ul>
-                        <li class="active">
-                            <a href='#'> Αρχικη</a>
-                        </li>
-                        <li>
-                            <a href='#'> Συνδεση</a>
-                        </li>
-                        <li>
-                            <a href='#'> Βοηθεια</a>
+                        <li> <a href='#'>   <Button /></a>
+                         
                         </li>
                     </ul>
                 </nav>
