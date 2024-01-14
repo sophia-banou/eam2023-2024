@@ -85,7 +85,7 @@
   font-size: var(--font-size-xs);
 }
 
-.body{
+.login_body{
   position: relative;
   top: 10%;
   left: 10%;
@@ -94,8 +94,7 @@
   font-size: 22px;
   color: #000;
 }
-.rectangle-parent, 
-.rectangle-group{
+.login_rectangle{
     top: 0;
     border-radius: 6px;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -105,14 +104,14 @@
     display: flex;
     align-items: center;
 }
-.rectangle-parent {
+.login_rectangle {
     position: relative;
     top: 20%;
     left: 10%;
     width: 700px;
     height: 300px;
 }
-.div{
+.login_div{
   position: absolute;
   left: 30%;
   text-align: left;
@@ -121,7 +120,7 @@
   line-height: 1.5;
 }
 
-.div1{
+.login_div1{
   text-align: left;
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
