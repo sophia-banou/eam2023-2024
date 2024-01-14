@@ -30,7 +30,6 @@ export default function Login() {
     </div >*/
     <div className="login_body">
     <div className="login_rectangle">
-      
       <img class="user-group-icon" src="student-icon.png" ></img>
       <div className="login_div">Είμαι Φοιτητής
             <div className="login_div1">Βρείτε πληροφορίες για τα μαθήματα σας.<br></br>
