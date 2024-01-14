@@ -11,12 +11,14 @@ export default function Help() {
         <Nav1 />
         <div className="help_body">
             <div className="help_div2">Βοήθεια</div>
-            <Link to="/help_students">
-                <div className="help_rectangle1">
-                    <img className="himage2" alt="" src="/student_ico.png" /> 
+            
+        
+                    <Link to="/help_students">
+                        <img className="himage2" alt="" src="/help-student-button.png" /> 
+                    </Link>  
                     <div className="help_div">Φοιτητές/τριες</div>
-                </div>
-            </Link>  
+                
+
             <br></br>
             <Link to="/help_students">
                 <div className="help_rectangle2">
