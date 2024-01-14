@@ -11,42 +11,42 @@ export default function Help_students() {
         <div className="body">
             <div className="div2">Κατηγορίες</div>
             <div className="rectangle-parent">
-                <img className="img" alt="" src="/dhlwsh.png" />
+                <img className="image" alt="" src="/dhlwsh.png" />
                 <div className="div">Δήλωση Μαθήματος
                     <div className="div1">Δημιουργία καινούργιας δήλωσης μαθημάτων</div>
                 </div>
                 
             </div>
             <div className="rectangle-group">
-                <img className="img" alt="" src="/bathmologia.png" />
+                <img className="image" alt="" src="/bathmologia.png" />
                 <div className="div">Προβολή Βαθμολογιών
                     <div className="div1"> Εκτύπωση ή αποθήκευση μίας ή περισσότερων βαθμολογιών</div>
                 </div>
                                
             </div>
             <div className="rectangle-container">
-                <img className="img" alt="" src="/pistopoihtiko.png" />
+                <img className="image" alt="" src="/pistopoihtiko.png" />
                 <div className="div">Έκδοση Πιστοποιητικού
                     <div className="div1">Δημιουργία αίτησης για έκδοση πιστοποιητικού καθορισμένου από την γραμματεία</div>
                 </div>
                 
             </div>
             <div className="group-div">
-                <img className="img" alt="" src="/mathima.png" />
+                <img className="image" alt="" src="/mathima.png" />
                 <div className="div">Πληροφορίες Μαθημάτων
                     <div className="div1"> Πληροφορίες για όλα τα μαθήματα του Προγράμματος Σπουδών</div>
                 </div>
                 
             </div>
             <div className="rectangle-parent1">
-                <img className="img" alt="" src="/aithseis.png" />
+                <img className="image" alt="" src="/aithseis.png" />
                 <div className="div">Παλιότερες Αιτήσεις και Δηλώσεις
                     <div className="div1">Παραλαβή πιστοποιητικών ή έλεγχος κατάστασης δηλώσεων</div>
                 </div>
                 
             </div>
             <div className="rectangle-parent2">
-                <img className="img" alt="" src="/profile.png" />
+                <img className="image" alt="" src="/profile.png" />
                 <div className="div">Επεξεργασία Προφίλ
                     <div className="div1">Δυνατότητα προβολής και επεξεργασίας του προφίλ</div>
                 </div>
