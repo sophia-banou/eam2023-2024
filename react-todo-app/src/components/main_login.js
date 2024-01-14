@@ -41,6 +41,18 @@ export default function Login() {
       </div>
       
     </div>
+      <div className="login_rectangle">
+      <img class="user-group-icon" src="teacher-icon.png" ></img>
+      <div className="login_div"> <span class="login-head">Είμαι Καθηγητής </span>
+            <div className="login_div1">
+              Παρακολουθήστε παλιά σας βαθμολόγια <br></br> και δημιουργήστε καινούργια. <br></br>
+              Δείτε πληροφορίες για τα μαθήματα που διδάσκετε. <br></br>
+        
+            </div>
+              <a href='#'> <SignInButton /> </a>
+      </div>
+      
+    </div>
     </div>
   );
 }
