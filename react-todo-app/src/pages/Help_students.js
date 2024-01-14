@@ -8,7 +8,7 @@ export default function Help_students() {
   return (
     <div>
         <Nav1 />
-        <div className="body">
+        <div className="body2">
             <div className="div2">Κατηγορίες</div>
             <div className="rectangle-parent">
                 <img className="himage" alt="" src="/dhlwsh.png" />
