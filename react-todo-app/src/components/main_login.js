@@ -32,15 +32,13 @@ export default function Login() {
     <div className="login_rectangle">
       
       <img class="user-group-icon" src="student-icon.png" ></img>
-      <div className="login_div">Είμαι Φοιτητής
+      <div className="login_div"> <span class="login-head">Είμαι Φοιτητής </span>
             <div className="login_div1">Βρείτε πληροφορίες για τα μαθήματα σας.<br></br>
               Κάντε δήλωση μαθημάτων. <br></br>
               Δείτε και εκτυπώστε τη βαθμολογία σας. <br></br>
               Κάντε αίτηση για την έκδοση πιστοποιητικών.
             </div>
-            <ul>
-              <li> <a href='#'> <SignInButton /> </a></li>
-            </ul>
+              <a href='#'> <SignInButton /> </a>
       </div>
       
     </div>
