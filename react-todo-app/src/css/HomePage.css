@@ -3,12 +3,11 @@
 #header-image-menu{
 	top: 10px;
 	position: relative;
-	margin: 1px;
+	margin: 0px;
 }
 
 #header-image-menu img{
 	width: 100%;
-	margin: 1px;
 	padding: 0px;
 }
 
