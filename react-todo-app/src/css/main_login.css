@@ -15,8 +15,12 @@
 .user-group-icon {
   margin: 20px;
   position: relative;
-  width:  300px;
-  height: 300px;
+  width:  200px;
+  height: 200px;
+  overflow:hidden ;
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
   &:hover {
     transform: translateY(-2px);
   }
@@ -79,4 +83,47 @@
   overflow: hidden;
   text-align: left;
   font-size: var(--font-size-xs);
+}
+
+.body{
+  position: relative;
+  top: 10%;
+  left: 10%;
+  width: 100%;
+  height: 80%;
+  font-size: 22px;
+  color: #000;
+}
+.rectangle-parent, 
+.rectangle-group{
+    top: 0;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    width: 20%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+.rectangle-parent {
+    position: relative;
+    top: 20%;
+    left: 10%;
+    width: 700px;
+    height: 300px;
+}
+.div{
+  position: absolute;
+  left: 30%;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+.div1{
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  line-height: 1;
 }

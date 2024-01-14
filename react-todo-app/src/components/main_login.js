@@ -11,7 +11,7 @@ import SignInButton from "./SignInButton";
 
 export default function Login() {
   return (
-    <div class="user-groupslogin">
+    /*<div class="user-groupslogin">
       <div id="user-groups" >
         <ul>
           <li><a href='#'> <img class="user-group-icon" src="student-icon.png" ></img> </a> </li>
@@ -27,7 +27,24 @@ export default function Login() {
           </li>
         </ul>
       </div>
-    </div >
+    </div >*/
+    <div className="body">
+    <div className="rectangle-parent">
+      
+      <img class="user-group-icon" src="student-icon.png" ></img>
+      <div className="div">Είμαι Φοιτητής
+            <div className="div1">Βρείτε πληροφορίες για τα μαθήματα σας.<br></br>
+              Κάντε δήλωση μαθημάτων. <br></br>
+              Δείτε και εκτυπώστε τη βαθμολογία σας. <br></br>
+              Κάντε αίτηση για την έκδοση πιστοποιητικών.
+            </div>
+            <ul>
+              <li> <a href='#'> <SignInButton /> </a></li>
+            </ul>
+      </div>
+      
+    </div>
+    </div>
   );
 }
 
