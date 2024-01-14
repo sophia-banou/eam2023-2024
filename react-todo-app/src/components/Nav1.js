@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import "./../css/App.css";
 import Button from "./../components/Button1.js";
 import SignInButton from "./../components/SignInButton.js";
@@ -13,7 +14,7 @@ export default function Nav1() {
                 <nav id="menu">
                     
                     <ul>
-                        <li> <a href='#'>   <Button /></a>
+                        <li> <Link to="/Help_students"> <Button /> </Link>
                         <li> <a href='#'> <SignInButton /> </a> </li>
 
                          

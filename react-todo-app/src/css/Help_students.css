@@ -1,0 +1,101 @@
+.rectangle-parent, 
+.rectangle-group, 
+.rectangle-container, 
+.group-div, 
+.rectangle-parent1,
+.rectangle-parent2 {
+    top: 0;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    width: 20%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+.rectangle-parent {
+    position: relative;
+    top: 20%;
+    left: 10%;
+    width: 349px;
+    height: 120px;
+}
+.rectangle-group {
+    position: relative;
+    top: 20%;
+    left: 10%;
+    width: 349px;
+    height: 120px;
+}
+.rectangle-container {
+    position: relative;
+    top: 20%;
+    left: 10%;
+    width: 349px;
+    height: 120px;
+}
+.group-div {
+    position: relative;
+    top: 20%;
+    left: 10%;
+    width: 349px;
+    height: 120px;
+}
+.rectangle-parent1 {
+    position: relative;
+    top: 20%;
+    left: 10%;
+    width: 349px;
+    height: 120px;
+}
+.rectangle-parent2 {
+    position: relative;
+    top: 20%;
+    left: 10%;
+    width: 349px;
+    height: 120px;
+}
+
+.div{
+    position: absolute;
+    left: 30%;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.div1{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    line-height: 1;
+}
+.div2{
+    position: relative;
+    top: 52px;
+    left: 400px;
+    width: 349px;
+    height: 120px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img {
+    position: absolute;
+    left: 5%;
+    width: 90px;
+    height: 80px;
+    max-width: 100%;
+    max-height: 100%;
+}
+.body{
+   position: relative;
+   top: 10%;
+   left: 10%;
+   width: 100%;
+   height: 80%;
+   font-size: 22px;
+   color: #000;
+}
