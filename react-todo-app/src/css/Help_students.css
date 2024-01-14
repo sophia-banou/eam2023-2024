@@ -82,7 +82,7 @@
     align-items: center;
     justify-content: center;
 }
-img {
+image {
     position: absolute;
     left: 5%;
     width: 90px;
@@ -90,7 +90,7 @@ img {
     max-width: 100%;
     max-height: 100%;
 }
-.body{
+.body2{
    position: relative;
    top: 10%;
    left: 10%;
