@@ -14,47 +14,47 @@
     align-items: center;
 }
 .rectangle-parent {
-    position: relative;
-    top: 20%;
-    left: 10%;
+    position: absolute;
+    top: 126px;
+    left: 208px;
     width: 349px;
     height: 120px;
 }
 .rectangle-group {
-    position: relative;
-    top: 20%;
-    left: 10%;
+    position: absolute;
+    top: 410px;
+    left: 208px;
     width: 349px;
     height: 120px;
 }
 .rectangle-container {
-    position: relative;
-    top: 20%;
-    left: 10%;
+    position: absolute;
+    top: 268px;
+    left: 208px;
     width: 349px;
     height: 120px;
 }
 .group-div {
-    position: relative;
-    top: 20%;
-    left: 10%;
+    position: absolute;
+    top: 126px;
+    left: 593px;
     width: 349px;
     height: 120px;
-}
-.rectangle-parent1 {
-    position: relative;
-    top: 20%;
-    left: 10%;
+  }
+  .rectangle-parent1 {
+    position: absolute;
+    top: 268px;
+    left: 593px;
     width: 349px;
     height: 120px;
-}
-.rectangle-parent2 {
-    position: relative;
-    top: 20%;
-    left: 10%;
+  }
+  .rectangle-parent2 {
+    position: absolute;
+    top: 410px;
+    left: 593px;
     width: 349px;
     height: 120px;
-}
+  }
 
 .div{
     position: absolute;
@@ -82,7 +82,7 @@
     align-items: center;
     justify-content: center;
 }
-image {
+.himage {
     position: absolute;
     left: 5%;
     width: 90px;
