@@ -13,7 +13,7 @@ export default function Help() {
             <div className="help_div2">Βοήθεια</div>
             <Link to="/help_students">
                 <div className="help_rectangle1">
-                    <img className="himage2" alt="" src="/studentshelp.jpg" /> 
+                    <img className="himage2" alt="" src="/student_ico.png" /> 
                     <div className="help_div">Φοιτητές/τριες</div>
                 </div>
             </Link>  

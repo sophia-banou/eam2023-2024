@@ -1,9 +1,9 @@
 .body_hdilosis{
-    position: absolute;
+    position: relative;
     top: 10%;
     left: 10%;
     width: 80%;
-    height: 80%;
+    height: 800px;
     font-size: 22px;
     color: #000;
  }
