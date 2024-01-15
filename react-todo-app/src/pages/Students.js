@@ -9,8 +9,8 @@ export default function HomePage() {
     <div>
       <Nav1 />
       <Menu />
-      <div id="header-image-menu">
-        <img src="student_banner.png" alt="National and Kapodistrian University of Athens" />
+      <div id="header-image-menu-students">
+        <img src="student_banner.jpg" alt="National and Kapodistrian University of Athens" />
       </div>
       <Footer />
     </div>
