@@ -13,7 +13,7 @@ import Help_profile from "./pages/Help_profile";
 import Help_teachers from "./pages/Help_teachers";
 import Help_dhmiourgia from "./pages/Help_dhmiourgia";
 import Help_mathimata_didaskontwn from "./pages/Help_mathimata_didaskontwn";
-import Help_bathologio from "./pages/Help_bathologio";
+import Help_bathmologio from "./pages/Help_bathmologio";
 
 export default function App() {
   return (
@@ -32,7 +32,7 @@ export default function App() {
       <Route path="/help_teachers" element = {<Help_teachers />} /> 
       <Route path="/help_dhmiourgia" element = {<Help_dhmiourgia />} /> 
       <Route path="/help_mathimata_didaskontwn" element = {<Help_mathimata_didaskontwn />} /> 
-      <Route path="/help_bathmologio" element = {<Help_bathologio />} /> 
+      <Route path="/help_bathmologio" element = {<Help_bathmologio />} /> 
     </Routes>
     </BrowserRouter>
     </div>

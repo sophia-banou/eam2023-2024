@@ -1,8 +1,8 @@
 import React from "react"
 import './../css/App.css';
 import './../css/Help_dilosi.css';
-import Nav1 from "./../components/Nav1.js"
-import Footer from "./../components/footer.js"
+import Nav1 from "../components/Nav1.js"
+import Footer from "../components/footer.js"
 
 export default function Help() {
   return (
