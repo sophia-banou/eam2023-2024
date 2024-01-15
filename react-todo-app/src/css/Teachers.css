@@ -1,0 +1,61 @@
+.teacher_box {
+    position: absolute;
+    top: 50px;
+    width: 1400px;
+    height: 400px;   
+    background-color: #ececec;
+    display: flex;
+    align-items: center;
+  }
+
+.teacher_div1,
+.teacher_div2,
+.teacher_div3,
+.teacher_div4{
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    &:hover {
+        border: 2px solid rgba(0, 0, 0, 0.2);
+    }
+}
+.teacher_div1{
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 350px;
+    height: 120px;
+}
+.teacher_div2{
+    position: absolute;
+    top: 220px;
+    left: 100px;
+    width: 350px;
+    height: 120px;
+}
+.teacher_div3{
+    position: absolute;
+    top: 50px;
+    left: 550px;
+    width: 350px;
+    height: 120px;
+}
+.teacher_div4{
+    position: absolute;
+    top: 220px;
+    left: 550px;
+    width: 350px;
+    height: 120px;
+}
+
+  .teachers_body {
+    position: relative;
+    top: 0;
+    left: 15%;
+    width: 70%;
+    height: 500px;
+    overflow: hidden;
+  }

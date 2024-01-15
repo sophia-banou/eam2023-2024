@@ -16,6 +16,7 @@ import Help_mathimata_didaskontwn from "./pages/Help_mathimata_didaskontwn";
 import Help_bathmologio from "./pages/Help_bathmologio";
 import Students from "./pages/Students";
 import Help_teachers_profile from "./pages/Help_teachers_profile";
+import Teachers from "./pages/Teachers";
 
 export default function App() {
   return (
@@ -37,6 +38,7 @@ export default function App() {
       <Route path="/help_bathmologio" element = {<Help_bathmologio />} /> 
       <Route path="/students" element = {<Students />} /> 
       <Route path="/help_teachers_profile" element = {<Help_teachers_profile />} /> 
+      <Route path="/teachers" element = {<Teachers />} /> 
     </Routes>
     </BrowserRouter>
     </div>

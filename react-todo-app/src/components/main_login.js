@@ -50,7 +50,7 @@ export default function Login() {
               Δείτε πληροφορίες για τα μαθήματα που διδάσκετε. <br></br>
         
             </div>
-              <a href='#'> <SignInButton /> </a>
+            <Link to="/teachers"> <SignInButton /> </Link>
       </div>
       
     </div>
