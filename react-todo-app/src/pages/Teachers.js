@@ -10,8 +10,8 @@ export default function Teachers() {
     <div>
       <Nav1 />
       <Menu />
-      <div id="header-image-menu">
-        <img src="student_banner.png" alt="National and Kapodistrian University of Athens" />
+      <div id="header-image-menu-students">
+        <img src="teachers-banner.jpg" alt="National and Kapodistrian University of Athens" />
       </div>
       <div className="teachers_body">
             <div className="teacher_box">

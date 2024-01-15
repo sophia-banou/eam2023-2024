@@ -1,8 +1,8 @@
 .menu-item {
-    position: absolute;
-    top: 150px;
+    position: relative;
+    top:140px;
     width: 100%;
-    height: 69px;   
+    height: 50px;   
     background-color: #404040;
     display: flex;
     align-items: center;
@@ -11,10 +11,10 @@
   .divmenu {
     position: relative;
     top: 0;
-    padding: 8px;
+    padding: 8px 10px;
     left: 31px;
     width: 201px;
-    height: 50px;
+    height: 34px;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -33,7 +33,7 @@
   }
 
   #header-image-menu-students {
-    top: -20px;
+    top: -40px;
     position: relative;
     margin: 0px;
   }
