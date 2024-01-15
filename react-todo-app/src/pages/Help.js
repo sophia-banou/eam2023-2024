@@ -24,7 +24,7 @@ export default function Help() {
 
             <br></br>
             <Link to="/help_teachers">
-                <div className="help_rectangle1">
+                <div className="help_rectangle2">
                     <div className="help_div">Διδάσκοντες /ουσες</div>
                     <div><img id="help-icon" src="teacher_icon.png" alt="Student"></img></div>
                 </div>
