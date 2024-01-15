@@ -12,7 +12,7 @@ export default function HomePage() {
       <div id="header-image-menu-students">
         <img src="student_banner.jpg" alt="National and Kapodistrian University of Athens" />
       </div>
-      <Footer />
+     <Footer />
     </div>
   );
 }
