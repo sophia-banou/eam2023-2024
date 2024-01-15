@@ -90,10 +90,8 @@
 .himage {
     position: absolute;
     left: 5%;
-    width: 60px;
-    height: 60px;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 64px;
+    max-height: 64px;
     top: 25px;
 }
 .body2{

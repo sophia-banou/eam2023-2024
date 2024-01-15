@@ -31,9 +31,9 @@ export default function Help_students() {
             </Link>
             <Link to="/help_pistopoihtiko">
             <div className="rectangle-container">
-                <div><img className="himage" alt="" src="/pistopoihtiko.png" /> </div>
+                <div> <img className="himage" alt="" src="/pistopoihtiko.png" /> </div>
                 <div className="div">Έκδοση Πιστοποιητικού
-                    <div className="div1">Δημιουργία αίτησης για έκδοση πιστοποιητικού καθορισμένου από την γραμματεία</div>
+                    <div className="div1">Δημιουργία αίτησης για έκδοση <br></br> πιστοποιητικού καθορισμένου από την γραμματεία</div>
                 </div>
             </div>
             </Link>
