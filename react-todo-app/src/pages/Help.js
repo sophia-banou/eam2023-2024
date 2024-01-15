@@ -20,7 +20,7 @@ export default function Help() {
                 
 
             <br></br>
-            <Link to="/help_students">
+            <Link to="/help_teachers">
                 <div className="help_rectangle2">
                     <img className="himage2" alt="" src="/studentshelp.jpg" /> 
                     <div className="help_div">Διδάσκοντες/ουσες</div>
