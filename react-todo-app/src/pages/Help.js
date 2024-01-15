@@ -14,9 +14,12 @@ export default function Help() {
             
         
                     <Link to="/help_students">
-                        <img className="himage2" alt="" src="/help-student-button.png" /> 
+                        <div class="help_rectangle1">
+                        <div className="help_div">Φοιτητές /τριες</div>
+                        <div><img id="help-icon" src="student_icon.png" alt="Student"></img></div>
+                        </div>
                     </Link>  
-                    <div className="help_div">Φοιτητές/τριες</div>
+                    
                 
 
             <br></br>
