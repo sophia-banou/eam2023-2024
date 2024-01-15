@@ -28,13 +28,13 @@ export default function Teachers() {
                 </div>
             </div>
             <div className="teacher_div3">
-                <img className="timage" alt="" src="/bathmologia.png" />
+                <img className="timage" alt="" src="/memwnomena.png" />
                 <div className="teachers_div">Δημιουργία Νέου Βαθμολογίου Μεμονωμένα
                     <div className="teachers_div1">Δημιουργήστε νέο βαθμολόγιο με <br></br>μεμονωμένη εισαγωγή βαθμών</div>
                 </div>
             </div>
             <div className="teacher_div4">
-                <img className="timage" alt="" src="/bathmologia.png" />
+                <img className="timage" alt="" src="/mazika.png" />
                 <div className="teachers_div">Δημιουργία Νέου Βαθμολογίου Μαζικά
                     <div className="teachers_div1">Δημιουργήστε νέο βαθμολόγιο με <br></br>ανέβασμα αρχείου</div>
                 </div>

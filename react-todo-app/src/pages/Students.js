@@ -28,7 +28,7 @@ export default function HomePage() {
                 </div>
             </div>
             <div className="teacher_div3">
-                <img className="timage" alt="" src="/bathmologia.png" />
+                <img className="timage" alt="" src="/dhlwsh.png" />
                 <div className="teachers_div">Δήλωση Μαθημάτων
                     <div className="teachers_div1">Δηλώστε μαθήματα για την <br></br>τρέχουσα εξεταστική περίοδο</div>
                 </div>

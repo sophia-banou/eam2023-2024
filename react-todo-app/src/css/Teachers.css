@@ -54,19 +54,19 @@
     top: 25px;
 }
 .teachers_div{
-    top: 30px;
+    top: 25px;
     position: absolute;
-    left: 40%;
-    text-align: center;
+    left: 30%;
+    text-align: left;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     font-size: 20px;
-    line-height: 1.5;
+    line-height: 1.2;
     color: black;
 }
 
 .teachers_div1{
-    text-align: center;
+    text-align: left;
     font-family: "Montserrat", sans-serif;
     font-weight: lighter;
     font-size: 14px;
