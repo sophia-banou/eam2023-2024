@@ -36,7 +36,7 @@ export default function HomePage() {
             <div className="teacher_div4">
                 <img className="timage" alt="" src="/aithseis.png" />
                 <div className="teachers_div">Ιστορικό
-                    <div className="teachers_div1">Δείτε παλαιότερες δηλώσεις και ελέγξτε την κατάσταση των αιτήσεων σας</div>
+                    <div className="teachers_div1">Δείτε παλαιότερες δηλώσεις <br></br>και ελέγξτε την κατάσταση <br></br>των αιτήσεων σας</div>
                 </div>
             </div>
             </div>
