@@ -35,7 +35,7 @@ export default function Help_teachers() {
                 </div>
             </div>
             </Link>
-            <Link to="/help_profile">
+            <Link to="/help_teachers_profile">
             <div className="rectangle-parent1">
                 <img className="himage" alt="" src="/profile.png" />
                 <div className="div">Επεξεργασία Προφίλ
