@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import "./../css/main_login.css";
 import SignInButton from "./SignInButton";
 
@@ -37,7 +38,7 @@ export default function Login() {
               Δείτε και εκτυπώστε τη βαθμολογία σας. <br></br>
               Κάντε αίτηση για την έκδοση πιστοποιητικών.
             </div>
-              <a href='#'> <SignInButton /> </a>
+            <Link to="/students"> <SignInButton /> </Link>
       </div>
       
     </div>
