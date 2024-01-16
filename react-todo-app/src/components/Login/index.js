@@ -1,6 +1,9 @@
 import './index.css'
 import React, { useState } from 'react';
-import { doc, getDoc } from 'firebase/firestore'
+import { collection, doc, getDoc } from 'firebase/firestore'
+import { db } from '../firebase';
+
+
 
 export default function Login({db}){
 
@@ -12,7 +15,7 @@ export default function Login({db}){
         e.preventDefault()
         
         // We create a doc that 'points' at collection 'users' with primary key user's input email 
-        const ref = db.collection("aturing").doc(db, "users", email); 
+        const ref = doc(db, "users", email); 
         // Now "Bring me, from the collection 'users' the document with name/value 'email'"
         const res = await getDoc(ref);
 
