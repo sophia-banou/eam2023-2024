@@ -1,9 +1,7 @@
 import React from "react"
 import {BrowserRouter} from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
-import { firebaseConfig } from './config/firebase';
-import { initializeApp } from 'firebase/app'
-import { getFirestore } from 'firebase/firestore'
+import { db } from './config/firebase';
 
 
 import HomePage from "./pages/HomePage";
@@ -25,9 +23,6 @@ import Teachers from "./pages/Teachers";
 import Register from './components/Register/index';
 import Login from './components/Login';
 import Courses from './components/Courses';
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
 
 export default function App() {
   return (
