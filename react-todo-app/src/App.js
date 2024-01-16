@@ -1,6 +1,11 @@
 import React from "react"
 import {BrowserRouter} from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
+import { firebaseConfig } from './config/firebase';
+import { initializeApp } from 'firebase/app'
+import { getFirestore } from 'firebase/firestore'
+
+
 import HomePage from "./pages/HomePage";
 import Help from "./pages/Help";
 import Help_students from "./pages/Help_students";
@@ -17,6 +22,9 @@ import Help_bathmologio from "./pages/Help_bathmologio";
 import Students from "./pages/Students";
 import Help_teachers_profile from "./pages/Help_teachers_profile";
 import Teachers from "./pages/Teachers";
+import Register from './component/Register';
+import Login from './component/Login';
+import Courses from './component/Courses';
 
 export default function App() {
   return (
@@ -39,6 +47,9 @@ export default function App() {
       <Route path="/students" element = {<Students />} /> 
       <Route path="/help_teachers_profile" element = {<Help_teachers_profile />} /> 
       <Route path="/teachers" element = {<Teachers />} /> 
+      <Route path="/login" element={<Login db={db} />} />
+      <Route path="register" element={<Register db={db}/>} />
+      <Route path="courses" element={<Courses db={db}/>} />
     </Routes>
     </BrowserRouter>
     </div>
