@@ -18,7 +18,7 @@ export default function Nav1() {
                     
                     <ul>
                         <li>  <Link to="/help"> <Button /> </Link>
-                        <li> <a> <SignInButton /> </a> </li>
+                        <li>  <Link to="/login"> <SignInButton />  </Link></li>
 
                          
                         </li>
