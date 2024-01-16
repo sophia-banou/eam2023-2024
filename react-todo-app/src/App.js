@@ -22,9 +22,12 @@ import Help_bathmologio from "./pages/Help_bathmologio";
 import Students from "./pages/Students";
 import Help_teachers_profile from "./pages/Help_teachers_profile";
 import Teachers from "./pages/Teachers";
-import Register from './component/Register';
-import Login from './component/Login';
-import Courses from './component/Courses';
+import Register from './components/Register/index';
+import Login from './components/Login';
+import Courses from './components/Courses';
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 export default function App() {
   return (
