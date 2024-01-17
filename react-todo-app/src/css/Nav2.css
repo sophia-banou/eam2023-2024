@@ -1,0 +1,29 @@
+.profile_div{
+    position: relative;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: black;
+}
+.profile_body {
+    position: relative;
+    width: 200px;
+    height: 60px;
+}
+.profile_container {
+    position: absolute;
+    top: 20px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+.pimage {
+    position: relative;
+    max-width: 50px;
+    max-height: 50px;
+}

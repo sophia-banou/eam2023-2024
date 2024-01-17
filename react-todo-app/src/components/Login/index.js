@@ -30,7 +30,12 @@ export default function Login({db}){
             localStorage.setItem('email', user_email)
 
             // Go to page /courses
-            window.location.href = './courses'
+            if (user_role === 'student') {
+                window.location.href = './students'
+            }
+            else {
+                window.location.href = './teachers'
+            }
             console.log("Found User:", res.data());
         } else {
             console.log("No such document!");
@@ -40,10 +45,9 @@ export default function Login({db}){
     return(
         <div className='login'>
             <form onSubmit={handleLogin} className='login-container'>
-                <h2>Login</h2>
+                <h2>ΣΥΝΔΕΣΗ</h2>
                 <div className='login-row'>
-                    <label>Email:</label>
-                    &nbsp;&nbsp;&nbsp;
+                    <div className='login-text'>Όνομα Χρήστη</div>
                     <input
                         type="email"
                         value={email}
@@ -51,15 +55,14 @@ export default function Login({db}){
                     />
                 </div>
                 <div className='login-row'>
-                    <label>Password:</label>
-                    &nbsp;&nbsp;&nbsp;
+                    <div className='login-text'>Κωδικός</div>
                     <input
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
-                <button type='submit'>Login</button>
+                <button id='sign-in-button' type='submit'>Login</button>
                 <a href='/register'>Create new user</a>
             </form>
         </div>
