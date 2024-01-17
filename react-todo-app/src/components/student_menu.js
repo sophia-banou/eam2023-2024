@@ -7,7 +7,7 @@ export default function Menu() {
     return (
         <div className="menu_body">
             <div className="menu-item">
-            <div className="divmenu">ΔΗΛΩΣΗ ΜΑΘΗΜΑΤΩΝ</div>
+            <Link to="/student_dilosi"><div className="divmenu">ΔΗΛΩΣΗ ΜΑΘΗΜΑΤΩΝ</div></Link>
             <div className="divmenu">ΒΑΘΜΟΛΟΓΙΕΣ</div>
             <div className="divmenu">ΜΑΘΗΜΑΤΑ</div>
             <div className="divmenu">ΑΙΤΗΣΗ ΠΙΣΤΟΠΟΙΗΤΙΚΟΥ</div>
