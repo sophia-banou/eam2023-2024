@@ -23,6 +23,11 @@ import Teachers from "./pages/Teachers";
 import Register from './components/Register/index';
 import Login from './components/Login';
 import Courses from './components/Courses';
+import Student_dilosi from './pages/Student_dilosi';
+import Student_bathmologies from './pages/Student_bathmologies';
+import Student_mathimata from './pages/Student_mathimata';
+import Student_aitisi from './pages/Student_aitisi';
+import Student_profile from './pages/Student_profile';
 
 export default function App() {
   return (
@@ -48,6 +53,7 @@ export default function App() {
       <Route path="/login" element={<Login db={db} />} />
       <Route path="register" element={<Register db={db}/>} />
       <Route path="courses" element={<Courses db={db}/>} />
+      <Route path="/student_dilosi" element={<Student_dilosi db={db}/>} />
     </Routes>
     </BrowserRouter>
     </div>
