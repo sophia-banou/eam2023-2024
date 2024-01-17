@@ -1,0 +1,53 @@
+.sp-div1 {
+    background-color: rgb(249, 249, 249);
+    margin:auto;
+    width: 1000px;
+    height: 600px;
+}
+
+.sp-div2{
+    width:1000px;
+    height: 130px;
+    margin: auto;
+    background-color: rgb(226, 226, 226);
+    display: flex;
+}
+
+.sp-div3{
+    position: relative;
+    margin-top:40px;
+    margin-left: 20px;
+    text-align: center;
+    
+    
+}
+.sp-icon{
+    margin:10px;
+}
+
+.sp-text1{
+    font-weight: bold;
+    font-size: 17px;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 3px;
+}
+
+.sp-text2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+}
+
+.logout{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    right: 270px;
+    top: 260px;
+    background-color: brown;
+    border:none;
+    color: white;
+    &:hover,active{
+        cursor: pointer;
+        background-color: rgb(139, 41, 41);
+    }
+}

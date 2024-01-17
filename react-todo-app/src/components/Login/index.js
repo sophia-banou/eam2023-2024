@@ -25,14 +25,14 @@ export default function Login({db}){
             const user_role = res.data().role
             const user_email = res.data().email
             const user_name = res.data().name
-            const user_AM = res.data().AM
+            const user_am = res.data().am
 
 
             // Store the email and role as keys in your browser local storage
             localStorage.setItem('role', user_role)
             localStorage.setItem('email', user_email)
             localStorage.setItem('name', user_name)
-            localStorage.setItem('am', user_AM)
+            localStorage.setItem('am', user_am)
 
             // Go to page /courses
             if (user_role === 'student') {

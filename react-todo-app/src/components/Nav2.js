@@ -5,7 +5,6 @@ import { db } from './firebase';
 import "./../css/HomePage.css";
 import "./../css/Nav2.css";
 import {Button2} from "./Button1.js";
-import { logout } from '../Utils/Methods';
 
 export default function Nav2() {
     useEffect(()=> {
@@ -30,6 +29,7 @@ export default function Nav2() {
                     <ul>
                         <li>  <Link to="/help"> <Button2 /> </Link></li>
                         <li>  
+                        <Link to="/student_profile">
                         <div className='profile_body'>
                             <div className='profile_container'>
                                 <div className="profile_div">{localStorage.getItem("name")}
@@ -37,6 +37,7 @@ export default function Nav2() {
                                 <img className="pimage" alt="" src="/profile-icon.png" />
                             </div> 
                         </div>
+                        </Link>
                         </li>
 
                     </ul>
