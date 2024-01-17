@@ -26,6 +26,14 @@ export default function Login({db}){
             const user_email = res.data().email
             const user_name = res.data().name
             const user_am = res.data().am
+            const user_dob = res.data().dob
+            const user_pob = res.data().pob
+            const user_semester = res.data().semester
+            const user_marital_status = res.data().marital_status
+            const user_father_name = res.data().father_name
+            const user_mother_name = res.data().mother_name
+            const user_id= res.data().id
+            const user_AMKA = res.data().AMKA
 
 
             // Store the email and role as keys in your browser local storage
@@ -33,6 +41,14 @@ export default function Login({db}){
             localStorage.setItem('email', user_email)
             localStorage.setItem('name', user_name)
             localStorage.setItem('am', user_am)
+            localStorage.setItem('dob', user_dob)
+            localStorage.setItem('pob', user_pob)
+            localStorage.setItem('semester', user_semester)
+            localStorage.setItem('marital_status', user_marital_status)
+            localStorage.setItem('father_name', user_father_name)
+            localStorage.setItem('mother_name', user_mother_name)
+            localStorage.setItem('id', user_id)
+            localStorage.setItem('AMKA', user_AMKA)
 
             // Go to page /courses
             if (user_role === 'student') {
