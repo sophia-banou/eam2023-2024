@@ -15,16 +15,16 @@
     margin-bottom: 20px;
 }
 .login-text{
-    text-align: left;
+    text-align: center;
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
+    font-size: 13px;
     margin: 0px;
 }
 .login-container{
     color: rgb(30, 30, 30);
     width: 500px;
-    height: 500px;
+    height: 400px;
     margin: 0px;
     padding: 10px;
     background-color: rgb(255, 255, 255);
@@ -34,7 +34,7 @@
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .login-container button{
-    background-color: rgb(86, 86, 86);
+    background-color: rgb(255, 255, 255);
     border: none;
     padding: 8px;
     position: absolute;
@@ -45,14 +45,16 @@
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .login-row{
-    text-align: left;
+    text-align: center;
     padding: 3px;
+    padding-top: 20px;
 }
 .login-row input{
+    padding: 4px 50px;
     color: rgb(30, 30, 30);
     background-color: rgb(240, 248, 255, 0);
-    border: 1px solid rgb(30, 30, 30);
-    border-radius: 3px;
+    border: 1.5px solid rgb(30, 30, 30);
+    border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
     cursor: text;
     display: inline-block;
@@ -63,4 +65,26 @@
     height: 20px;
     width: 200px;
     outline: none;
+    &:focus{
+        background-color: rgb(230, 239, 247);
+
+    }
 }
+
+
+  .login-icon1 {
+    position: absolute;
+    left:115px;
+    top:97px;
+  }
+
+    
+  .login-icon2 {
+    position: absolute;
+    left:116px;
+    top:166px;
+  }
+
+  .icon2 {
+    position: absolute;
+  }
