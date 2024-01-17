@@ -32,10 +32,9 @@ export default function Nav2() {
                         <li>  
                         <div className='profile_body'>
                             <div className='profile_container'>
-                                <div className="profile_div">{localStorage.getItem('name')}
-                                    <button onClick={logout} className='logout'>Logout</button>
+                                <div className="profile_div">{localStorage.getItem("name")}
                                 </div>
-                                <img className="pimage" alt="" src="/student-icon.png" />
+                                <img className="pimage" alt="" src="/profile-icon.png" />
                             </div>
                         </div>
                         </li>
