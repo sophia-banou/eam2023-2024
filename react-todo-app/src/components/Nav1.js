@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import "./../css/HomePage.css";
 import Button from "./../components/Button1.js";
 import SignInButton from "./../components/SignInButton.js";
-import HomePage from "../pages/HomePage.js";
+
 
 export default function Nav1() {
     return (

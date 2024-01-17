@@ -1,8 +1,8 @@
 import './index.css'
 import React, { useState } from 'react';
-import { collection, doc, getDoc } from 'firebase/firestore'
+import {doc, getDoc } from 'firebase/firestore'
 import { db } from '../firebase';
-
+import {Link} from "react-router-dom";
 
 
 export default function Login({db}){
@@ -45,14 +45,18 @@ export default function Login({db}){
     return(
         <div className='login'>
             <form onSubmit={handleLogin} className='login-container'>
+                <Link to="/">
+                <img src="back-arrow.png" class="icon2"></img>
+                </Link>
                 <h2>ΣΥΝΔΕΣΗ</h2>
                 <div className='login-row'>
                     <div className='login-text'>Όνομα Χρήστη</div>
-                    <input
+                    <input 
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                    />
+                    /> 
+                    <img class="login-icon1" src="user-icon.png" />
                 </div>
                 <div className='login-row'>
                     <div className='login-text'>Κωδικός</div>
@@ -61,9 +65,10 @@ export default function Login({db}){
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
+                    <img class="login-icon2" src="password-icon.png" />
                 </div>
-                <button id='sign-in-button' type='submit'>Login</button>
-                <a href='/register'>Create new user</a>
+                <button id="sign-in-button2" type='submit'>Σύνδεση</button>
+                 
             </form>
         </div>
     )
