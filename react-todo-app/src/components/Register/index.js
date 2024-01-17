@@ -6,7 +6,10 @@ import './index.css'
 export default function Register({db}){
 
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');  
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+  const [AM, setAM] = useState('');
+  const [role, setrole] = useState('');    
 
   // Handles the register functionality of the user
   async function handleRegister(e){
@@ -16,7 +19,9 @@ export default function Register({db}){
     const docUser = {
         email: email,
         password: password,
-        role: "student",
+        name: name,
+        AM: AM,
+        role: role,
         courses: [
           {
             name: "Επικοινωνία Ανθρώπου Μηχανής",
@@ -64,6 +69,33 @@ export default function Register({db}){
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                />
+            </div>
+            <div className='register-row'>
+                <label>Name:</label>
+                &nbsp;&nbsp;&nbsp;
+                <input
+                    type="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                />
+            </div>
+            <div className='register-row'>
+                <label>AM:</label>
+                &nbsp;&nbsp;&nbsp;
+                <input
+                    type="AM"
+                    value={AM}
+                    onChange={(e) => setAM(e.target.value)}
+                />
+            </div>
+            <div className='register-row'>
+                <label>Role:</label>
+                &nbsp;&nbsp;&nbsp;
+                <input
+                    type="role"
+                    value={role}
+                    onChange={(e) => setrole(e.target.value)}
                 />
             </div>
             <button type='submit'>Register</button>

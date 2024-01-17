@@ -11,10 +11,10 @@ import Menu from "./../components/student_menu.js"
 
 export default function Student_dilosi() {
 
-    const ref = doc(db, "courses", "all_courses");
-    const res = getDoc(ref);
+    //const ref = doc(db, "courses", "all_courses");
+    //const res = getDoc(ref);
 
-    const user_role = res.data().name
+    //const user_role = res.data().name
 
 
     useEffect(()=> {
@@ -30,7 +30,7 @@ export default function Student_dilosi() {
             <Nav2 />
             <Menu />
             <div className='courses'>
-                <textarea rows={5} cols={50} style={{'margin': '10px'}} value={courses}/ >   
+                {/* <textarea rows={5} cols={50} style={{'margin': '10px'}} value={courses}/ >    */}
             </div>
             <Footer />
         </div>

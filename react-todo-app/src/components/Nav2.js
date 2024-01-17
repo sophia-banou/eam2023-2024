@@ -31,7 +31,7 @@ export default function Nav2() {
                         <li>  
                         <div className='profile_body'>
                             <div className='profile_container'>
-                                <div className="profile_div">{localStorage.getItem('email')}
+                                <div className="profile_div">{localStorage.getItem('name')}
                                     <button onClick={logout} className='logout'>Logout</button>
                                 </div>
                                 <img className="pimage" alt="" src="/student-icon.png" />
