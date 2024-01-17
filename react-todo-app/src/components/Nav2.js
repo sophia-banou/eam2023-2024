@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import { db } from './firebase';
 import "./../css/HomePage.css";
 import "./../css/Nav2.css";
-import Button from "./Button1.js";
+import {Button2} from "./Button1.js";
 import { logout } from '../Utils/Methods';
 
 export default function Nav2() {
@@ -28,14 +28,14 @@ export default function Nav2() {
                 <nav id="menu">
                     
                     <ul>
-                        <li>  <Link to="/help"> <Button /> </Link></li>
+                        <li>  <Link to="/help"> <Button2 /> </Link></li>
                         <li>  
                         <div className='profile_body'>
                             <div className='profile_container'>
                                 <div className="profile_div">{localStorage.getItem("name")}
                                 </div>
                                 <img className="pimage" alt="" src="/profile-icon.png" />
-                            </div>
+                            </div> 
                         </div>
                         </li>
 

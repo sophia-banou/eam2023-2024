@@ -8,3 +8,11 @@ export default function Button1() {
         </button>
     )
 }
+
+export function Button2() {
+    return( 
+        <button id="help-button2"> 
+            Βοήθεια 
+        </button>
+    )
+}

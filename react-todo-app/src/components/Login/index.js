@@ -32,7 +32,7 @@ export default function Login({db}){
             localStorage.setItem('role', user_role)
             localStorage.setItem('email', user_email)
             localStorage.setItem('name', user_name)
-            localStorage.setItem('AM', user_AM)
+            localStorage.setItem('am', user_AM)
 
             // Go to page /courses
             if (user_role === 'student') {
