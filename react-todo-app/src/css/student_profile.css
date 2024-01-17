@@ -1,0 +1,122 @@
+.sp-div1 {
+    margin:auto;
+    width: 600px;
+    height: 600px;
+    margin-bottom: 100px;
+}
+
+.sp-div2{
+    width:1000px;
+    height: 130px;
+    margin: auto;
+    display: flex;
+}
+
+.sp-div3{
+    position: relative;
+    margin-top:40px;
+    margin-left: 20px;
+    text-align: center;
+    
+    
+}
+.sp-icon{
+    margin:10px;
+    width:100px;
+    height:100px;
+}
+
+.sp-text1{
+    font-weight: bold;
+    font-size: 17px;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 3px;
+}
+
+.sp-text2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+}
+
+.logout{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    right: 310px;
+    top: 275px;
+    background-color: brown;
+    border:none;
+    color: white;
+    &:hover,active{
+        cursor: pointer;
+        background-color: rgb(139, 41, 41);
+    }
+}
+
+
+
+.sp-table1{
+    width: 700px;
+    height: 50px;
+    margin:auto;
+    border-collapse: collapse;
+    font-family: "Montserrat", sans-serif;
+   
+    
+}
+
+
+
+.cell{
+    background-color: #b1cbb6;
+    padding: 6px;
+    border:1.2px  rgb(156, 173, 159) solid;
+    &:hover,active{
+        cursor: pointer;
+        background-color: rgb(156, 173, 159);
+        color:white;
+      
+    }
+   
+}
+
+
+.active{
+    cursor: pointer;
+    background-color: rgb(156, 173, 159);
+    color:white;
+    border:1.2px  rgb(156, 173, 159) solid;
+    padding: 6px;
+}
+
+
+.sp-table2{
+    width: 700px;
+    margin:auto;
+    border-collapse: collapse;
+    font-family: "Montserrat", sans-serif;
+}
+
+.sp-table2 tr{
+    border:1px rgb(226, 226, 226) solid;
+   
+}
+
+.sp-table2 tr th{
+    padding: 5px 10px;
+    max-width:350px;
+    text-align:left;
+    padding-left: 60px;
+    border:1px rgb(226, 226, 226) solid;
+}
+
+.sp-table2 tr td{
+    padding: 8px 10px;
+    max-width:350px;
+    text-align:left;
+    padding-left: 60px;
+}
+
+.row2{
+    background-color: rgb(246, 246, 246);
+}
