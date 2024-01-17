@@ -1,6 +1,6 @@
 import './index.css'
 import React, { useState } from 'react';
-import {doc, getDoc } from 'firebase/firestore'
+import {doc, getDoc,setDoc } from 'firebase/firestore'
 import { db } from '../firebase';
 import {Link} from "react-router-dom";
 

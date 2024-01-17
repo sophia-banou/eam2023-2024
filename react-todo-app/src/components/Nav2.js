@@ -14,6 +14,7 @@ export default function Nav2() {
         if (localStorage.getItem('role') !== "student") {
             window.location.href = '/'
         }
+        
     },[])
 
     return (
@@ -31,10 +32,10 @@ export default function Nav2() {
                         <li>  
                         <div className='profile_body'>
                             <div className='profile_container'>
-                                <div className="profile_div">{localStorage.getItem('email')}
-                                    <button onClick={logout} className='logout'>Logout</button>
-                                </div>
-                                <img className="pimage" alt="" src="/student-icon.png" />
+                            <div className="profile_div">{localStorage.getItem("am")}
+                            
+                            </div>
+                                <img className="pimage" alt="" src="profile-icon.png" />
                             </div>
                         </div>
                         </li>

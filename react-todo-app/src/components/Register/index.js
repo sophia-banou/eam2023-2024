@@ -20,9 +20,9 @@ export default function Register({db}){
         courses: [
           {
             name: "Επικοινωνία Ανθρώπου Μηχανής",
-            grade: 10
-          }
-        ]
+            grade: 10,
+          },
+        ],
     };
 
     try{
