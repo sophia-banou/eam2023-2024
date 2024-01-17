@@ -54,6 +54,10 @@ export default function App() {
       <Route path="register" element={<Register db={db}/>} />
       <Route path="courses" element={<Courses db={db}/>} />
       <Route path="/student_dilosi" element={<Student_dilosi db={db}/>} />
+      <Route path="/student_bathmologies" element={<Student_bathmologies db={db}/>} />
+      <Route path="/student_mathimata" element={<Student_mathimata db={db}/>} />
+      <Route path="/student_aitisi" element={<Student_aitisi db={db}/>} />
+      <Route path="/student_profile" element={<Student_profile db={db}/>} />
     </Routes>
     </BrowserRouter>
     </div>

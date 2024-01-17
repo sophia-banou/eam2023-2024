@@ -8,9 +8,9 @@ export default function Menu() {
         <div className="menu_body">
             <div className="menu-item">
             <Link to="/student_dilosi"><div className="divmenu">ΔΗΛΩΣΗ ΜΑΘΗΜΑΤΩΝ</div></Link>
-            <div className="divmenu">ΒΑΘΜΟΛΟΓΙΕΣ</div>
-            <div className="divmenu">ΜΑΘΗΜΑΤΑ</div>
-            <div className="divmenu">ΑΙΤΗΣΗ ΠΙΣΤΟΠΟΙΗΤΙΚΟΥ</div>
+            <Link to="/student_bathmologies"><div className="divmenu">ΒΑΘΜΟΛΟΓΙΕΣ</div></Link>
+            <Link to="/student_mathimata"><div className="divmenu">ΜΑΘΗΜΑΤΑ</div></Link>
+            <Link to="/student_aitisi"><div className="divmenu">ΑΙΤΗΣΗ ΠΙΣΤΟΠΟΙΗΤΙΚΟΥ</div></Link>
             </div>
         </div>
     );
