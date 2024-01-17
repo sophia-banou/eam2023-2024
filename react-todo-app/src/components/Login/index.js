@@ -33,7 +33,7 @@ export default function Login({db}){
             if (user_role === 'student') {
                 window.location.href = './students'
             }
-            else {
+            if (user_role === 'teacher'){
                 window.location.href = './teachers'
             }
             console.log("Found User:", res.data());
@@ -68,6 +68,7 @@ export default function Login({db}){
                     <img class="login-icon2" src="password-icon.png" />
                 </div>
                 <button id="sign-in-button2" type='submit'>Σύνδεση</button>
+                <a href='/register'>Create new user</a>
                  
             </form>
         </div>
