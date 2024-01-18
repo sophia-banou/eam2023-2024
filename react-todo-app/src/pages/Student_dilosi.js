@@ -7,7 +7,7 @@ import "./../css/Student_dilosi.css";
 import Nav2 from "./../components/Nav2.js"
 import Footer from "./../components/footer.js"
 import Menu from "./../components/student_menu.js"
-import { Button2 } from "../components/Button1.js";
+
 
 export default function Student_dilosi() {
     const [checked, setChecked] = useState([]);
@@ -44,28 +44,28 @@ export default function Student_dilosi() {
                         </tr>
                         <tr>
                             <th ><input value={1} type="checkbox" onChange={handleCheck} /></th>
-                            <th>Μάθημα</th>
+                            <th>Μάθημα1</th>
                             <th>Α</th>
                             <th>8ο</th>
                             <th>Ελεύθερο</th>
                         </tr>
                         <tr class="drow2">
                             <th><input value={1} type="checkbox" onChange={handleCheck} /></th>
-                            <th>Μάθημα</th>
+                            <th>Μάθημα2</th>
                             <th>Α</th>
                             <th>8ο</th>
                             <th>Ελεύθερο</th>
                         </tr>
                         <tr>
                             <th><input value={1} type="checkbox" onChange={handleCheck} /></th>
-                            <th>Μάθημα</th>
+                            <th>Μάθημα3</th>
                             <th>Α</th>
                             <th>8ο</th>
                             <th>Ελεύθερο</th>
                         </tr>
                         <tr class="drow2">
                             <th><input value={1} type="checkbox" onChange={handleCheck} /></th>
-                            <th>Μάθημα</th>
+                            <th>Μάθημα4</th>
                             <th>Α</th>
                             <th>8ο</th>
                             <th>Ελεύθερο</th>
