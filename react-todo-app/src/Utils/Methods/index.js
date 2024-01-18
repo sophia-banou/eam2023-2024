@@ -9,3 +9,10 @@ export function logout () {
         window.location.href = '/'
     }
 }
+
+export function btnTab1 () {
+    var table1 = document.getElementById("table1");
+    var table2 = document.getElementById("table2");
+    table1.style.display = "table";
+    table2.style.display = "none";
+}

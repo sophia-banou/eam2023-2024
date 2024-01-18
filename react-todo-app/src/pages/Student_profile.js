@@ -2,18 +2,11 @@ import React from "react"
 import Nav2 from "./../components/Nav2.js"
 import Menu from "./../components/student_menu.js"
 import "./../css/student_profile.css";
-import { logout } from '../Utils/Methods';
+import { logout, btnTab1 } from '../Utils/Methods';
 import Footer from "./../components/footer.js"
 import Button from "./../components/Headerbutton.js"
 
 export default function StudentProfile() {
- 
-    function btnTab1() {
-        var table1 = document.getElementById("sp-table2");
-        var table2 = document.getElementById("sp-table3");
-        table1.style.display = "table";
-        table2.style.display = "none";
-    }
 
     return (
         <div>
@@ -31,13 +24,14 @@ export default function StudentProfile() {
                 <div class="div-table">
                     <table class="sp-table1">
                         <tr>
-                            <th id="profile-b1" onclick ="btnTab1()" class="active">Σχετικά με τις Σπουδές</th>
+                            <th id="profile-b1" onClick={btnTab1} class="active">Προσωπικά Στοιχεία</th>
                             <th id="profile-b2" class="cell">Σχετικά με τις Σπουδές</th>
                             <th id="profile-b3" class="cell">Πληροφορίες Επικοινωνίας</th>
+
                         </tr>
                     </table>
 
-                    <table id="sp-table2">
+                    <table id="table1" class="sp-table2">
                         <tr>
                             <th>Ονοματεπώνυμο</th>
                             <td>{localStorage.getItem("name")}</td>
@@ -79,8 +73,8 @@ export default function StudentProfile() {
                             <td>{localStorage.getItem("AMKA")}</td>
                         </tr>
                     </table>
-                    <table id="sp-table3">
-    
+                    <table id="table2" class="sp-table2">
+
                         <tr class="row2">
                             <th>Ημερομηνία Γέννησης</th>
                             <td>{localStorage.getItem("dob")}</td>
@@ -123,6 +117,7 @@ export default function StudentProfile() {
             </div>
 
             <Footer />
+
         </div>
 
     )
