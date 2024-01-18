@@ -21,7 +21,7 @@ export default function Nav2() {
             <div id="header">
                
                 <div id="logo">
-                <Link to="/">
+                <Link to="/2">
                     <img src="logo.png" alt="Logo" /></Link>
                 </div> 
                 <nav id="menu">
