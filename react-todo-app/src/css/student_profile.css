@@ -90,19 +90,19 @@
 }
 
 
-.sp-table2{
+#sp-table2{
     width: 700px;
     margin:auto;
     border-collapse: collapse;
     font-family: "Montserrat", sans-serif;
 }
 
-.sp-table2 tr{
+#sp-table2 tr{
     border:1px rgb(226, 226, 226) solid;
    
 }
 
-.sp-table2 tr th{
+#sp-table2 tr th{
     padding: 5px 10px;
     max-width:350px;
     text-align:left;
@@ -110,7 +110,7 @@
     border:1px rgb(226, 226, 226) solid;
 }
 
-.sp-table2 tr td{
+#sp-table2 tr td{
     padding: 8px 10px;
     max-width:350px;
     text-align:left;
@@ -119,4 +119,8 @@
 
 .row2{
     background-color: rgb(246, 246, 246);
+}
+
+#sp-table3{
+    display:none;
 }
