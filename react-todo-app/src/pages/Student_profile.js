@@ -2,9 +2,8 @@ import React from "react"
 import Nav2 from "./../components/Nav2.js"
 import Menu from "./../components/student_menu.js"
 import "./../css/student_profile.css";
-import { logout, btnTab1 } from '../Utils/Methods';
+import { logout, btnTab1, btnTab2, btnTab3 } from '../Utils/Methods/index.js';
 import Footer from "./../components/footer.js"
-import Button from "./../components/Headerbutton.js"
 
 export default function StudentProfile() {
 
@@ -24,9 +23,9 @@ export default function StudentProfile() {
                 <div class="div-table">
                     <table class="sp-table1">
                         <tr>
-                            <th id="profile-b1" onClick={btnTab1} class="active">Προσωπικά Στοιχεία</th>
-                            <th id="profile-b2" class="cell">Σχετικά με τις Σπουδές</th>
-                            <th id="profile-b3" class="cell">Πληροφορίες Επικοινωνίας</th>
+                            <th id="pb1" onClick={btnTab1} class="active">Προσωπικά Στοιχεία</th>
+                            <th id="pb2" onClick={btnTab2} class="cell">Σχετικά με τις Σπουδές</th>
+                            <th id="pb3" onClick={btnTab3} class="cell">Πληροφορίες Επικοινωνίας</th>
 
                         </tr>
                     </table>
@@ -45,72 +44,73 @@ export default function StudentProfile() {
                             <td>{localStorage.getItem("am")}</td>
                         </tr>
                         <tr class="row2">
-                            <th>Εξάμηνο Φοίτησης</th>
-                            <td>{localStorage.getItem("semester")}</td>
-                        </tr>
-                        <tr>
                             <th>Οικογενειακή Κατάσταση</th>
                             <td>{localStorage.getItem("marital_status")}</td>
                         </tr>
-                        <tr class="row2">
+                        <tr>
                             <th>Όνομα Πατέρα</th>
                             <td>{localStorage.getItem("father_name")}</td>
                         </tr>
-                        <tr>
+                        <tr class="row2">
                             <th>Όνομα Μητέρας</th>
                             <td>{localStorage.getItem("mother_name")}</td>
                         </tr>
-                        <tr class="row2">
+                        <tr>
                             <th>Πολή/ Χωριό Γέννησης</th>
                             <td>{localStorage.getItem("pob")}</td>
                         </tr>
-                        <tr>
+                        <tr class="row2">
                             <th>Αριθμός Ταυτότητας</th>
                             <td>{localStorage.getItem("id")}</td>
                         </tr>
-                        <tr class="row2">
+                        <tr>
                             <th>ΑΜΚΑ</th>
                             <td>{localStorage.getItem("AMKA")}</td>
                         </tr>
                     </table>
                     <table id="table2" class="sp-table2">
 
-                        <tr class="row2">
-                            <th>Ημερομηνία Γέννησης</th>
-                            <td>{localStorage.getItem("dob")}</td>
-                        </tr>
                         <tr>
-                            <th>Αριθμός Μητρώου</th>
-                            <td>{localStorage.getItem("am")}</td>
-                        </tr>
-                        <tr class="row2">
                             <th>Εξάμηνο Φοίτησης</th>
                             <td>{localStorage.getItem("semester")}</td>
                         </tr>
-                        <tr>
-                            <th>Οικογενειακή Κατάσταση</th>
-                            <td>{localStorage.getItem("marital_status")}</td>
-                        </tr>
                         <tr class="row2">
-                            <th>Όνομα Πατέρα</th>
-                            <td>{localStorage.getItem("father_name")}</td>
+                            <th>Ακαδημαϊκό Έτος 1ης Εγγραφής</th>
+                            <td>{localStorage.getItem("year1")}</td>
                         </tr>
                         <tr>
-                            <th>Όνομα Μητέρας</th>
-                            <td>{localStorage.getItem("mother_name")}</td>
+                            <th>Ημερομηνία 1ης Εγγραφής</th>
+                            <td>{localStorage.getItem("date1")}</td>
+                        </tr>
+
+                    </table>
+                    <table id="table3" class="sp-table2">
+
+                        <tr>
+                            <th>Διεύθυνση Κατοικάς</th>
+                            <td>{localStorage.getItem("address")}</td>
                         </tr>
                         <tr class="row2">
-                            <th>Πολή/ Χωριό Γέννησης</th>
-                            <td>{localStorage.getItem("pob")}</td>
+                            <th>Πόλη Κατοικίας</th>
+                            <td>{localStorage.getItem("city")}</td>
                         </tr>
                         <tr>
-                            <th>Αριθμός Ταυτότητας</th>
-                            <td>{localStorage.getItem("id")}</td>
+                            <th>Τηλέφωνο Κατοικίας</th>
+                            <td>{localStorage.getItem("phone1")}</td>
                         </tr>
                         <tr class="row2">
-                            <th>ΑΜΚΑ</th>
-                            <td>{localStorage.getItem("AMKA")}</td>
+                            <th>ΤΚ Κατοικίας</th>
+                            <td>{localStorage.getItem("code")}</td>
                         </tr>
+                        <tr>
+                            <th>Κινητό Τηλέφωνο</th>
+                            <td>{localStorage.getItem("phone2")}</td>
+                        </tr>
+                        <tr class="row2">
+                            <th>Διεύθυνση Ηλεκτρονικού Ταχυδρομίου</th>
+                            <td>{localStorage.getItem("email")}</td>
+                        </tr>
+                       
                     </table>
                 </div>
 

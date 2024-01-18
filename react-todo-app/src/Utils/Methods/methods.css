@@ -1,0 +1,22 @@
+.cell{
+    background-color: #b1cbb6;
+    padding: 6px;
+    border:1.2px  rgb(156, 173, 159) solid;
+    &:hover,active{
+        cursor: pointer;
+        background-color: rgb(156, 173, 159);
+        color:white;
+      
+    }
+   
+}
+
+
+.active{
+    cursor: pointer;
+    background-color: rgb(156, 173, 159);
+    color:white;
+    border:1.2px  rgb(156, 173, 159) solid;
+    padding: 6px;
+}
+
