@@ -1,6 +1,8 @@
 // Logout checks if you have the specific keys stored in your local storage. 
 // If you have then deletes them and redirects to login page.
-export function logout () {
+import "./methods.css";
+
+export function logout() {
     if (localStorage.getItem('role') !== null || localStorage.getItem('email') !== null || localStorage.getItem('AM') !== null || localStorage.getItem('name') !== null) {
         localStorage.removeItem('role')
         localStorage.removeItem('name')
@@ -10,9 +12,52 @@ export function logout () {
     }
 }
 
-export function btnTab1 () {
+export function btnTab1() {
+
     var table1 = document.getElementById("table1");
     var table2 = document.getElementById("table2");
+    var table3 = document.getElementById("table3");
+    var pbutton1 = document.getElementById("pb1");
+    var pbutton2 = document.getElementById("pb2");
+    var pbutton3 = document.getElementById("pb3");
+
     table1.style.display = "table";
     table2.style.display = "none";
+    table3.style.display = "none";
+    pbutton1.className = "active"
+    pbutton2.className = "cell"
+    pbutton2.className = "cell"
+}
+export function btnTab2() {
+
+    var table1 = document.getElementById("table1");
+    var table2 = document.getElementById("table2");
+    var table3 = document.getElementById("table3");
+    var pbutton1 = document.getElementById("pb1");
+    var pbutton2 = document.getElementById("pb2");
+    var pbutton3 = document.getElementById("pb3");
+
+    table1.style.display = "none";
+    table2.style.display = "table";
+    table3.style.display = "none";
+    pbutton1.className = "cell"
+    pbutton2.className = "active"
+    pbutton3.className = "cell"
+}
+
+export function btnTab3() {
+
+    var table1 = document.getElementById("table1");
+    var table2 = document.getElementById("table2");
+    var table3 = document.getElementById("table3");
+    var pbutton1 = document.getElementById("pb1");
+    var pbutton2 = document.getElementById("pb2");
+    var pbutton3 = document.getElementById("pb3");
+
+    table1.style.display = "none";
+    table2.style.display = "none";
+    table3.style.display = "table";
+    pbutton1.className = "cell"
+    pbutton2.className = "cell"
+    pbutton3.className = "active"
 }
