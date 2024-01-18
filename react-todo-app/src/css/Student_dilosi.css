@@ -1,31 +1,42 @@
-.courses{
-
-    justify-content: center;
+.d-div1 {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin-bottom: 100px;
+    flex: content;
     align-items: center;
-    width: auto;
 }
 
-.course-row{
+
+.dcell{
+    font-weight: 600;
     text-align: center;
-    padding: 3px;
+    background-color: #aeaeae;
+    padding: 6px;
+    border:1.2px  rgb(156, 173, 159) solid;   
 }
 
-.logout{
-    width: 100px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    background-color: brown;
-    color: white;
+
+.d-table2{
+    width: 1000px;
+    margin:auto;
+    border-collapse: collapse;
+    font-family: "Montserrat", sans-serif;
 }
-.weird{
-    background: -webkit-linear-gradient(90deg, rgba(58,88,180,1) 0%, rgba(162,42,199,1) 25%, rgba(253,29,29,1) 52%, rgba(253,142,40,1) 77%, rgba(234,252,69,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+.d-table2 tr{
+    border:1px rgb(226, 226, 226) solid;
+   
 }
-.welcome{
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    margin: 0px;
+
+.d-table2 tr th{
+    font-weight: 200;
+    padding: 5px 10px;
+    max-width:350px;
+    text-align:center;
+    border:1px rgb(226, 226, 226) solid;
+}
+
+.drow2{
+    background-color: rgb(246, 246, 246);
 }
