@@ -6,7 +6,6 @@
     background-color: #404040;
     display: flex;
     align-items: center;
-    color:white;
   }
   .divmenu {
     position: relative;
@@ -45,3 +44,6 @@
     padding: 0px;
   }
   
+  .link-menu{
+    text-decoration: none;
+  }

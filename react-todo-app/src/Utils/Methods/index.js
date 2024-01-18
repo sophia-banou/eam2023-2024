@@ -8,6 +8,22 @@ export function logout() {
         localStorage.removeItem('name')
         localStorage.removeItem('AM')
         localStorage.removeItem('email')
+        localStorage.removeItem('dob')
+        localStorage.removeItem('pob')
+        localStorage.removeItem('semester')
+        localStorage.removeItem('marital_status')
+        localStorage.removeItem('father_name')
+        localStorage.removeItem('mother_name')
+        localStorage.removeItem('id')
+        localStorage.removeItem('AMKA')
+        localStorage.removeItem('year1')
+        localStorage.removeItem('date1')
+        localStorage.removeItem('address')
+        localStorage.removeItem('city')
+        localStorage.removeItem('code')
+        localStorage.removeItem('phone1')
+        localStorage.removeItem('phone2')
+ 
         window.location.href = '/'
     }
 }
