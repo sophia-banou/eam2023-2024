@@ -175,3 +175,28 @@ export function Arxiki(){
             return(<Link to="/teachers">Αρχική σελίδα ></Link>);
     }  
 }
+
+export function Arxiki(){
+    if (localStorage.getItem('role') === null) {
+        return (<div><Link to="/">Αρχική σελίδα ></Link> <span>Βοήθεια</span></div>);
+      } else {
+        if (localStorage.getItem('role') === "student")
+            return(<Link to="/students">Αρχική σελίδα ></Link>);
+        if (localStorage.getItem('role') === "teacher")
+            return(<Link to="/teachers">Αρχική σελίδα ></Link>);
+    }  
+}
+export function generateTable2() {  
+    var date = sessionStorage.getItem("date1");
+    var status = sessionStorage.getItem("status1");
+
+    let table = '<table class="d-table2">';  
+    table += '<tr><th class="dcell">Ημερομηνία</th><th class="dcell">Κατάσταση</th><th class="dcell">Ενέργειες</th> ';  
+   
+    table += `<tr><td>${date} </td><td>${status}</td> <td> <img class="icont" src="./view-icon.png" /> <img class="icont" src ="./edit-icon2.png"></td></tr>`
+
+    table += '</table>';   
+    var gib = document.getElementById("dyn1");  
+    if (gib){ gib.innerHTML = table;}
+   
+}  

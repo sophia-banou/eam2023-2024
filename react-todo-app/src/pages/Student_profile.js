@@ -13,13 +13,18 @@ export default function StudentProfile() {
             <Nav2 />
             <Menu />
             <div class="sp">
+
                 <div class="sp-div">
-                    <div class="sp-box">
-                        <img src="./aithseis.png"></img>
-                        <p><h>Ιστορικό </h> <br></br>Δείτε παλαιότερες δηλώσεις και ελέγξτε την κατάσταση των αιτήσεων σας</p>
-                        
-                    </div>
+                    <Link class="link" to="/istoriko">
+                        <div class="sp-box">
+                            <img src="./aithseis.png"></img>
+                            <p><h>Ιστορικό </h> <br></br>Δείτε παλαιότερες δηλώσεις και ελέγξτε την κατάσταση των αιτήσεων σας</p>
+
+                        </div>
+                    </Link>
+
                 </div>
+
 
                 <div class="sp-div1">
                     <div class="sp-div2">
@@ -30,10 +35,10 @@ export default function StudentProfile() {
                         </div>
                         <button onClick={logout} className='logout'>Αποσύνδεση</button>
                         <Link to="/edit_profile">
-                        <button class="edit-button"> 
-                            <img src="./edit-icon.png" class="edit-icon"></img>
-                            <p>Επεξεργασία</p>
-                        </button>
+                            <button class="edit-button">
+                                <img src="./edit-icon.png" class="edit-icon"></img>
+                                <p>Επεξεργασία</p>
+                            </button>
                         </Link>
                     </div>
                     <div class="div-table">
@@ -135,7 +140,7 @@ export default function StudentProfile() {
 
             <Footer />
 
-        </div>
+        </div >
 
     )
 }

@@ -66,3 +66,7 @@
 }
 
 
+.d-table2 tr td img{
+    max-width: 30px;
+    max-height: 30px;
+}
