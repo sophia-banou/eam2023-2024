@@ -31,7 +31,8 @@ export function logout() {
         localStorage.removeItem('endyear')
         localStorage.removeItem('endmonth')
         localStorage.removeItem('endday')
-
+        localStorage.clear();
+        sessionStorage.clear();
         window.location.href = '/'
     }
 }
