@@ -195,7 +195,7 @@ export default function Edit_profile() {
                             </tr>
 
                         </table>
-                        <button class="submit" type='submit'>Αποθήκευση</button> 
+                        <div class="submit-div"><button class="submit" type='submit'> <p>Αποθήκευση</p></button> </div>
                         </form>
                     </div>
                     
