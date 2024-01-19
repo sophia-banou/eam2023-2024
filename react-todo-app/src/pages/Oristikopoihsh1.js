@@ -22,27 +22,19 @@ export default function Proswrinh1() {
         <div onLoad={generateTable}>
             <Nav2 />
             <Menu />
-            <div class="icon-div">
-                <Link to="/student_dilosi">
-                    <img src="back-arrow.png" class="arrow-icon"></img>
-                </Link>
-            </div>
 
             <div class="d-div1">
                 <div id="dyn1" class="div-table" ></div>
 
-                <div class="warning-message"> <h>Προσοχή!</h> <br></br>Αν πατήσετε οριστική υποβολή δεν θα μπορείτε να επεξεργαστείτε
-                    περαιτέρω αυτήν την δήλωση</div>
-
-                <Link class="link" to="/oristikopoihsh1">
-                <div className="dilosi_rectangle1">
-                    <div className="dilosi_div">
-                        
-                            Οριστική Υποβολή
-                         </div>
+                <div class="message"> Η δήλωση σας οριστικοποιήθηκε. Οι προηγούμενες δηλώσεις σας για αυτό το εξάμηνο θα διαγραφούν</div>
+                <div class="buttons">
+                    <Link class="button" to="/students">
+                    <div>Επιστροφή στην Αρχική Σελίδα </div> <img class="home_icon" src="./home-icon.png"></img>
+                    </Link>
                 </div>
-                </Link>
             </div>
+
+
             <Footer />
 
 

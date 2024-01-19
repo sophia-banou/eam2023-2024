@@ -25,7 +25,7 @@ export default function Student_dilosi() {
             <Nav2 />
             <Menu />
             <div class="d-div1">  
-            <div class="button-div"> <button onClick={checkAll}> Επιλογή</button> </div>     
+            <div class="button-div"> <button onClick={checkAll}> Επιλογή Όλων</button> </div>     
                 <div class="div-table">
                     <table class="d-table2">
                         <tr>

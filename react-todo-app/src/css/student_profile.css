@@ -1,5 +1,57 @@
+.sp{
+    display: flex;
+}
+
+.sp-div{
+    height: 600px;
+    margin:auto;
+    margin-right: 10px;
+    margin-left:0px;
+    width: 400px;
+    margin-bottom: 100px;
+}
+
+.sp-box{
+    height:100px;
+    width:280px;
+    margin:auto;
+    margin-top: 130px;
+    text-align: left;
+    padding: 10px 10px;
+    display: flex;
+    border: 1px rgba(0, 0, 0, 0.2) solid;
+    border-radius: 3px;
+    &:hover{
+        border: 2px rgba(0, 0, 0, 0.2) solid;
+        cursor: pointer;
+    }
+}
+
+.sp-box img{
+    margin:auto;
+    max-width: 64px;
+    max-height: 64px;
+}
+
+.sp-box p{
+    width: 200px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+    margin:auto;
+
+}
+
+.sp-box p h{
+    width: 200px;
+    font-weight: bold;
+    font-size: 18px;
+   
+}
+
 .sp-div1 {
     margin:auto;
+    margin-left:0px;
     width: 600px;
     height: 600px;
     margin-bottom: 100px;
@@ -43,8 +95,10 @@
     height: 30px;
     position: absolute;
     right: 310px;
+    font-family: "Montserrat", sans-serif;
     top: 275px;
     background-color: brown;
+    border-radius: 3px;
     border:none;
     color: white;
     &:hover,active{
@@ -53,7 +107,35 @@
     }
 }
 
+.edit-button{   
+    width: 120px;
+    text-align: right;
+    display:flex;
+    height: 30px;
+    position: absolute;
+    right: 420px;
+    font-family: "Montserrat", sans-serif;
+    top: 275px;
+    background-color:  #404040;
+    border-radius: 3px;
+    border:none;
+    color: white;
+    &:hover,active{
+        cursor: pointer;
+        background-color: #2d2d2d;
+    }
+}
 
+.edit-button img{
+    max-width: 20px;
+    max-height: 20px;
+    margin:auto;
+}
+
+.edit-button p{
+    width:130px;
+    margin:auto;
+}
 
 .sp-table1{
     width: 700px;
@@ -68,12 +150,12 @@
 
 
 .cell{
-    background-color: #b1cbb6;
+    background-color:#aeaeae;
     padding: 6px;
-    border:1.2px  rgb(156, 173, 159) solid;
+    border:1.2px  #aeaeae solid;
     &:hover,active{
         cursor: pointer;
-        background-color: rgb(156, 173, 159);
+        background-color: #aeaeae;
         color:white;
       
     }
@@ -83,9 +165,9 @@
 
 .active{
     cursor: pointer;
-    background-color: rgb(156, 173, 159);
+    background-color: rgb(158, 158, 158);
     color:white;
-    border:1.2px  rgb(156, 173, 159) solid;
+    border:1.2px   rgb(158, 158, 158) solid;
     padding: 6px;
 }
 
@@ -123,4 +205,16 @@
 
 #table2, #table3{
     display:none;
+}
+
+.icon-div{
+    width:650px;
+    margin:auto;
+}
+
+.div-table2{
+    width:600px;
+    margin:auto;
+    background-color: #f5f5f5;
+    height: 500px;
 }
