@@ -1,9 +1,11 @@
 import React from "react"
+import { Link } from "react-router-dom";
 import './../css/App.css';
 import './../css/Help_dilosi.css';
 import Nav1 from "./../components/Nav1.js"
 import Nav2 from "./../components/Nav2.js"
 import Footer from "./../components/footer.js"
+import {Arxiki} from "../Utils/Methods/index.js"
 
 export default function Help() {
   if (localStorage.getItem('role') === null) {
@@ -14,6 +16,7 @@ export default function Help() {
   return (
     <div>
         <div>{nav}</div>
+        <div className="breadcrumb_body">{Arxiki()} <Link to="/help">Βοήθεια> </Link> <Link to="/help_students">Φοιτητές> </Link> <span>Παλαιότερες Αιτήσεις και Δηλώσεις</span></div>
         <div className="body_hdilosis">
             <div className="little_box">
             <img className="himage3" alt="" src="/aithseis.png" />

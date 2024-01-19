@@ -3,6 +3,7 @@
 import "./methods.css";
 import {db} from '../../components/firebase';
 import {doc, getDoc,setDoc } from 'firebase/firestore'
+import { Link } from "react-router-dom";
 
 export function logout() {
     if (localStorage.getItem('role') !== null || localStorage.getItem('email') !== null || localStorage.getItem('AM') !== null || localStorage.getItem('name') !== null) {
@@ -162,4 +163,15 @@ export function logo() {
     if (localStorage.getItem('role') === "teacher"){
         window.location.href = "/teachers"
     }
+}
+
+export function Arxiki(){
+    if (localStorage.getItem('role') === null) {
+        return (<div><Link to="/">Αρχική σελίδα ></Link> <span>Βοήθεια</span></div>);
+      } else {
+        if (localStorage.getItem('role') === "student")
+            return(<Link to="/students">Αρχική σελίδα ></Link>);
+        if (localStorage.getItem('role') === "teacher")
+            return(<Link to="/teachers">Αρχική σελίδα ></Link>);
+    }  
 }

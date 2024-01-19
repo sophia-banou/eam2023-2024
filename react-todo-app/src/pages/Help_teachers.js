@@ -1,10 +1,11 @@
 import React from "react"
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import './../css/App.css';
 import './../css/Help_students.css';
 import Nav1 from "./../components/Nav1.js"
 import Nav2 from "./../components/Nav2.js"
 import Footer from "./../components/footer.js"
+import {Arxiki} from "../Utils/Methods/index.js"
 
 export default function Help_teachers() {
     if (localStorage.getItem('role') === null) {
@@ -15,6 +16,7 @@ export default function Help_teachers() {
   return (
     <div>
         <div>{nav}</div>
+        <div className="breadcrumb_body">{Arxiki()} <Link to="/help">Βοήθεια> </Link><span>Διδάσκοντες</span></div>
         <div className="body2">
             <div className="div2">Κατηγορίες</div>
             <Link to="/help_dhmiourgia">
