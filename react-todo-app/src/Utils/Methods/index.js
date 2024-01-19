@@ -175,17 +175,6 @@ export function Arxiki(){
             return(<Link to="/teachers">Αρχική σελίδα ></Link>);
     }  
 }
-
-export function Arxiki(){
-    if (localStorage.getItem('role') === null) {
-        return (<div><Link to="/">Αρχική σελίδα ></Link> <span>Βοήθεια</span></div>);
-      } else {
-        if (localStorage.getItem('role') === "student")
-            return(<Link to="/students">Αρχική σελίδα ></Link>);
-        if (localStorage.getItem('role') === "teacher")
-            return(<Link to="/teachers">Αρχική σελίδα ></Link>);
-    }  
-}
 export function generateTable2() {  
     var date = sessionStorage.getItem("date1");
     var status = sessionStorage.getItem("status1");
