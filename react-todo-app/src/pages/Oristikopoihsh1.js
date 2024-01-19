@@ -18,11 +18,6 @@ export default function Proswrinh1() {
         }
     }, []);
 
-    var data2={
-        date: new Date().toDateString(),
-        status: "Οριστική",
-        course_array: sessionStorage.getItem("res").split(','),
-    };
 
     sessionStorage.setItem("date1", new Date().toDateString());
     sessionStorage.setItem("status1", "Οριστική");
