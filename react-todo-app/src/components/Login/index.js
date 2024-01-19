@@ -42,6 +42,7 @@ export default function Login({db}){
             const user_code = res.data().code 
             const user_phone1 = res.data().phone1 
             const user_phone2 = res.data().phone2 
+            const user_dilosh_id = res.data().dilosh_id
 
             // Store the email and role as keys in your browser local storage
             localStorage.setItem('role', user_role)
@@ -63,6 +64,7 @@ export default function Login({db}){
             localStorage.setItem('phone1', user_phone1) 
             localStorage.setItem('phone2', user_phone2)
             localStorage.setItem('code', user_code)
+            localStorage.setItem('dilosh_id', user_dilosh_id)
 
             // Go to page /courses
             if (user_role === 'student') {
