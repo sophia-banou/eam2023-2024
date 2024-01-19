@@ -149,3 +149,11 @@ export function generateTable() {
    
 }  
 
+export function logo() {
+    if (localStorage.getItem('role') === "student") {
+        window.location.href = '/students'
+    }
+    if (localStorage.getItem('role') === "teacher"){
+        window.location.href = "/teachers"
+    }
+}

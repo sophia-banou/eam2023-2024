@@ -3,12 +3,18 @@ import {Link} from "react-router-dom";
 import './../css/App.css';
 import './../css/Help_students.css';
 import Nav1 from "./../components/Nav1.js"
+import Nav2 from "./../components/Nav2.js"
 import Footer from "./../components/footer.js"
 
 export default function Help_teachers() {
+    if (localStorage.getItem('role') === null) {
+        var nav = <Nav1 />;
+      } else {
+        var nav = <Nav2 />;
+    }
   return (
     <div>
-        <Nav1 />
+        <div>{nav}</div>
         <div className="body2">
             <div className="div2">Κατηγορίες</div>
             <Link to="/help_dhmiourgia">

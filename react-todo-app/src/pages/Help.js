@@ -8,14 +8,14 @@ import Footer from "./../components/footer.js"
 
 
 export default function Help() {
-    if (localStorage.getItem('role') === "student") {
-        var button = <Nav2 />;
+    if (localStorage.getItem('role') === null) {
+        var nav = <Nav1 />;
       } else {
-        var button = <Nav1 />;
+        var nav = <Nav2 />;
       }   
     return (
         <div>
-            <div> {button} </div>
+            <div> {nav} </div>
             <div className="help_body">
                 <div className="help_div2">ΒΟΗΘΕΙΑ</div>
 

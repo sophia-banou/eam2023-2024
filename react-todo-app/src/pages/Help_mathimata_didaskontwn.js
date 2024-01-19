@@ -2,12 +2,18 @@ import React from "react"
 import './../css/App.css';
 import './../css/Help_dilosi.css';
 import Nav1 from "./../components/Nav1.js"
+import Nav2 from "./../components/Nav2.js"
 import Footer from "./../components/footer.js"
 
 export default function Help() {
+  if (localStorage.getItem('role') === null) {
+    var nav = <Nav1 />;
+  } else {
+    var nav = <Nav2 />;
+  }
   return (
     <div>
-        <Nav1 />
+        <div>{nav}</div>
         <div className="body_hdilosis">
             <div className="little_box">
             <img className="himage3" alt="" src="/mathima.png" />
