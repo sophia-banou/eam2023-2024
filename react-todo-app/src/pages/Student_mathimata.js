@@ -22,6 +22,7 @@ export default function Student_dilosi() {
         <div>
             <Nav2 />
             <Menu />
+            <div className="breadcrumb_body2"><Link to="/students">Αρχική> </Link><span>Μαθήματα</span></div>
             <div class="d-div1">  
                 <div class="div-table">
                     <table class="d-table2">
