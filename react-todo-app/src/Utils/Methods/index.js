@@ -25,6 +25,12 @@ export function logout() {
         localStorage.removeItem('code')
         localStorage.removeItem('phone1')
         localStorage.removeItem('phone2')
+        localStorage.removeItem('startyear')
+        localStorage.removeItem('startmonth')
+        localStorage.removeItem('startday')
+        localStorage.removeItem('endyear')
+        localStorage.removeItem('endmonth')
+        localStorage.removeItem('endday')
 
         window.location.href = '/'
     }
