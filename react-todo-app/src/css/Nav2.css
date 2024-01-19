@@ -12,6 +12,7 @@
     position: relative;
     width: 200px;
     height: 60px;
+    cursor: pointer;
 }
 .profile_container {
     position: relative;

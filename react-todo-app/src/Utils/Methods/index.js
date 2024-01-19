@@ -146,7 +146,14 @@ export function logo() {
         window.location.href = "/teachers"
     }
 }
-
+export function profil() {
+    if (localStorage.getItem('role') === "student") {
+        window.location.href = '/student_profile'
+    }
+    if (localStorage.getItem('role') === "teacher"){
+        window.location.href = "/teacher_profile"
+    }
+}
 export function Arxiki(){
     if (localStorage.getItem('role') === null) {
         return (<div><Link to="/">Αρχική σελίδα ></Link> <span>Βοήθεια</span></div>);

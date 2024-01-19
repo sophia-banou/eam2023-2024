@@ -7,8 +7,8 @@ export default function Menu() {
     return (
         <div className="menu_body">
             <div className="menu-item">
-            <div className="divmenu">ΒΑΘΜΟΛΟΓΙΑ</div>
-            <div className="divmenu">ΜΑΘΗΜΑΤΑ</div>
+            <Link class="link-menu" to="/teacher_bathmologia"><div className="divmenu">ΒΑΘΜΟΛΟΓΙΑ</div></Link>
+            <Link class="link-menu" to="/teacher_mathimata"><div className="divmenu">ΜΑΘΗΜΑΤΑ</div></Link>
             </div>
         </div>
     );

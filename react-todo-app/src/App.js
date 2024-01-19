@@ -33,6 +33,9 @@ import Oristikopoihsh1 from './pages/Oristikopoihsh1';
 import Edit_profile from './pages/Edit_profile';
 import Istoriko from './pages/Istoriko';
 import Proeskopisi from './pages/Proeskopisi';
+import Teacher_profile from './pages/Teacher_profile';
+import Teacher_bathmologio from './pages/Teacher_bathhmologio';
+import Teacher_mathimata from './pages/Teacher_mathimata';
 
 export default function App() {
   return (
@@ -66,8 +69,10 @@ export default function App() {
       <Route path="/proswrinh1" element={<Proswrinh1 db={db}/>} />
       <Route path="/oristikopoihsh1" element={<Oristikopoihsh1 db={db}/>} />
       <Route path="/istoriko" element={<Istoriko db={db}/>} />
-      <Route path="/istoriko" element={<Istoriko db={db}/>} />
       <Route path="/proeskopisi" element={<Proeskopisi db={db}/>} />
+      <Route path="/teacher_profile" element={<Teacher_profile db={db}/>} />
+      <Route path="/teacher_bathmologia" element={<Teacher_bathmologio db={db}/>} />
+      <Route path="/teacher_mathimata" element={<Teacher_mathimata db={db}/>} />
     </Routes>
     </BrowserRouter>
     </div>

@@ -6,6 +6,7 @@ import "./../css/HomePage.css";
 import "./../css/Nav2.css";
 import {Button2} from "./Button1.js";
 import {logo} from "../Utils/Methods/index.js"
+import {profil} from "../Utils/Methods/index.js"
 
 export default function Nav2() {
     useEffect(()=> {
@@ -29,15 +30,13 @@ export default function Nav2() {
                     <ul>
                         <li>  <Link to="/help"> <Button2 /> </Link></li>
                         <li>  
-                        <Link to="/student_profile">
-                        <div className='profile_body'>
+                        <div className='profile_body' onClick={profil}>
                             <div className='profile_container'>
                                 <div className="profile_div">{localStorage.getItem("name")}
                                 </div>
                                 <img className="pimage" alt="" src="/profile-icon.png" />
                             </div> 
                         </div>
-                        </Link>
                         </li>
 
                     </ul>
