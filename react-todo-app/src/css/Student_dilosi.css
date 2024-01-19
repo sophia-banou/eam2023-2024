@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     height: 350px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     flex: content;
     align-items: center;
 }
@@ -37,37 +37,91 @@
     text-align:center;
     border:1px rgb(226, 226, 226) solid;
 }
+.d-table2 tr td{
+    font-weight: 200;
+    padding: 5px 10px;
+    max-width:350px;
+    text-align:center;
+    border:1px rgb(226, 226, 226) solid;
+}
 
 .drow2{
     background-color: rgb(246, 246, 246);
 }
 
-.dilosi_div{
+
+.dilosi_rectangle1 {
+    margin: auto;
+    border-radius: 3px;
+    border: 2px solid #547980;
+    width: 240px;
+    padding: 10px 10px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     line-height: 1.5;
     color: white;
     font-weight: 900;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
-    left: 15px;
-    position:absolute;
-
-}
-
-.dilosi_rectangle1 {
-    left:45%;
-    position: relative;
-    border-radius: 6px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    width: 200px;
-    height: 50px;
-    display: flex;
-    align-items: center;
+    text-shadow: none;
     background-color: #547980;
     &:hover{
-        transform: translateY(-1px);
-        border: 2px solid rgba(0, 0, 0, 0.2);
+        cursor:pointer;
+        background-color: white;
+        color: #547980;
     }
+}
+
+.button-div{
+    width: 1000px;
+    margin:auto;
+}
+
+.button-div button{
+    width: 110px;
+    height:30px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #404040;
+    border: 1px  #404040 solid;
+    border-radius: 3px;
+    font-weight: 900;
+    &:hover{
+        cursor: pointer;
+        background-color: white;
+        color: #404040;
+    }
+}
+
+.error1{
+    width: 500px;
+    height:40px;
+    margin:auto;
+    margin-bottom: 50px;
+    text-align: center;
+    color: rgb(194, 54, 54);
+}
+
+.warning-message{
+    width:500px;
+    margin:auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(194, 54, 54);
+    background-color: rgb(253, 237, 237);
+    padding: 10px 10px;
+    margin-bottom: 30px;
+}
+
+.warning-message h{
+    font-weight: bold;
+}
+
+.arrow-icon{
+    margin: auto;
+    
+}
+
+.icon-div{
+    width:1000px;
+    margin:auto;
 }

@@ -7,19 +7,11 @@ import "./../css/Student_dilosi.css";
 import Nav2 from "./../components/Nav2.js"
 import Footer from "./../components/footer.js"
 import Menu from "./../components/student_menu.js"
+import {checkAll, GetCheckboxValue} from '../Utils/Methods/index.js';
 
 
 export default function Student_dilosi() {
-    const [checked, setChecked] = useState([]);
-    const handleCheck = (event) => {
-        var updatedList = [...checked];
-        if (event.target.checked) {
-          updatedList = [...checked, event.target.value];
-        } else {
-          updatedList.splice(checked.indexOf(event.target.value), 1);
-        }
-        setChecked(updatedList);
-      };
+
     useEffect(()=> {
         // Every time you try to enter this page check if you have a saved key at the local storage. 
         // If not, then do not allow user to enter this page and redirect to login page
@@ -33,51 +25,54 @@ export default function Student_dilosi() {
             <Nav2 />
             <Menu />
             <div class="d-div1">  
+            <div class="button-div"> <button onClick={checkAll}> Επιλογή</button> </div>     
                 <div class="div-table">
                     <table class="d-table2">
                         <tr>
-                            <th class="dcell"><input type="checkbox" disabled/></th>
+                            <th class="dcell"></th>
                             <th class="dcell">Όνομα μαθήματος</th>
                             <th class="dcell">Κατεύθυνση</th>
                             <th class="dcell">Εξάμηνο</th>
                             <th class="dcell">Κατηγορία</th>
                         </tr>
                         <tr>
-                            <th ><input value={1} type="checkbox" onChange={handleCheck} /></th>
-                            <th>Μάθημα1</th>
+                            <th><input type="checkbox" class="cb" id="check1" value="eam"/></th>
+                            <th>Επικοινωνία Ανθρώπου Μηχανής</th>
                             <th>Α</th>
-                            <th>8ο</th>
-                            <th>Ελεύθερο</th>
+                            <th>7ο</th>
+                            <th>Κατ' Επιλογήν Υποχρεωτικό</th>
                         </tr>
                         <tr class="drow2">
-                            <th><input value={1} type="checkbox" onChange={handleCheck} /></th>
-                            <th>Μάθημα2</th>
-                            <th>Α</th>
-                            <th>8ο</th>
-                            <th>Ελεύθερο</th>
+                            <th><input type="checkbox" class="cb" id="check2" value="ss"/></th>
+                            <th>Σήματα & Συστήματα</th>
+                            <th>Κοινό</th>
+                            <th>3ο</th>
+                            <th>Υποχρεωτικό</th>
                         </tr>
                         <tr>
-                            <th><input value={1} type="checkbox" onChange={handleCheck} /></th>
-                            <th>Μάθημα3</th>
+                            <th><input type="checkbox" class="cb" id="check3" value="tn"/></th>
+                            <th>Τεχνητή Νοημοσύνη Ι</th>
                             <th>Α</th>
-                            <th>8ο</th>
-                            <th>Ελεύθερο</th>
+                            <th>5ο</th>
+                            <th>Προαιρετικό</th>
                         </tr>
                         <tr class="drow2">
-                            <th><input value={1} type="checkbox" onChange={handleCheck} /></th>
-                            <th>Μάθημα4</th>
+                            <th><input type="checkbox" class="cb" id="check4" value="g1"/></th>
+                            <th>Γραφικά Ι</th>
                             <th>Α</th>
-                            <th>8ο</th>
-                            <th>Ελεύθερο</th>
+                            <th>5ο</th>
+                            <th>Προαιρετικό</th>
                         </tr>
                     </table>
                 </div>
-                <Link to="/aitisi_teachers">
+
                 <div className="dilosi_rectangle1">
-                    <div className="dilosi_div">Προσωρινή Αποθήκευση</div>
+                    <div onClick={GetCheckboxValue} className="dilosi_div">Προσωρινή Αποθήκευση</div>
                 </div>
-                </Link>
+                
             </div>
+            <h4 class="error1" id="result"></h4>  
+
             
             <Footer />
         </div>

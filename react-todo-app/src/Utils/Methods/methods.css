@@ -2,7 +2,7 @@
     background-color: #b1cbb6;
     padding: 6px;
     border:1.2px  rgb(156, 173, 159) solid;
-    &:hover,active{
+    &:hover{
         cursor: pointer;
         background-color: rgb(156, 173, 159);
         color:white;
@@ -19,4 +19,50 @@
     border:1.2px  rgb(156, 173, 159) solid;
     padding: 6px;
 }
+
+
+.d-div1 {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    margin-bottom: 50px;
+    flex: content;
+    align-items: center;
+}
+
+
+.dcell{
+    font-weight: 600;
+    text-align: center;
+    background-color: #aeaeae;
+    padding: 6px;
+    border:1.2px  rgb(156, 173, 159) solid;   
+}
+
+
+.d-table2{
+    width: 1000px;
+    margin:auto;
+    border-collapse: collapse;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 50px;
+}
+
+.tr1{
+    border:1px rgb(226, 226, 226) solid;
+   
+}
+
+.th1{
+    font-weight: 200;
+    padding: 5px 10px;
+    max-width:350px;
+    text-align:center;
+    border:1px rgb(226, 226, 226) solid;
+}
+
+.drow2{
+    background-color: rgb(246, 246, 246);
+}
+
 

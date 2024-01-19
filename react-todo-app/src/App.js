@@ -28,6 +28,7 @@ import Student_bathmologies from './pages/Student_bathmologies';
 import Student_mathimata from './pages/Student_mathimata';
 import Student_aitisi from './pages/Student_aitisi';
 import Student_profile from './pages/Student_profile';
+import Proswrinh1 from './pages/Proswrinh1';
 
 export default function App() {
   return (
@@ -58,6 +59,7 @@ export default function App() {
       <Route path="/student_mathimata" element={<Student_mathimata db={db}/>} />
       <Route path="/student_aitisi" element={<Student_aitisi db={db}/>} />
       <Route path="/student_profile" element={<Student_profile db={db}/>} />
+      <Route path="/proswrinh1" element={<Proswrinh1 db={db}/>} />
     </Routes>
     </BrowserRouter>
     </div>

@@ -32,10 +32,10 @@ export default function Student_dilosi() {
                             <th class="dcell">Κατηγορία</th>
                         </tr>
                         <tr>
-                            <th>Μάθημα</th>
+                            <th>Επικοινωνία Ανθρώπου Μηχανής</th>
                             <th>Α</th>
-                            <th>8ο</th>
-                            <th>Ελεύθερο</th>
+                            <th>7ο</th>
+                            <th>Κατ'επιλογήν Υποχρεωτικό</th>
                         </tr>
                         <tr class="drow2">
                             <th>Μάθημα</th>
