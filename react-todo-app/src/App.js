@@ -31,6 +31,7 @@ import Student_profile from './pages/Student_profile';
 import Proswrinh1 from './pages/Proswrinh1';
 import Oristikopoihsh1 from './pages/Oristikopoihsh1';
 import Edit_profile from './pages/Edit_profile';
+import Istoriko from './pages/Istoriko';
 
 export default function App() {
   return (
@@ -63,7 +64,7 @@ export default function App() {
       <Route path="/student_profile" element={<Student_profile db={db}/>} />
       <Route path="/proswrinh1" element={<Proswrinh1 db={db}/>} />
       <Route path="/oristikopoihsh1" element={<Oristikopoihsh1 db={db}/>} />
-      <Route path="/edit_profile" element={<Edit_profile db={db}/>} />
+      <Route path="/istoriko" element={<Istoriko db={db}/>} />
     </Routes>
     </BrowserRouter>
     </div>
