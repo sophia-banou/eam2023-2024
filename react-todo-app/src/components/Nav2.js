@@ -21,8 +21,8 @@ export default function Nav2() {
         <header class="sticky">
             <div id="header">
                
-                <div id="logo">
-                    <img src="logo.png" alt="Logo" onClick={logo}/>
+                <div id="logo" className="hover">
+                    <img src="logo.png" alt="Logo" onClick={logo} />
                 </div> 
                 <nav id="menu">
                     

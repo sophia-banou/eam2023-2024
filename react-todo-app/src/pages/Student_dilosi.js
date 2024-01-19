@@ -68,7 +68,7 @@ export default function Student_dilosi() {
             <Nav2 />
             <Menu />
             <div>{message}</div>
-            <div class="d-div1">  
+            {/* <div class="d-div1">  
             <div class="button-div"> <button onClick={checkAll}> Επιλογή Όλων</button> </div>     
                 <div class="div-table">
                     <table class="d-table2">
@@ -115,7 +115,7 @@ export default function Student_dilosi() {
                 </div>
                 
             </div>
-            <h4 class="error1" id="result"></h4>  
+            <h4 class="error1" id="result"></h4>   */}
 
             
             <Footer />
