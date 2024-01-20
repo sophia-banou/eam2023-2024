@@ -28,7 +28,6 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     line-height: 1.5;
-    color: #ffff;
     font-weight: 900;
     text-shadow: none;
     background-color: #404040;
@@ -53,5 +52,20 @@
     font-weight: 600;
     display: flex;
     align-items: center;
-    justify-content: center;      
+    justify-content: center;     
+  }
+  .menu_div2 {
+    position: relative;
+    top: 0;
+    padding: 8px 10px;
+    width: 201px;
+    height: 34px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    color: #ffff;   
+  }
+  .link_deco{
+    text-decoration: none;
   }

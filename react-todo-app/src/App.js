@@ -36,6 +36,7 @@ import Proeskopisi from './pages/Proeskopisi';
 import Teacher_profile from './pages/Teacher_profile';
 import Teacher_bathmologio from './pages/Teacher_bathhmologio';
 import Teacher_mathimata from './pages/Teacher_mathimata';
+import Teacher_create from './pages/Teacher_create';
 
 export default function App() {
   return (
@@ -73,6 +74,7 @@ export default function App() {
       <Route path="/teacher_profile" element={<Teacher_profile db={db}/>} />
       <Route path="/teacher_bathmologia" element={<Teacher_bathmologio db={db}/>} />
       <Route path="/teacher_mathimata" element={<Teacher_mathimata db={db}/>} />
+      <Route path="/teacher_create" element={<Teacher_create db={db}/>} />
     </Routes>
     </BrowserRouter>
     </div>

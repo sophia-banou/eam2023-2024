@@ -1,9 +1,28 @@
 import React from "react";
 import {checkAll, GetCheckboxValue} from '../Utils/Methods/index.js';
+import { useState } from "react";
 import "./../css/dilosi_message.css";
 import "./../css/Student_dilosi.css";
 
 export default function Message() {
+    const [limit, setLimit] = useState(3);
+    async function handleChange (e){
+        var inputs = document.querySelectorAll('.cb');
+        var temp = 0;
+        for (var i = 0; i < inputs.length; i++) {
+            if(inputs[i].checked === true){
+                temp++;
+            }
+        }
+        if (temp > limit){
+            e.target.checked = false;
+            return document.getElementById("result").innerHTML = "Δεν έχετε επιλέξει κάποιο μάθημα";
+        }
+        else{
+            return document.getElementById("result").innerHTML = null;
+        }
+    }
+
     const smonth = localStorage.getItem("startmonth");
     const syear = localStorage.getItem("startyear");
     const sdate = localStorage.getItem("startday");
@@ -31,34 +50,35 @@ export default function Message() {
                             <th class="dcell">Κατηγορία</th>
                         </tr>
                         <tr>
-                            <th><input type="checkbox" class="cb" id="check1" value="eam"/></th>
+                            <th><input type="checkbox" class="cb" id="check1" value="eam" onChange={handleChange}/></th>
                             <th>Επικοινωνία Ανθρώπου Μηχανής</th>
                             <th>Α</th>
                             <th>7ο</th>
                             <th>Κατ' Επιλογήν Υποχρεωτικό</th>
                         </tr>
                         <tr class="drow2">
-                            <th><input type="checkbox" class="cb" id="check2" value="ss"/></th>
+                            <th><input type="checkbox" class="cb" id="check2" value="ss" onChange={handleChange}/></th>
                             <th>Σήματα & Συστήματα</th>
                             <th>Κοινό</th>
                             <th>3ο</th>
                             <th>Υποχρεωτικό</th>
                         </tr>
                         <tr>
-                            <th><input type="checkbox" class="cb" id="check3" value="tn"/></th>
+                            <th><input type="checkbox" class="cb" id="check3" value="tn"onChange={handleChange}/></th>
                             <th>Τεχνητή Νοημοσύνη Ι</th>
                             <th>Α</th>
                             <th>5ο</th>
                             <th>Προαιρετικό</th>
                         </tr>
                         <tr class="drow2">
-                            <th><input type="checkbox" class="cb" id="check4" value="g1"/></th>
+                            <th><input type="checkbox" class="cb" id="check4" value="g1"onChange={handleChange}/></th>
                             <th>Γραφικά Ι</th>
                             <th>Α</th>
                             <th>5ο</th>
                             <th>Προαιρετικό</th>
                         </tr>
                     </table>
+
                 </div>
 
                 <div className="dilosi_rectangle1">
