@@ -16,7 +16,7 @@ export default function Help_students() {
   return (
     <div>
         <div>{nav}</div>
-        <div className="breadcrumb_body">{Arxiki()} <Link to="/help">Βοήθεια> </Link><span>Φοιτητές</span></div>
+        <div className="breadcrumb_body">{Arxiki()} <Link to="/help">Βοήθεια / </Link><span>Φοιτητές</span></div>
         <div className="body2">
             <div className="div2">ΚΑΤΗΓΟΡΙΕΣ</div>
 

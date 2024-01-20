@@ -1,0 +1,57 @@
+.bath_rectangle {
+    margin-left: 5%;
+    border: 2px solid #547980;
+    width: 240px;
+    height: 70px;
+    padding: 10px 10px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: white;
+    font-weight: 900;
+    text-shadow: none;
+    background-color: #547980;
+    &:hover{
+        cursor:pointer;
+        background-color: white;
+        color: #547980;
+    }
+}
+.menu_box {
+    margin-left: 5%;
+    margin-bottom: 5%;
+    width: 220px;
+    height: fit-content;
+    padding: 10px 10px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #ffff;
+    font-weight: 900;
+    text-shadow: none;
+    background-color: #404040;
+    &:hover{
+        cursor:pointer;
+        background-color: #2d2d2d;
+    }
+}
+.plus {
+    position: absolute;
+    top:5px;
+    left: 150px;
+    max-width: 64px;
+    max-height: 64px;
+}
+.menu_div {
+    position: relative;
+    top: 0;
+    padding: 8px 10px;
+    width: 201px;
+    height: 34px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;      
+  }

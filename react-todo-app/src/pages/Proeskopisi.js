@@ -22,7 +22,7 @@ export default function Proeskopisi() {
         <div onLoad={getGrade}>
             <Nav2 />
             <Menu />
-            <div className="breadcrumb_body2"><Link to="/students">Αρχική> </Link><Link to="/student_bathmologies">Βαθμολογίες> </Link><span>Προεσκόπιση</span></div>
+            <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><Link to="/student_bathmologies">Βαθμολογίες / </Link><span>Προεσκόπιση</span></div>
 
             <div class="d-div1">
                 <div id="dyn1" class="div-table" ></div>
