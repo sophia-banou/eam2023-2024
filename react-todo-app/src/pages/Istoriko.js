@@ -8,6 +8,7 @@ import "./../css/Student_dilosi.css";
 import Footer from "./../components/footer.js"
 import { Link } from "react-router-dom";
 import { doc, getDoc, updateDoc, deleteDoc, setDoc } from 'firebase/firestore'
+import { logo } from "../Utils/Methods/index.js";
 
 export function redir1(){
     window.location.href = '/view_dilwsh';
@@ -31,11 +32,11 @@ export default function Istoriko() {
 
             if (res2.data().status == "Προσωρινή") {
                 table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
-                <td>  <Link to="/"> <img class="icont" src="./view-icon.png" />   </Link> <img class="icont" src ="./edit-icon2.png"> </td></tr>`
+                <td>  <a href='/view_dilwsh'> <img id ="gamw" class="icont" src="./view-icon.png" /> </a>   <a href='/edit_dilwsh'> <img class="icont" src ="./edit-icon2.png">  </a></td></tr>`
             } 
             else{
                 table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
-                <td> <Link to="/view_dilwsh"> <img class="icont" src="./view-icon.png" />  </Link> <img class="icont" src ="./edit-icon3.png"> </td></tr>`
+                <td> <a href='/view_dilwsh'> <img class="icont" src="./view-icon.png" />  </a> <img class="icont" src ="./edit-icon3.png"> </td></tr>`
             }
 
             
@@ -46,8 +47,10 @@ export default function Istoriko() {
 
     }
 
+ 
+
     useEffect(() => {
-        getDilwseis();
+        getDilwseis();  
         // Every time you try to enter this page check if you have a saved key at the local storage. 
         // If not, then do not allow user to enter this page and redirect to login page
         if (localStorage.getItem('role') !== "student") {
@@ -69,4 +72,5 @@ export default function Istoriko() {
             <Footer />
         </div>
     );
+
 }
