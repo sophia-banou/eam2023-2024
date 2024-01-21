@@ -13,12 +13,16 @@ import Menu from "./../components/student_menu.js"
 export default function Student_dilosi() {
     
     async function getCourse (){
+        var button1 = document.getElementById("b1");
+        var button2 = document.getElementById("b2");
+        button1.disabled = false;
+        button2.disabled = true;
         var user_email = localStorage.getItem("email");
     
         const ref = doc(db, "users", user_email); 
         const res = await getDoc(ref);
 
-        let table = '<table class="d-table2">';  
+        let table = '<div class="button-div"> <button onClick={checkAll}> Επιλογή Όλων</button> </div><table class="d-table2">';  
         table += '<tr><th class="dcell"></th><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Βαθμός</th><th class="dcell">Εξεταστική περίοδος</th></tr>';  
 
         var courses = res.data().courses;
@@ -34,6 +38,11 @@ export default function Student_dilosi() {
         if (gib){ gib.innerHTML = table;}
     }
     async function getChecked (){
+        var button1 = document.getElementById("b1");
+        var button2 = document.getElementById("b2");
+        button1.disabled = true;
+        button2.disabled = false;
+
         let table = '<table class="d-table2">';  
         table += '<tr><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Βαθμός</th><th class="dcell">Εξεταστική περίοδος</th></tr>';
         var inputs = document.querySelectorAll('.bath');
@@ -46,7 +55,7 @@ export default function Student_dilosi() {
             }
         }
         table += '</table>'; 
-        var gg = document.getElementById("dyn2");  
+        var gg = document.getElementById("dyn1");  
         if (gg){ gg.innerHTML = table;}
     }
     useEffect(()=> {
@@ -63,15 +72,12 @@ export default function Student_dilosi() {
             <Nav2 />
             <Menu />
             <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><span>Βαθμολογίες</span></div>
-            <div class="d-div1">  
-            <div class="button-div"> <button onClick={checkAll}> Επιλογή Όλων</button> </div>     
+            <div class="d-div1">       
             <div id="dyn1"></div>
-            <div id="dyn2"></div>
 
-                <div onClick={getChecked} className="dilosi_rectangle1">
-                    <div className="dilosi_div">Επόμενο➜</div>
-                </div> 
-
+            {/* <div id="asd" className="dilosi_rectangle1"></div> */}
+            <button id="b1" className="dilosi_div" onClick={getChecked}>Επόμενο</button>
+            <button id="b2" className="dilosi_div" onClick={getCourse}>Προηγούμενο</button>
             </div>
             <h4 class="error1" id="result"></h4>  
             <Footer />
