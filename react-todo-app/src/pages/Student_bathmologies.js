@@ -30,7 +30,7 @@ export default function Student_dilosi() {
             table += `<tr><th><input type="checkbox" class="bath" value="${grade}" name="${name}" id="${period}"/></th><th>${name}</td><th>${grade}</td><td>${period}</td></tr>`; 
         }
         table += '</table>'; 
-        var gib = document.getElementById("dyn3");  
+        var gib = document.getElementById("dyn1");  
         if (gib){ gib.innerHTML = table;}
     }
     async function getChecked (){

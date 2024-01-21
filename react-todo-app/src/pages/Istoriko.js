@@ -9,7 +9,13 @@ import Footer from "./../components/footer.js"
 import { Link } from "react-router-dom";
 import { doc, getDoc, updateDoc, deleteDoc, setDoc } from 'firebase/firestore'
 
+export function redir1(){
+    window.location.href = '/view_dilwsh';
+}
+
 export default function Istoriko() {
+
+
 
     async function getDilwseis(){
         const res = await getDoc(doc(db,"users",localStorage.getItem("email")));
@@ -23,10 +29,19 @@ export default function Istoriko() {
 
             const res2 = await getDoc(doc(db,"diloseis",id));
 
-            table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> <td> <img class="icont" src="./view-icon.png" /> <img class="icont" src ="./edit-icon2.png"></td></tr>`
+            if (res2.data().status == "Προσωρινή") {
+                table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
+                <td>  <Link to="/"> <img class="icont" src="./view-icon.png" />   </Link> <img class="icont" src ="./edit-icon2.png"> </td></tr>`
+            } 
+            else{
+                table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
+                <td> <Link to="/view_dilwsh"> <img class="icont" src="./view-icon.png" />  </Link> <img class="icont" src ="./edit-icon3.png"> </td></tr>`
+            }
+
+            
         }
         table += '</table>';   
-        var gib = document.getElementById("dyn1");  
+        var gib = document.getElementById("dyn");  
         if (gib){ gib.innerHTML = table;}
 
     }
@@ -49,7 +64,7 @@ export default function Istoriko() {
                 <h>Δηλώσεις</h>
             </div>
         
-            <div id="dyn1" class="div-table" ></div>
+            <div id="dyn" class="div-table" ></div>
 
             <Footer />
         </div>

@@ -37,6 +37,8 @@ import Teacher_profile from './pages/Teacher_profile';
 import Teacher_bathmologio from './pages/Teacher_bathhmologio';
 import Teacher_mathimata from './pages/Teacher_mathimata';
 import Teacher_create from './pages/Teacher_create';
+import Edit_dilwsh from './pages/Edit_dilwsh';
+import View_dilwsh from './pages/View_dilwsh';
 
 export default function App() {
   return (
@@ -75,6 +77,9 @@ export default function App() {
       <Route path="/teacher_bathmologia" element={<Teacher_bathmologio db={db}/>} />
       <Route path="/teacher_mathimata" element={<Teacher_mathimata db={db}/>} />
       <Route path="/teacher_create" element={<Teacher_create db={db}/>} />
+      <Route path="/edit_dilwsh" element={<Edit_dilwsh db={db}/>} />
+      <Route path="/view_dilwsh" element={<View_dilwsh db={db}/>} />
+
     </Routes>
     </BrowserRouter>
     </div>
