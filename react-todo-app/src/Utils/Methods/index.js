@@ -165,24 +165,6 @@ export function Arxiki(){
     }  
 }
 
-export function getChecked (){
-    let table = '<table class="d-table2">';  
-    table += '<tr><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Βαθμός</th><th class="dcell">Εξεταστική περίοδος</th></tr>';
-    var inputs = document.querySelectorAll('.bath');
-    for (var i = 0; i < inputs.length; i++) {
-        if(inputs[i].checked === true){
-            var grade = inputs[i].value;
-            var name = inputs[i].name;
-            var period = inputs[i].id;
-            table += `<tr><th>${name}</td><th>${grade}</td><th>${period}</td></tr>`; 
-        }
-    }
-    table += '</table>'; 
-    var gg = document.getElementById("proeskopisi");  
-    if (gg){ gg.innerHTML = table;}
-    //window.location.href = './proeskopisi' ;
-}
-
 export function getGrade() {  
     var data = sessionStorage.getItem("res2").split(',');
 
