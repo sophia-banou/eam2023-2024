@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from 'react';
 import { db } from '../components/firebase.js';
+import {doc, getDoc} from 'firebase/firestore'
 import {Link} from "react-router-dom";
 import {checkAll, GetCheckboxValue2} from '../Utils/Methods/index.js';
 import "./../css/HomePage.css";
@@ -10,8 +11,22 @@ import Footer from "./../components/footer.js"
 import Menu from "./../components/student_menu.js"
 
 export default function Student_dilosi() {
+    
+    async function getCourse (){
+        var user_email = localStorage.getItem("email");
+    
+        const ref = doc(db, "users", user_email); 
+        const res = await getDoc(ref);
+        var courses = res.data().courses;
+        for (var id = 0; id < courses.data().length; id++){
+            var grade = id.data().grade;
+            var name = id.data().name;
+        }
+
+    }
 
     useEffect(()=> {
+        getCourse();
         // Every time you try to enter this page check if you have a saved key at the local storage. 
         // If not, then do not allow user to enter this page and redirect to login page
         if (localStorage.getItem('role') !== "student") {
@@ -23,7 +38,7 @@ export default function Student_dilosi() {
         <div>
             <Nav2 />
             <Menu />
-            <div className="breadcrumb_body2"><Link to="/students">Αρχική> </Link><span>Βαθμολογίες</span></div>
+            <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><span>Βαθμολογίες</span></div>
             <div class="d-div1">  
             <div class="button-div"> <button onClick={checkAll}> Επιλογή Όλων</button> </div>     
                 <div class="div-table">

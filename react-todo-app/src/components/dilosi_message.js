@@ -1,11 +1,22 @@
 import React from "react";
 import {checkAll, GetCheckboxValue} from '../Utils/Methods/index.js';
-import { useState } from "react";
+import { useEffect} from "react";
+import { db } from '../components/firebase.js';
+import {doc, getDoc} from 'firebase/firestore'
 import "./../css/dilosi_message.css";
 import "./../css/Student_dilosi.css";
 
 export default function Message() {
-    const [limit, setLimit] = useState(3);
+    var limit;
+    
+    async function getLimit (){
+        var semester = localStorage.getItem("semester");
+    
+        const ref = doc(db, "limits", semester); 
+        const res = await getDoc(ref);
+        limit = res.data().mathimata;
+    }
+
     async function handleChange (e){
         var inputs = document.querySelectorAll('.cb');
         var temp = 0;
@@ -16,12 +27,15 @@ export default function Message() {
         }
         if (temp > limit){
             e.target.checked = false;
-            return document.getElementById("result").innerHTML = "Δεν έχετε επιλέξει κάποιο μάθημα";
+            return document.getElementById("result").innerHTML = "Έχετε φτάσει το ανώτατο όριο μαθημάτων για το εξάμηνο σας";
         }
         else{
             return document.getElementById("result").innerHTML = null;
         }
     }
+    useEffect(()=> {
+        getLimit();
+    },[])
 
     const smonth = localStorage.getItem("startmonth");
     const syear = localStorage.getItem("startyear");
@@ -39,7 +53,7 @@ export default function Message() {
             </div>
         </div>
         <div class="d-div1">  
-            <div class="button-div"> <button onClick={checkAll}> Επιλογή Όλων</button> </div>     
+            {/* <div class="button-div"> <button onClick={checkAll}> Επιλογή Όλων</button> </div>      */}
                 <div class="div-table">
                     <table class="d-table2">
                         <tr>
