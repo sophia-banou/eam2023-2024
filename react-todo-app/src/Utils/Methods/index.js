@@ -183,8 +183,9 @@ export function getChecked (){
     //window.location.href = './proeskopisi' ;
 }
 
+
 export function getGrade() {  
-    var data = sessionStorage.getItem("res2").split(',');
+    var data = sessionStorage.getItem("res").split(',');
 
     let table = '<table class="d-table2">';  
     table += '<tr><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Βαθμός</th><th class="dcell">Εξεταστική περίοδος</th></tr>';  

@@ -30,7 +30,7 @@ export default function Student_dilosi() {
             table += `<tr><th><input type="checkbox" class="bath" value="${grade}" name="${name}" id="${period}"/></th><th>${name}</td><th>${grade}</td><td>${period}</td></tr>`; 
         }
         table += '</table>'; 
-        var gib = document.getElementById("dyn1");  
+        var gib = document.getElementById("dyn3");  
         if (gib){ gib.innerHTML = table;}
     }
     useEffect(()=> {
@@ -49,7 +49,7 @@ export default function Student_dilosi() {
             <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><span>Βαθμολογίες</span></div>
             <div class="d-div1">  
             <div class="button-div"> <button onClick={checkAll}> Επιλογή Όλων</button> </div>     
-            <div id="dyn1"></div>
+            <div id="dyn3"></div>
             <Link to="/proeskopisi">
                 <div className="dilosi_rectangle1">
                     <div className="dilosi_div">Επόμενο➜</div>
