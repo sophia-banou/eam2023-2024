@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { db } from '../components/firebase.js';
 import {doc, getDoc} from 'firebase/firestore'
 import {Link} from "react-router-dom";
-import {checkAll, GetCheckboxValue2} from '../Utils/Methods/index.js';
+import {checkAll, getChecked} from '../Utils/Methods/index.js';
 import "./../css/HomePage.css";
 import "./../css/Student_dilosi.css";
 import Nav2 from "./../components/Nav2.js"
@@ -19,7 +19,7 @@ export default function Student_dilosi() {
         const res = await getDoc(ref);
 
         let table = '<table class="d-table2">';  
-        table += '<tr><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Βαθμός</th><th class="dcell">Εξεταστική περίοδος</th></tr>';  
+        table += '<tr><th class="dcell"></th><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Βαθμός</th><th class="dcell">Εξεταστική περίοδος</th></tr>';  
 
         var courses = res.data().courses;
 
@@ -27,16 +27,12 @@ export default function Student_dilosi() {
             var grade = courses[id].grade;
             var name = courses[id].name;
             var period = courses[id].period;
-            table += `<tr><th>${name}</td><th>${grade}</td><td>${period}</td></tr>`; 
+            table += `<tr><th><input type="checkbox" class="bath" value="${grade}" name="${name}" id="${period}"/></th><th>${name}</td><th>${grade}</td><td>${period}</td></tr>`; 
         }
         table += '</table>'; 
         var gib = document.getElementById("dyn1");  
         if (gib){ gib.innerHTML = table;}
-
-
-
     }
-
     useEffect(()=> {
         getCourse();
         // Every time you try to enter this page check if you have a saved key at the local storage. 
@@ -54,13 +50,13 @@ export default function Student_dilosi() {
             <div class="d-div1">  
             <div class="button-div"> <button onClick={checkAll}> Επιλογή Όλων</button> </div>     
             <div id="dyn1"></div>
-
+            <Link to="/proeskopisi">
                 <div className="dilosi_rectangle1">
-                    <div onClick={GetCheckboxValue2} className="dilosi_div">Επόμενο➜</div>
-                </div>
-                
+                    <div className="dilosi_div">Επόμενο➜</div>
+                </div> 
+            </Link>
             </div>
-            <h4 class="error1" id="result"></h4>   */
+            <h4 class="error1" id="result"></h4>  
             <Footer />
         </div>
     );

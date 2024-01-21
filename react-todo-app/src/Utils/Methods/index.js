@@ -179,42 +179,24 @@ export function generateTable2() {
    
 }  
 
-var res2 = [];
-
-export function GetCheckboxValue2() {
-    var l1 = document.getElementById("check1");
-    var l2 = document.getElementById("check2");
-    var l3 = document.getElementById("check3");
-    var l4 = document.getElementById("check4");
-    var pl1 = l1.value;
-    var pl2 = l2.value;
-    var pl3 = l3.value;
-    var pl4 = l4.value;
-
-
-
-    res2 = new Array();
-
-    if (l1.checked == true) {
-        res2.push(pl1);
+export function getChecked (){
+    let table = '<table class="d-table2">';  
+    table += '<tr><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Βαθμός</th><th class="dcell">Εξεταστική περίοδος</th></tr>';
+    var inputs = document.querySelectorAll('.bath');
+    for (var i = 0; i < inputs.length; i++) {
+        if(inputs[i].checked === true){
+            var grade = inputs[i].value;
+            var name = inputs[i].name;
+            var period = inputs[i].id;
+            table += `<tr><th>${name}</td><th>${grade}</td><th>${period}</td></tr>`; 
+        }
     }
-    if (l2.checked == true) {
-        res2.push(pl2);
-    }
-    if (l3.checked == true) {
-        res2.push(pl3);
-    }
-    if (l4.checked == true) {
-        res2.push(pl4);
-    }
-    if (l1.checked != true && l2.checked != true && l3.checked != true && l4.checked != true) {
-        return document.getElementById("result").innerHTML = "Δεν έχετε επιλέξει κάποιο μάθημα";
-    } else {
-        sessionStorage.setItem("res2",res2);
-        window.location.href = './proeskopisi' ;
-    }
-
+    table += '</table>'; 
+    var gg = document.getElementById("proeskopisi");  
+    if (gg){ gg.innerHTML = table;}
+    //window.location.href = './proeskopisi' ;
 }
+
 export function getGrade() {  
     var data = sessionStorage.getItem("res2").split(',');
 

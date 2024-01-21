@@ -7,7 +7,7 @@ import "./../css/Student_dilosi.css";
 import Nav2 from "./../components/Nav2.js"
 import Footer from "./../components/footer.js"
 import Menu from "./../components/student_menu.js"
-import { getGrade } from "../Utils/Methods/index.js";
+import { getChecked } from "../Utils/Methods/index.js";
 
 export default function Proeskopisi() {
     useEffect(() => {
@@ -19,13 +19,13 @@ export default function Proeskopisi() {
     }, []);
 
     return (
-        <div onLoad={getGrade}>
+        <div onLoad={getChecked}>
             <Nav2 />
             <Menu />
             <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><Link to="/student_bathmologies">Βαθμολογίες / </Link><span>Προεσκόπιση</span></div>
 
             <div class="d-div1">
-                <div id="dyn1" class="div-table" ></div>
+            <div id="proeskopisi"></div>
                 <div className="dilosi_rectangle1">
                     <div className="dilosi_div">
                         Εκτύπωση 🖨️
