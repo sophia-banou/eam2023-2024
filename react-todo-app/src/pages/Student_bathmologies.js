@@ -33,8 +33,6 @@ export default function Student_dilosi() {
         var gib = document.getElementById("dyn1");  
         if (gib){ gib.innerHTML = table;}
 
-
-
     }
 
     useEffect(()=> {
