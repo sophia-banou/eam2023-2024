@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { db } from '../components/firebase.js';
 import {doc, getDoc} from 'firebase/firestore'
 import {Link} from "react-router-dom";
-import {checkAll, getChecked} from '../Utils/Methods/index.js';
+import {checkAll} from '../Utils/Methods/index.js';
 import "./../css/HomePage.css";
 import "./../css/Student_dilosi.css";
 import Nav2 from "./../components/Nav2.js"
@@ -33,6 +33,22 @@ export default function Student_dilosi() {
         var gib = document.getElementById("dyn3");  
         if (gib){ gib.innerHTML = table;}
     }
+    async function getChecked (){
+        let table = '<table class="d-table2">';  
+        table += '<tr><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Βαθμός</th><th class="dcell">Εξεταστική περίοδος</th></tr>';
+        var inputs = document.querySelectorAll('.bath');
+        for (var i = 0; i < inputs.length; i++) {
+            if(inputs[i].checked === true){
+                var grade = inputs[i].value;
+                var name = inputs[i].name;
+                var period = inputs[i].id;
+                table += `<tr><th>${name}</td><th>${grade}</td><th>${period}</td></tr>`; 
+            }
+        }
+        table += '</table>'; 
+        var gg = document.getElementById("dyn2");  
+        if (gg){ gg.innerHTML = table;}
+    }
     useEffect(()=> {
         getCourse();
         // Every time you try to enter this page check if you have a saved key at the local storage. 
@@ -49,12 +65,13 @@ export default function Student_dilosi() {
             <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><span>Βαθμολογίες</span></div>
             <div class="d-div1">  
             <div class="button-div"> <button onClick={checkAll}> Επιλογή Όλων</button> </div>     
-            <div id="dyn3"></div>
-            <Link to="/proeskopisi">
-                <div className="dilosi_rectangle1">
+            <div id="dyn1"></div>
+            <div id="dyn2"></div>
+
+                <div onClick={getChecked} className="dilosi_rectangle1">
                     <div className="dilosi_div">Επόμενο➜</div>
                 </div> 
-            </Link>
+
             </div>
             <h4 class="error1" id="result"></h4>  
             <Footer />
