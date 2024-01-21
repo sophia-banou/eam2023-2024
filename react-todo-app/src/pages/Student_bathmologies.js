@@ -9,7 +9,6 @@ import "./../css/Student_dilosi.css";
 import Nav2 from "./../components/Nav2.js"
 import Footer from "./../components/footer.js"
 import Menu from "./../components/student_menu.js"
-import { getGrade } from "../Utils/Methods/index.js";
 
 export default function Student_dilosi() {
     
@@ -23,16 +22,11 @@ export default function Student_dilosi() {
         table += '<tr><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Βαθμός</th><th class="dcell">Εξεταστική περίοδος</th></tr>';  
 
         var courses = res.data().courses;
-        //var courses2 = Object.entries(courses);
 
         for (var id = 0; id < courses.length; id++){
             var grade = courses[id].grade;
             var name = courses[id].name;
             var period = courses[id].period;
-            // var data ={
-            //     grade: grade,
-            //     name: name
-            // };
             table += `<tr><th>${name}</td><th>${grade}</td><td>${period}</td></tr>`; 
         }
         table += '</table>'; 
