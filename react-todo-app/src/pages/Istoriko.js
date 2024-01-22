@@ -30,7 +30,7 @@ export default function Istoriko() {
             const res2 = await getDoc(doc(db,"diloseis",id));
             if (res2.data().status == "Προσωρινή") {
                 table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
-                <td> <img class="vicon" src="./view-icon.png" value=${id} />    <a href='/edit_dilwsh'> <img class="icont" src ="./edit-icon2.png">  </a></td></tr>`
+                <td> <img class="vicon" src="./view-icon.png" value=${id} />   <img class="eicon" src ="./edit-icon2.png">  </td></tr>`
             } 
             else{
                 table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
@@ -39,8 +39,6 @@ export default function Istoriko() {
            
             
         }
-       
-        //table += `<tr> <td> ${sessionStorage.getItem("did")} </td> </tr>`;
         table += '</table>';   
         var gib = document.getElementById("dyn");  
         if (gib){ gib.innerHTML = table;}
@@ -50,15 +48,19 @@ export default function Istoriko() {
 
     var d_el;
 
-    function redir(){
-        window.location.assign('/view_dilwsh');
-    }
 
     function handleClick (){
         var value = d_el.getAttribute("value");
         console.log(d_el, value);
         sessionStorage.setItem("did",value);
-        redir();
+        window.location.assign('/view_dilwsh');
+    }
+
+    function handleClick2 (){
+        var value = d_el.getAttribute("value");
+        console.log(d_el, value);
+        sessionStorage.setItem("did",value);
+        window.location.assign('/edit_dilwsh');
     }
 
     function jj(){
@@ -67,6 +69,13 @@ export default function Istoriko() {
             d_el = inputs[i];
             console.log(d_el);
             d_el.addEventListener('click', handleClick);
+        }
+
+        var inputs2 = document.querySelectorAll('.eicon');
+        for (var i = 0; i < inputs2.length; i++) {
+            d_el = inputs2[i];
+            console.log(d_el);
+            d_el.addEventListener('click', handleClick2);
         }
 
     }

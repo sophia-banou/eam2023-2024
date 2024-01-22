@@ -20,6 +20,7 @@ export default function View_dilwsh(){
     }
     
     useEffect(() => {
+        console.log(sessionStorage.getItem("did"));
         // Every time you try to enter this page check if you have a saved key at the local storage. 
         // If not, then do not allow user to enter this page and redirect to login page
         if (localStorage.getItem('role') !== "student") {

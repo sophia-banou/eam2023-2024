@@ -15,7 +15,6 @@ export default function Proswrinh1() {
 
         const ref = doc(db, "users", localStorage.getItem("email"));
         const res = await getDoc(ref);
-
         var d_id = res.data().d_id;
         var current_period = res.data().current_period;
         var flag = true;
@@ -58,7 +57,7 @@ export default function Proswrinh1() {
         var year = today.getFullYear();
         var date = today.getDate();
         var currentDate = date + '/' + month + '/' + year;
-    
+      
 
         await setDoc(doc(db, "diloseis", new_id2), {
 
