@@ -99,13 +99,13 @@ export function GetCheckboxValue() {
             return document.getElementById("result").innerHTML = "Δεν έχετε επιλέξει κάποιο μάθημα";
         }
         else {
-            sessionStorage.setItem("res",res);
+            sessionStorage.setItem("res", JSON.stringify(res));
             window.location.href = './proswrinh1' ;
         }
 }  
 
 export function generateTable() {  
-    var data = sessionStorage.getItem("res");
+    var data = JSON.parse(sessionStorage.getItem("res"));
 
     let table = '<table class="d-table2">';  
     table += '<tr><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Κατεύθυνση</th><th class="dcell">Εξάμηνο</th> <th class="dcell">Κατηγορία</th></tr>';  
