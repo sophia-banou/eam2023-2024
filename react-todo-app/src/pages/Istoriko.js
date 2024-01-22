@@ -14,28 +14,7 @@ import { doc, getDoc, updateDoc, deleteDoc, setDoc } from 'firebase/firestore'
 
 export default function Istoriko() {
 
-    var d_el;
-
-    function redir(){
-        window.location.assign('/');
-    }
-
-    async function handleClick (){
-        var value = d_el.getAttribute("value");
-        console.log(d_el, value);
-        sessionStorage.setItem("did",value);
-        redir();
-    }
-
-    async function jj(){
-        var inputs = document.querySelectorAll('.vicon');
-        for (var i = 0; i < inputs.length; i++) {
-            d_el = inputs[i];
-            console.log(d_el);
-            d_el.addEventListener('click', handleClick, false);
-        }
-
-    }
+   
 
     async function getDilwseis(){
 
@@ -60,12 +39,35 @@ export default function Istoriko() {
            
             
         }
-        jj();
+       
         //table += `<tr> <td> ${sessionStorage.getItem("did")} </td> </tr>`;
         table += '</table>';   
         var gib = document.getElementById("dyn");  
         if (gib){ gib.innerHTML = table;}
-     
+        jj();
+
+    }
+
+    var d_el;
+
+    function redir(){
+        window.location.assign('/view_dilwsh');
+    }
+
+    function handleClick (){
+        var value = d_el.getAttribute("value");
+        console.log(d_el, value);
+        sessionStorage.setItem("did",value);
+        redir();
+    }
+
+    function jj(){
+        var inputs = document.querySelectorAll('.vicon');
+        for (var i = 0; i < inputs.length; i++) {
+            d_el = inputs[i];
+            console.log(d_el);
+            d_el.addEventListener('click', handleClick);
+        }
 
     }
 
