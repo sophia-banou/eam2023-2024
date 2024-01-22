@@ -46,9 +46,15 @@ export default function Message() {
     const edate =localStorage.getItem("endday");
     var start = `${smonth}/${sdate}/${syear}`;
     var end = `${emonth}/${edate}/${eyear}`;
-
-    async function getCourse (){
     
+    async function jj(){
+        var inputs = document.querySelectorAll('.cb');
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('change', handleChange, false);
+            
+        }
+    }
+    async function getCourse (){
         const ref = doc(db, "courses", "all_courses"); 
         const res = await getDoc(ref);
 
@@ -62,11 +68,12 @@ export default function Message() {
             var name = courses[id].name;
             var semester = courses[id].semester;
             var category = courses[id].category;
-            table += `<tr><th><input type="checkbox" class="cb" onChange="${handleChange()}"/></th><th>${name}</th><th>${track}</th><th>${semester}</th><th>${category}</th></tr>`; 
+            table += `<tr><th><input type="checkbox" class="cb"/></th><th>${name}</th><th>${track}</th><th>${semester}</th><th>${category}</th></tr>`; 
         }
         table += '</table>'; 
         var dil = document.getElementById("diloseis-table");  
         if (dil){ dil.innerHTML = table;}
+        jj();
     }
     return( 
         <div>
