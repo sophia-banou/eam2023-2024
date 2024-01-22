@@ -50,10 +50,11 @@ export default function Message() {
     async function jj(){
         var inputs = document.querySelectorAll('.cb');
         for (var i = 0; i < inputs.length; i++) {
-            inputs[i].addEventListener('change', handleChange, false);
+            inputs[i].addEventListener('change',handleChange, false);
             
         }
     }
+
     async function getCourse (){
         const ref = doc(db, "courses", "all_courses"); 
         const res = await getDoc(ref);
