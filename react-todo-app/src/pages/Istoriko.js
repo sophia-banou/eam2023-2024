@@ -14,13 +14,30 @@ import { doc, getDoc, updateDoc, deleteDoc, setDoc } from 'firebase/firestore'
 
 export default function Istoriko() {
 
+    var d_el;
+
+    function redir(){
+        window.location.assign('/');
+    }
+
+    async function handleClick (){
+        var value = d_el.getAttribute("value");
+        console.log(d_el, value);
+        sessionStorage.setItem("did",value);
+        redir();
+    }
+
+    async function jj(){
+        var inputs = document.querySelectorAll('.vicon');
+        for (var i = 0; i < inputs.length; i++) {
+            d_el = inputs[i];
+            console.log(d_el);
+            d_el.addEventListener('click', handleClick, false);
+        }
+
+    }
 
     async function getDilwseis(){
-        window.onload = function () {
-            function redir2(){
-                window.location.href('/');
-            }
-        }
 
         const res = await getDoc(doc(db,"users",localStorage.getItem("email")));
         var d_id = res.data().d_id;
@@ -34,18 +51,21 @@ export default function Istoriko() {
             const res2 = await getDoc(doc(db,"diloseis",id));
             if (res2.data().status == "Προσωρινή") {
                 table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
-                <td> <img class="vicon" src="./view-icon.png" />    <a href='/edit_dilwsh'> <img class="icont" src ="./edit-icon2.png">  </a></td></tr>`
+                <td> <img class="vicon" src="./view-icon.png" value=${id} />    <a href='/edit_dilwsh'> <img class="icont" src ="./edit-icon2.png">  </a></td></tr>`
             } 
             else{
                 table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
-                <td>  <img class="vicon" src="./view-icon.png" />  <img class="icont" src ="./edit-icon3.png"> </td></tr>`
+                <td>  <img class="vicon" src="./view-icon.png" value=${id} />  <img class="icont" src ="./edit-icon3.png"> </td></tr>`
             }
            
             
         }
+        jj();
+        //table += `<tr> <td> ${sessionStorage.getItem("did")} </td> </tr>`;
         table += '</table>';   
         var gib = document.getElementById("dyn");  
         if (gib){ gib.innerHTML = table;}
+     
 
     }
 
