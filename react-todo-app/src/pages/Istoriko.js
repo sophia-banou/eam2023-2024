@@ -11,10 +11,17 @@ import { doc, getDoc, updateDoc, deleteDoc, setDoc } from 'firebase/firestore'
 
 
 
+
 export default function Istoriko() {
 
 
     async function getDilwseis(){
+        window.onload = function () {
+            function redir2(){
+                window.location.href('/');
+            }
+        }
+
         const res = await getDoc(doc(db,"users",localStorage.getItem("email")));
         var d_id = res.data().d_id;
 
@@ -25,16 +32,15 @@ export default function Istoriko() {
             var id = d_id[i];
 
             const res2 = await getDoc(doc(db,"diloseis",id));
-
             if (res2.data().status == "Προσωρινή") {
                 table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
-                <td>  <a href='/view_dilwsh'> <img class="icont" src="./view-icon.png" /> </a>   <a href='/edit_dilwsh'> <img class="icont" src ="./edit-icon2.png">  </a></td></tr>`
+                <td> <img class="vicon" src="./view-icon.png" />    <a href='/edit_dilwsh'> <img class="icont" src ="./edit-icon2.png">  </a></td></tr>`
             } 
             else{
                 table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
-                <td> <a href='/view_dilwsh'> <img class="icont" src="./view-icon.png" />  </a> <img class="icont" src ="./edit-icon3.png"> </td></tr>`
+                <td>  <img class="vicon" src="./view-icon.png" />  <img class="icont" src ="./edit-icon3.png"> </td></tr>`
             }
-
+           
             
         }
         table += '</table>';   
