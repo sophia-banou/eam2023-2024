@@ -27,14 +27,15 @@ export default function Message() {
         }
         if (temp > limit){
             e.target.checked = false;
-            return document.getElementById("result").innerHTML = "Έχετε φτάσει το ανώτατο όριο μαθημάτων για το εξάμηνο σας";
+            document.getElementById("result").innerHTML = "Έχετε φτάσει το ανώτατο όριο μαθημάτων για το εξάμηνο σας";
         }
         else{
-            return document.getElementById("result").innerHTML = null;
+            document.getElementById("result").innerHTML = null;
         }
     }
     useEffect(()=> {
         getLimit();
+        getCourse();
     },[])
 
     const smonth = localStorage.getItem("startmonth");
@@ -45,6 +46,28 @@ export default function Message() {
     const edate =localStorage.getItem("endday");
     var start = `${smonth}/${sdate}/${syear}`;
     var end = `${emonth}/${edate}/${eyear}`;
+
+    async function getCourse (){
+    
+        const ref = doc(db, "courses", "all_courses"); 
+        const res = await getDoc(ref);
+
+        let table = '<table class="d-table2">';  
+        table += '<tr><th class="dcell"></th><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Κατεύθυνση</th><th class="dcell">Εξάμηνο</th><th class="dcell">Κατηγορία</th></tr>';  
+
+        var courses = res.data().courses;
+
+        for (var id = 0; id < courses.length; id++){
+            var track = courses[id].track;
+            var name = courses[id].name;
+            var semester = courses[id].semester;
+            var category = courses[id].category;
+            table += `<tr><th><input type="checkbox" class="cb" onChange="${handleChange()}"/></th><th>${name}</th><th>${track}</th><th>${semester}</th><th>${category}</th></tr>`; 
+        }
+        table += '</table>'; 
+        var dil = document.getElementById("diloseis-table");  
+        if (dil){ dil.innerHTML = table;}
+    }
     return( 
         <div>
         <div className='rectangle_long1'>
@@ -54,8 +77,14 @@ export default function Message() {
         </div>
         <div class="d-div1">  
             {/* <div class="button-div"> <button onClick={checkAll}> Επιλογή Όλων</button> </div>      */}
-                <div class="div-table">
-                    <table class="d-table2">
+                <div id="diloseis-table">
+                    {/* <table class="d-table2">
+                    <tr><th class="dcell"></th><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Κατεύθυνση</th><th class="dcell">Εξάμηνο</th><th class="dcell">Κατηγορία</th></tr>
+                    <tr><th><input type="checkbox" class="cb" onChange={handleChange()}/></th><th>${name}</th><th>${track}</th><th>${semester}</th><th>${category}</th></tr>
+                    </table> */}
+
+                </div>
+                    {/* <table class="d-table2">
                         <tr>
                             <th class="dcell"></th>
                             <th class="dcell">Όνομα μαθήματος</th>
@@ -91,9 +120,8 @@ export default function Message() {
                             <th>5ο</th>
                             <th>Προαιρετικό</th>
                         </tr>
-                    </table>
+                    </table> */}
 
-                </div>
 
                 <div className="dilosi_rectangle1">
                     <div onClick={GetCheckboxValue} className="dilosi_div">Προσωρινή Αποθήκευση</div>
