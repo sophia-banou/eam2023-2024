@@ -91,10 +91,7 @@ export function GetCheckboxValue() {
     var inputs = document.querySelectorAll('.cb');
         for (var i = 0; i < inputs.length; i++) {
             if(inputs[i].checked === true){
-                res.push(inputs[i].name);
-                res.push(inputs[i].value);
-                res.push(inputs[i].id);
-                res.push(inputs[i].title);
+                res[count] = new Array(inputs[i].name, inputs[i].value, inputs[i].id, inputs[i].title)
                 count++;
             }
         }
@@ -108,18 +105,18 @@ export function GetCheckboxValue() {
 }  
 
 export function generateTable() {  
-    var data = sessionStorage.getItem("res").split(',');
+    var data = sessionStorage.getItem("res");
 
     let table = '<table class="d-table2">';  
-    table += '<tr><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Κατεύθυνση</th><th class="dcell">Εξάμηνο</th> <th class="dcell">Κατηγορία</th></tr><tr>';  
+    table += '<tr><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Κατεύθυνση</th><th class="dcell">Εξάμηνο</th> <th class="dcell">Κατηγορία</th></tr>';  
    
     for (var i=0; i<data.length; i++){
-        var reg = data[i];
-        table += `<th>${reg}</th>`;
+        var course = data[i];
+        table += `<tr><th>${course[0]}</th><th>${course[1]}</th><th>${course[2]}</th><th>${course[3]}</th></tr>`;
     }
     
-    table += '</tr></table>';   
-    var gib = document.getElementById("dyn1");  
+    table += '</table>';   
+    var gib = document.getElementById("dyn10");  
     if (gib){ gib.innerHTML = table;}
    
 }  

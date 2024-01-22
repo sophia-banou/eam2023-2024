@@ -98,7 +98,7 @@ export default function Proswrinh1() {
             </div>
 
             <div class="d-div1">
-                <div id="dyn1" class="div-table" ></div>
+                <div id="dyn10" class="div-table" ></div>
 
                 <div class="warning-message"> <h>Προσοχή!</h> <br></br>Αν πατήσετε οριστική υποβολή δεν θα μπορείτε να επεξεργαστείτε
                     περαιτέρω αυτήν την δήλωση</div>
