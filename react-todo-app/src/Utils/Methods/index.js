@@ -86,53 +86,39 @@ export function checkAll() {
 var res = [];
 
 export function GetCheckboxValue() {
-    var l1 = document.getElementById("check1");
-    var l2 = document.getElementById("check2");
-    var l3 = document.getElementById("check3");
-    var l4 = document.getElementById("check4");
-    var pl1 = l1.value;
-    var pl2 = l2.value;
-    var pl3 = l3.value;
-    var pl4 = l4.value;
-
-
-
     res = new Array();
-
-    if (l1.checked == true) {
-        res.push(pl1);
-    }
-    if (l2.checked == true) {
-        res.push(pl2);
-    }
-    if (l3.checked == true) {
-        res.push(pl3);
-    }
-    if (l4.checked == true) {
-        res.push(pl4);
-    }
-    if (l1.checked != true && l2.checked != true && l3.checked != true && l4.checked != true) {
-        return document.getElementById("result").innerHTML = "Δεν έχετε επιλέξει κάποιο μάθημα";
-    } else {
-        sessionStorage.setItem("res",res);
-        window.location.href = './proswrinh1' ;
-    }
-
+    var count = 0;
+    var inputs = document.querySelectorAll('.cb');
+        for (var i = 0; i < inputs.length; i++) {
+            if(inputs[i].checked === true){
+                res.push(inputs[i].name);
+                res.push(inputs[i].value);
+                res.push(inputs[i].id);
+                res.push(inputs[i].title);
+                count++;
+            }
+        }
+        if (count == 0){
+            return document.getElementById("result").innerHTML = "Δεν έχετε επιλέξει κάποιο μάθημα";
+        }
+        else {
+            sessionStorage.setItem("res",res);
+            window.location.href = './proswrinh1' ;
+        }
 }  
 
 export function generateTable() {  
     var data = sessionStorage.getItem("res").split(',');
 
     let table = '<table class="d-table2">';  
-    table += '<tr><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Κατεύθυνση</th><th class="dcell">Εξάμηνο</th> <th class="dcell">Κατηγορία</th></tr>';  
+    table += '<tr><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Κατεύθυνση</th><th class="dcell">Εξάμηνο</th> <th class="dcell">Κατηγορία</th></tr><tr>';  
    
     for (var i=0; i<data.length; i++){
-        var id1 = data[i];
-        let course = courses.find(course => course.id === id1);
-        table += `<tr><th>${course.name}</td><th>${course.major}</td><td>${course.semester}</td><td>${course.category}</td> </tr>`; 
+        var reg = data[i];
+        table += `<th>${reg}</th>`;
     }
     
-    table += '</table>';   
+    table += '</tr></table>';   
     var gib = document.getElementById("dyn1");  
     if (gib){ gib.innerHTML = table;}
    

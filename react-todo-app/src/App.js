@@ -79,6 +79,7 @@ export default function App() {
       <Route path="/teacher_create" element={<Teacher_create db={db}/>} />
       <Route path="/edit_dilwsh" element={<Edit_dilwsh db={db}/>} />
       <Route path="/view_dilwsh" element={<View_dilwsh db={db}/>} />
+      <Route path="/edit_profile" element={<Edit_profile db={db}/>} />
 
     </Routes>
     </BrowserRouter>
