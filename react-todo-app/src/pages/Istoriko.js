@@ -5,15 +5,15 @@ import { useState, useEffect } from 'react';
 import { db } from '../components/firebase.js';
 import "./../css/student_profile.css";
 import "./../css/Student_dilosi.css";
+import "./../css/istoriko.css";
 import Footer from "./../components/footer.js"
 import { Link } from "react-router-dom";
-import { doc, getDoc, updateDoc, deleteDoc, setDoc } from 'firebase/firestore'
+import { doc, getDoc, updateDoc, deleteDoc, setDoc, collection, getDocs } from 'firebase/firestore'
 
 
 
 
 export default function Istoriko() {
-
    
 
     async function getDilwseis(){
@@ -39,7 +39,11 @@ export default function Istoriko() {
            
             
         }
+
+
         table += '</table>';   
+
+
         var gib = document.getElementById("dyn");  
         if (gib){ gib.innerHTML = table;}
         jj();
@@ -80,10 +84,33 @@ export default function Istoriko() {
 
     }
 
+    async function getAitiseis(){
+
+        const res = await getDoc(doc(db,"users",localStorage.getItem("email")));
+        let a_array = res.data().aithseis;
+        console.log(a_array);
+
+        let table = '<table class="d-table2">';  
+        table += '<tr><th class="dcell">Ημερομηνία</th><th class="dcell">Κατηγορία</th><th class="dcell">Ενέργειες</th> ';  
+
+        for (var i=0; i<a_array.length; i++){
+            var aithsh = a_array[i];
+
+       
+                table += `<tr><td>${aithsh.date} </td><td>${aithsh.category}</td> <td> <img  src="./view-icon.png"  /> 
+                <img src="./download-icon.png"  /> </td></tr>`
+        } 
+        table += '</table>';   
+        var gib = document.getElementById("dyn5");  
+        if (gib){ gib.innerHTML = table;}
+
+    }
+
  
 
     useEffect(() => {
         getDilwseis();
+        getAitiseis();
         // Every time you try to enter this page check if you have a saved key at the local storage. 
         // If not, then do not allow user to enter this page and redirect to login page
         if (localStorage.getItem('role') !== "student") {
@@ -108,7 +135,10 @@ export default function Istoriko() {
             </div>
         
             <div id="dyn" class="div-table" ></div>
-
+            <div class="table1">
+                <h>Πιστοποιητικά</h>
+            </div>
+            <div id="dyn5" class="div-table" ></div>
             <Footer />
         </div>
     );
