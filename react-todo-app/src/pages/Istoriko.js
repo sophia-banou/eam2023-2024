@@ -30,7 +30,7 @@ export default function Istoriko() {
             const res2 = await getDoc(doc(db,"diloseis",id));
             if (res2.data().status == "Προσωρινή") {
                 table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
-                <td> <img class="vicon" src="./view-icon.png" value=${id} />   <img class="eicon" src ="./edit-icon2.png">  </td></tr>`
+                <td> <img class="vicon" src="./view-icon.png" value=${id} />   <img class="eicon" src ="./edit-icon2.png" value=${id}>  </td></tr>`
             } 
             else{
                 table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
