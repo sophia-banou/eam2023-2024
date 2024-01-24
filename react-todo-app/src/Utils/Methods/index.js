@@ -77,9 +77,7 @@ const grades = [
     {name: " Ανάλυση Ι", grade: "7", period: "Ιουνίου", id:"g1" },
 ]
 
-function check(){
-    
-}
+
 export function checkAll() {
     var inputs = document.querySelectorAll('.bath');
     let count=0;

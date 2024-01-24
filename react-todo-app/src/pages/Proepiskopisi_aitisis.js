@@ -22,7 +22,7 @@ export default function Proepiskopisi_aitisis() {
             window.location.href = '/oristikopoihsh2';
         }
         else {
-            document.getElementById("result").innerHTML = "checkbox";
+            document.getElementById("result").innerHTML = `<div class="message1"> Δεν έχετε αποδεχτεί τους όρους χρήσης! </div>`;
         }
     }
     return (
@@ -31,7 +31,7 @@ export default function Proepiskopisi_aitisis() {
             <Menu />
             <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><Link to="/student_aitisi">Αίτηση Πιστοποιητικού / </Link><span>Προεπισκόπηση</span></div>
             <div className="aitisi_body2">
-                <h2>Αίτηση {sessionStorage.getItem("aitisi")}</h2>
+                <div class="aithsh_div1">Αίτηση {sessionStorage.getItem("aitisi")}</div>
                 <div class="m-div1"> 
                     <table class="m-table1">
                         <tr>
@@ -88,7 +88,7 @@ export default function Proepiskopisi_aitisis() {
                         </tr>
                     </table>
                     <br></br>
-                    <input type="checkbox" id="aicheckbox" /><label>Με ατομική μου ευθύνη και γνωρίζοντας τις κυρώσεις, που προβλέπονται από τις διατάξεις της παρ. 6 του άρθρου 22 του Ν. 1599/1986, δηλώνω ότι επιθυμώ να αιτηθώ για το εξής πιστοποιητικό:{sessionStorage.getItem("aitisi")}</label>
+                    <input type="checkbox" id="aicheckbox" /><label class="label">Με ατομική μου ευθύνη και γνωρίζοντας τις κυρώσεις, που προβλέπονται από τις διατάξεις της παρ. 6 του άρθρου 22 του Ν. 1599/1986, δηλώνω ότι επιθυμώ να αιτηθώ για το εξής πιστοποιητικό:{sessionStorage.getItem("aitisi")}</label>
                     
                     <div className="dilosi_rectangle1">
                         <div onClick={dosubmit} className="dilosi_div">Υποβολή</div>

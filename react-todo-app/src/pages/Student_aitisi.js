@@ -35,23 +35,24 @@ export default function Student_aitisi() {
             <Nav2 />
             <Menu />
             <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><span>Αίτηση Πιστοποιητικού</span></div>
+            <div class="title">ΑΙΤΗΣΗ ΠΙΣΤΟΠΟΙΗΤΙΚΟΥ</div>
             <div className="aitisi_body">
                 <form onSubmit={formSubmit}>
-                    <h3>Κατηγορίες</h3>
+                    <h class="head">Κατηγορίες <br></br></h>
                     <label>
-                        <input type="radio" value="Φοιτητικής Ιδιότητας" checked={selectedOption === "Φοιτητικής Ιδιότητας"} onChange={onValueChange} /> Φοιτητικής Ιδιότητας
+                        <input type="radio" value="Φοιτητικής Ιδιότητας" checked={selectedOption === "Φοιτητικής Ιδιότητας"} onChange={onValueChange} /> <span class="label">Φοιτητικής Ιδιότητας</span>
                     </label>
                     <br />
                     <label>
-                        <input type="radio" value="Αναλυτικής βαθμολογίας με προβιβάσιμους βαθμούς" checked={selectedOption === "Αναλυτικής βαθμολογίας με προβιβάσιμους βαθμούς"} onChange={onValueChange} /> Αναλυτική βαθμολογία με προβιβάσιμους βαθμούς
+                        <input type="radio" value="Αναλυτικής βαθμολογίας με προβιβάσιμους βαθμούς" checked={selectedOption === "Αναλυτικής βαθμολογίας με προβιβάσιμους βαθμούς"} onChange={onValueChange} /> <span class="label"> Αναλυτική βαθμολογία με προβιβάσιμους βαθμούς</span>
                     </label>
                     <br />
                     <label>
-                        <input type="radio" value="Στρατολογικής χρήσης" checked={selectedOption === "Στρατολογικής χρήσης"} onChange={onValueChange} /> Στρατολογικής χρήσης
+                        <input type="radio" value="Στρατολογικής χρήσης" checked={selectedOption === "Στρατολογικής χρήσης"} onChange={onValueChange} /> <span class="label">Στρατολογικής χρήσης</span>
                     </label>
                     <br />
                     <label>
-                        <input type="radio" value="Φορολογικής χρήσης" checked={selectedOption === "Φορολογικής χρήσης"} onChange={onValueChange} /> Φορολογικής χρήσης
+                        <input type="radio" value="Φορολογικής χρήσης" checked={selectedOption === "Φορολογικής χρήσης"} onChange={onValueChange} /> <span class="label">Φορολογικής χρήσης </span>
                     </label>
                     <br />
                     <button className="st-a-button" type="submit">Επιλογή</button>

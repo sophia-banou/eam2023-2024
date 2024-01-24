@@ -158,6 +158,7 @@ export default function Student_dilosi() {
             <Nav2 />
             <Menu />
             <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><span>Βαθμολογίες</span></div>
+            <div class="title">ΒΑΘΜΟΛΟΓΙΕΣ</div>
             <div class="div9">
                 <Button onClick={toggleVisibility} />
                 <Dropdown isVisible={isVisible} />

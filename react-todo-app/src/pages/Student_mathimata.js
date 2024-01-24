@@ -22,7 +22,7 @@ export default function Student_mathimata() {
         const ref = doc(db, "courses", "all_courses"); 
         const res = await getDoc(ref);
 
-        let table = '<table class="d-table2">';  
+        let table = '<table class="d-tablem">';  
         table += '<tr><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Κατεύθυνση</th><th class="dcell">Εξάμηνο</th><th class="dcell">Κατηγορία</th></tr>';  
 
         var courses = res.data().courses;
@@ -32,7 +32,7 @@ export default function Student_mathimata() {
             var name = courses[id].name;
             var semester = courses[id].semester;
             var category = courses[id].category;
-            table += `<tr class="mathima" data-id="${name}"><th>${name}</th><th>${track}</th><th>${semester}</th><th>${category}</th></tr>`; 
+            table += `<tr class="mathima" data-id="${name}"><td >${name}</td><th>${track}</th><th>${semester}</th><th>${category}</th></tr>`; 
         }
         table += '</table>'; 
         var dil = document.getElementById("mathimata-table");  
@@ -77,6 +77,7 @@ export default function Student_mathimata() {
             <Nav2 />
             <Menu />
             <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><span>Μαθήματα</span></div>
+            <div class="title">ΜΑΘΗΜΑΤΑ</div>
             <div class="d-div1">  
                 <div id="mathimata-table"></div>
             </div>

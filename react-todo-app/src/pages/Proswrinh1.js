@@ -26,23 +26,23 @@ export default function Proswrinh1() {
             if (res2.data().period == current_period) {
                 await deleteDoc(doc(db, "diloseis", res2.data().id));
                 var new_id = d_id[i];
-                flag=false;
+                flag = false;
                 break;
             }
             else {
                 var new_id = Date.now();
             }
         }
-        
-        if(d_id.length ==0){
+
+        if (d_id.length == 0) {
             var new_id = Date.now();
         }
-        if (flag != false){
+        if (flag != false) {
             d_id.push(new_id.toString());
         }
-       
+
         var courses = sessionStorage.getItem("res").split(',');
-       
+
         var data = {
             d_id: d_id,
         };
@@ -53,11 +53,11 @@ export default function Proswrinh1() {
 
 
         var today = new Date();
-        var month = today.getMonth()+1;
+        var month = today.getMonth() + 1;
         var year = today.getFullYear();
         var date = today.getDate();
         var currentDate = date + '/' + month + '/' + year;
-      
+
 
         await setDoc(doc(db, "diloseis", new_id2), {
 
@@ -91,13 +91,15 @@ export default function Proswrinh1() {
             <Nav2 />
             <Menu />
             <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><Link to="/student_bathmologies">Δήλωση μαθημάτων / </Link><span>Προσωρινή αποθήκευση</span></div>
+
             <div class="icon-div">
-                <Link to="/student_dilosi">
-                    <img src="back-arrow.png" class="arrow-icon"></img>
-                </Link>
+                    <Link to="/student_dilosi" class="arrow-icon">
+                        <img src="back-arrow.png" ></img>
+                    </Link>
             </div>
 
             <div class="d-div1">
+       
                 <div id="dyn10" class="div-table" ></div>
 
                 <div class="warning-message"> <h>Προσοχή!</h> <br></br>Αν πατήσετε οριστική υποβολή δεν θα μπορείτε να επεξεργαστείτε
@@ -110,6 +112,7 @@ export default function Proswrinh1() {
                         </div>
                     </div>
                 </Link>
+
             </div>
             <Footer />
 

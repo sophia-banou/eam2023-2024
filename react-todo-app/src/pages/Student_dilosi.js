@@ -68,6 +68,7 @@ export default function Student_dilosi() {
             <Nav2 />
             <Menu />
             <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><span>Δήλωση μαθημάτων</span></div>
+            <div class="title">ΔΗΛΩΣΗ ΜΑΘΗΜΑΤΩΝ</div>
             <div>{message}</div>
             {/* <div class="d-div1">  
             <div class="button-div"> <button onClick={checkAll}> Επιλογή Όλων</button> </div>     
