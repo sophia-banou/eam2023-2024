@@ -1,5 +1,5 @@
 import React from "react"
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { db } from '../components/firebase.js';
 import {Link} from "react-router-dom";
 import './../css/App.css';
@@ -17,38 +17,45 @@ export default function Student_aitisi() {
         }
     },[])
 
+    const [selectedOption, setSelectedOption] = useState("Male")  
+    
+    function onValueChange(event){
+        setSelectedOption(event.target.value)
+    }
+  
+    function formSubmit(event) {
+      event.preventDefault();
+      sessionStorage.setItem("aitisi", selectedOption)
+      window.location.href = '/proepiskopisi_aitisis' ;
+
+    }
     return (
         <div>
             <Nav2 />
             <Menu />
             <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><span>Αίτηση Πιστοποιητικού</span></div>
             <div className="aitisi_body">
-                <div className="aitisi_div2">Κατηγορίες Πιστοποιητικών</div>
+            <form onSubmit={formSubmit}>
+                <h3>Κατηγορίες</h3>
+                <label>
+                    <input type="radio" value="Φοιτητικής Ιδιότητας" checked={selectedOption === "Φοιτητικής Ιδιότητας"} onChange={onValueChange}/> Φοιτητικής Ιδιότητας
+                </label>
+                    <br/>
+                <label>
+                    <input type="radio" value="Αναλυτικής βαθμολογίας με προβιβάσιμους βαθμούς" checked={selectedOption === "Αναλυτικής βαθμολογίας με προβιβάσιμους βαθμούς"} onChange={onValueChange}/> Αναλυτική βαθμολογία με προβιβάσιμους βαθμούς
+                </label> 
+                <br/>
+                <label>
+                    <input type="radio" value="Στρατολογικής χρήσης" checked={selectedOption === "Στρατολογικής χρήσης"} onChange={onValueChange}/> Στρατολογικής χρήσης
+                </label>
+                <br/>
+                <label>
+                    <input type="radio" value="Φορολογικής χρήσης" checked={selectedOption === "Φορολογικής χρήσης"} onChange={onValueChange}/> Φορολογικής χρήσης
+                </label>
+                <br/>
+                <button className="st-a-button" type="submit">Επιλογή</button>
+            </form>
 
-
-                <Link to="/aitisi_students">
-                    <div class="aitisi_rectangle1">
-                        <div className="aitisi_div">Φοιτητικής Ιδιότητας</div>
-                    </div>
-                </Link>
-                <br></br>
-                <Link to="/aitisi_teachers">
-                    <div className="aitisi_rectangle1">
-                        <div className="aitisi_div">Φορολογικής χρήσης</div>
-                    </div>
-                </Link>
-                <br></br>
-                <Link to="/aitisi_teachers">
-                    <div className="aitisi_rectangle1">
-                        <div className="aitisi_div">Αναλυτική βαθμολογία με προβιβάσιμους βαθμούς</div>
-                    </div>
-                </Link>
-                <br></br>
-                <Link to="/aitisi_teachers">
-                    <div className="aitisi_rectangle1">
-                        <div className="aitisi_div">Στρατολογικής χρήσης</div>
-                    </div>
-                </Link>
             </div>
             <Footer />
         </div>

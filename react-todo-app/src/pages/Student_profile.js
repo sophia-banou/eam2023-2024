@@ -108,7 +108,7 @@ export default function StudentProfile() {
                         <table id="table3" class="sp-table2">
 
                             <tr>
-                                <th>Διεύθυνση Κατοικάς</th>
+                                <th>Διεύθυνση Κατοικίας</th>
                                 <td>{localStorage.getItem("address")}</td>
                             </tr>
                             <tr class="row2">
@@ -128,7 +128,7 @@ export default function StudentProfile() {
                                 <td>{localStorage.getItem("phone2")}</td>
                             </tr>
                             <tr class="row2">
-                                <th>Διεύθυνση Ηλεκτρονικού Ταχυδρομίου</th>
+                                <th>Διεύθυνση Ηλεκτρονικού Ταχυδρομείου</th>
                                 <td>{localStorage.getItem("email")}</td>
                             </tr>
 
