@@ -31,13 +31,18 @@ export default function Student_dilosi() {
         fail = 0;
         getCourse();
     }
+
     function Button(props) {
         return (
             <button className="st-b-button" onClick={props.onClick}>
-            <div className="st-b-button-div">Ταξινόμηση</div>
+                <div id="div76">
+                    ΦΙΛΤΡΑ <img class="ficon" src="filter-icon.png" />
+                </div>
             </button>
         );
     }
+
+
     function Dropdown(props) {
         return (
         <div>
@@ -71,7 +76,7 @@ export default function Student_dilosi() {
                 sum_of_grade += courses[id].ECTs * grade;
             }
         }
-        let div = `<table class="d-table2"><tr><th class="dcell">Σύνολο ECTs</th><th class="dcell">${sum_of_ects}</th><th class="dcell">Μ.Ο βαθμών</th><th class="dcell">${(Math.round((sum_of_grade/sum_of_ects)*100))/100}</th></table>`
+        let div = `<div class="div-20"><table class="d-table3"><tr><th>Σύνολο ECTs</th> <th>Μ.Ο βαθμών</th> </tr> <tr><td>${sum_of_ects}</td><td> ${(Math.round((sum_of_grade/sum_of_ects)*100))/100}</td> </tr></table></div>`
         var gib = document.getElementById("grade");  
         if (gib){ gib.innerHTML = div;}
 
@@ -153,7 +158,7 @@ export default function Student_dilosi() {
             <Nav2 />
             <Menu />
             <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><span>Βαθμολογίες</span></div>
-            <div>
+            <div class="div9">
                 <Button onClick={toggleVisibility} />
                 <Dropdown isVisible={isVisible} />
             </div>

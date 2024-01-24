@@ -17,12 +17,45 @@
 
 
 .d-table2{
+    font-size: 15px;
     width: 1000px;
     margin:auto;
     border-collapse: collapse;
     font-family: "Montserrat", sans-serif;
 
 }
+.div-20{
+    
+    width:1000px;
+    margin:auto;
+    margin-top: 50px;
+}
+
+.d-table3{
+    width: 300px;
+    margin:auto;
+    position:inherit;
+    border: black 1px solid;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+
+}
+.d-table3 tr th{
+    padding:5px;
+    border:1px rgb(226, 226, 226) solid;
+    background-color: #aeaeae;
+   
+}
+.d-table3 tr td{
+    padding:5px;
+    border:1px rgb(226, 226, 226) solid;
+    background-color: white;
+    font-weight: lighter;
+   
+}
+
 
 .d-table2 tr{
     border:1px rgb(226, 226, 226) solid;
@@ -225,41 +258,44 @@
     align-items: center;
 }
 .st-b-button {
-    margin-left: 5%;
-    border: 2px solid #547980;
+    margin-left: 80px;
+    position: inherit;
+    border:none;
     width: 100px;
     height: 35px;
     padding: 10px 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 15px;
     line-height: 1.5;
-    color: white;
+    background-color: white;
+    color: black;
     font-weight: 900;
     text-shadow: none;
     display: flex;
     align-items: center;
     justify-content: center;  
-    background-color: #547980;
     &:hover{
         cursor:pointer;
-        background-color: white;
-        color: #547980;
     }
 }
 .st-b-button-div {
-    position: relative;
+    width: 100px;
+    position: inherit;
     top: 0;
     padding: 8px 10px;
     font-weight: 600;
     font-size: 13px;
-  }
+}
+
 .st-b-dropdown {
-    margin-left: 5%;
+    margin-left: 80px;
     margin-bottom: 10px;
-    width: 80px;
+    width: 100px;
     height: fit-content;
-    padding: 10px 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: none;
+    position:absolute;
+    z-index:1;
+    font-family: "Montserrat", sans-serif;
     font-size: 15px;
     line-height: 1.5;
     text-shadow: none;  
@@ -268,10 +304,11 @@
     
 }
 .st-b-dropdown-div {
+    
     position: relative;
     top: 0;
     padding: 8px 10px;
-    width: 60px;
+    width: 80px;
     height: 20px;
     font-weight: 600;
     font-size: 13px;
@@ -297,3 +334,25 @@
 }}
     
     
+.div9{
+    width:1000px;
+    margin:auto;
+}
+
+#div76{
+    position: inherit;
+    float:left;
+    margin-left:none;
+    display:flex;
+}
+
+.ficon{
+    width:20px;
+    height:20px;
+    margin:auto;
+    margin-left:10px;
+}
+
+.fspan{
+    color: #547980;
+}

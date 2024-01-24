@@ -77,10 +77,23 @@ const grades = [
     {name: " Ανάλυση Ι", grade: "7", period: "Ιουνίου", id:"g1" },
 ]
 
+function check(){
+    
+}
 export function checkAll() {
     var inputs = document.querySelectorAll('.bath');
-    for (var i = 0; i < inputs.length; i++) {
-        inputs[i].checked = true;
+    let count=0;
+    let all = document.getElementById("checkall");
+
+    if (all.checked == true){
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].checked = true;
+        }
+    }
+    else {
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].checked = false;
+        }
     }
 }
 var res = [];
@@ -89,6 +102,7 @@ export function GetCheckboxValue() {
     res = new Array();
     var count = 0;
     var inputs = document.querySelectorAll('.cb');
+
         for (var i = 0; i < inputs.length; i++) {
             if(inputs[i].checked === true){
                 res[count] = new Array(inputs[i].name, inputs[i].value, inputs[i].id, inputs[i].title)

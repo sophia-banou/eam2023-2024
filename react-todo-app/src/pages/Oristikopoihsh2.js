@@ -11,12 +11,41 @@ import { doc, getDoc, updateDoc, deleteDoc, setDoc } from 'firebase/firestore'
 
 export default function Oristikopoihsh2() {
     useEffect(() => {
+        setAithsh();
         // Every time you try to enter this page check if you have a saved key at the local storage. 
         // If not, then do not allow user to enter this page and redirect to login page
         if (localStorage.getItem('role') !== "student") {
             window.location.href = '/'
         }
     }, [])
+
+    async function setAithsh(){
+        const ref = doc(db, "users", localStorage.getItem("email"));
+        const res1 = await getDoc(ref);
+
+        let selectedOption = sessionStorage.getItem("aitisi");
+        console.log(selectedOption);
+        var today = new Date();
+        var month = today.getMonth() + 1;
+        var year = today.getFullYear();
+        var date = today.getDate();
+        var currentDate = date + '/' + month + '/' + year;
+
+        let aithsh = {
+            date: currentDate,
+            category: selectedOption
+        }
+        
+        let a_array = res1.data().aithseis;
+        a_array.push(aithsh);
+
+        let data ={
+            aithseis: a_array
+        }
+
+        await updateDoc(ref, data);
+
+    }
 
 
 
