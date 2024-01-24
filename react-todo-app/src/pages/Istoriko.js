@@ -46,36 +46,36 @@ export default function Istoriko() {
 
     }
 
-    var d_el;
 
-
-    function handleClick (){
-        var value = d_el.getAttribute("value");
-        console.log(d_el, value);
+    function handleClick (element){
+        console.log(element);
+        var value = element.getAttribute("value");
+        console.log(element, value);
         sessionStorage.setItem("did",value);
         window.location.assign('/view_dilwsh');
     }
 
-    function handleClick2 (){
-        var value = d_el.getAttribute("value");
-        console.log(d_el, value);
+    function handleClick2 (element){
+        var value = element.getAttribute("value");
+        console.log(element, value);
         sessionStorage.setItem("did",value);
         window.location.assign('/edit_dilwsh');
     }
 
     function jj(){
         var inputs = document.querySelectorAll('.vicon');
-        for (var i = 0; i < inputs.length; i++) {
-            d_el = inputs[i];
-            console.log(d_el);
-            d_el.addEventListener('click', handleClick);
+        for (var i = 0; i < inputs.length; i++) {;
+            inputs[i].addEventListener('click', (function(e){
+                return function() {handleClick(e); };
+            }) (inputs[i]),false);
+   
         }
 
         var inputs2 = document.querySelectorAll('.eicon');
         for (var i = 0; i < inputs2.length; i++) {
-            d_el = inputs2[i];
-            console.log(d_el);
-            d_el.addEventListener('click', handleClick2);
+            inputs2[i].addEventListener('click', (function(e){
+                return function() {handleClick2(e); };
+            }) (inputs2[i]),false);  
         }
 
     }
