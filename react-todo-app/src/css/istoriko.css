@@ -1,0 +1,30 @@
+.div1{
+    width:1000px;
+    margin:auto;
+    height:900px;
+}
+
+.div2{
+    height:100px;
+    margin-left:none;
+    position: inherit;
+    text-align: left;
+    font-size: 18px;
+}
+
+.div2 span{
+    font-weight: bold;
+}
+
+.arrow-icon2{
+    width: 30px;
+    margin:auto;
+    margin-left: 170px; 
+}
+
+.d-table2 {
+    width: 1000px;
+    margin:auto;
+    font-size: 15px;
+}
+

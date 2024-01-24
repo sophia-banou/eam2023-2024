@@ -41,8 +41,8 @@ export default function Proswrinh1() {
             d_id.push(new_id.toString());
         }
        
-        var courses = sessionStorage.getItem("res");
-
+        var courses = sessionStorage.getItem("res").split(',');
+       
         var data = {
             d_id: d_id,
         };
