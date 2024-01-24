@@ -13,6 +13,8 @@ import Menu from "./../components/student_menu.js"
 export default function Student_dilosi() {
     var success = 0;
     var fail = 0;
+    var sum_of_ects = 0;
+    var sum_of_grade = 0;
 
     function getSuccess(){
         success = 1;
@@ -55,7 +57,25 @@ export default function Student_dilosi() {
     const toggleVisibility = () => {
         setIsVisible(!isVisible);
     };
+    async function getGrade (){
+        var user_email = localStorage.getItem("email");
     
+        const ref = doc(db, "users", user_email); 
+        const res = await getDoc(ref);
+        var courses = res.data().courses;
+
+        for (var id = 0; id < courses.length; id++){
+            var grade = courses[id].grade;
+            if (grade >= 5){
+                sum_of_ects += courses[id].ECTs;
+                sum_of_grade += courses[id].ECTs * grade;
+            }
+        }
+        let div = `<table class="d-table2"><tr><th class="dcell">Σύνολο ECTs</th><th class="dcell">${sum_of_ects}</th><th class="dcell">Μ.Ο βαθμών</th><th class="dcell">${(Math.round((sum_of_grade/sum_of_ects)*100))/100}</th></table>`
+        var gib = document.getElementById("grade");  
+        if (gib){ gib.innerHTML = div;}
+
+    }
     async function getCourse (){
         var user_email = localStorage.getItem("email");
     
@@ -120,6 +140,7 @@ export default function Student_dilosi() {
     // }
     useEffect(()=> {
         getCourse();
+        getGrade();
         // Every time you try to enter this page check if you have a saved key at the local storage. 
         // If not, then do not allow user to enter this page and redirect to login page
         if (localStorage.getItem('role') !== "student") {
@@ -138,6 +159,7 @@ export default function Student_dilosi() {
             </div>
             <div class="d-div1"> 
                 <div id="dyn11"></div>
+                <div id="grade"></div>
             </div>
             <div className="dilosi_rectangle1">
                     <div onClick={GetCheckboxValue2} className="dilosi_div">Επόμενο ➜</div>
