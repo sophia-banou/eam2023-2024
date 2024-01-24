@@ -17,7 +17,7 @@ export default function Student_aitisi() {
         }
     },[])
 
-    const [selectedOption, setSelectedOption] = useState("Male")  
+    const [selectedOption, setSelectedOption] = useState("Φοιτητικής Ιδιότητας")  
     
     function onValueChange(event){
         setSelectedOption(event.target.value)

@@ -8,7 +8,7 @@ import Nav2 from "./../components/Nav2.js"
 import Footer from "./../components/footer.js"
 import Menu from "./../components/student_menu.js"
 
-export default function Student_aitisi() {
+export default function Proepiskopisi_aitisis() {
     useEffect(()=> {
         // Every time you try to enter this page check if you have a saved key at the local storage. 
         // If not, then do not allow user to enter this page and redirect to login page
@@ -19,7 +19,7 @@ export default function Student_aitisi() {
     function dosubmit(){
         var b = document.getElementById("aicheckbox");
         if (b.checked == true){
-            window.location.href = '/';
+            window.location.href = '/oristikopoihsh2';
         }
         else {
             document.getElementById("result").innerHTML = "checkbox";

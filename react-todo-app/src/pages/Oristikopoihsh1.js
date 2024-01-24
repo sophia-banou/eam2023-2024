@@ -89,14 +89,14 @@ export default function Oristikopoihsh1() {
         <div onLoad={generateTable}>
             <Nav2 />
             <Menu />
-
+            <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><Link to="/student_dilosi">Δήλωση μαθημάτων / </Link><Link to="/proswrinh1">Προσωρινή αποθήκευση / </Link><span>Οριστική Υποβολή</span></div>
             <div class="d-div1">
-                <div id="dyn1" class="div-table" ></div>
+                <div id="dyn10" class="div-table" ></div>
 
                 <div class="message"> Η δήλωση σας οριστικοποιήθηκε. Οι προηγούμενες δηλώσεις σας για αυτό το εξάμηνο θα διαγραφούν</div>
                 <div class="buttons">
                     <Link class="button" to="/students">
-                    <div>Επιστροφή στην Αρχική Σελίδα </div> <img class="home_icon" src="./home-icon.png"></img>
+                        <div>Επιστροφή στην Αρχική Σελίδα </div> <img class="home_icon" src="./home-icon.png"></img>
                     </Link>
                 </div>
             </div>
