@@ -63,7 +63,7 @@ export default function Student_dilosi() {
         const res = await getDoc(ref);
 
         let table = '<table class="d-table2">';  
-        table += '<tr><th class="dcell"></th><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Βαθμός</th><th class="dcell">Εξεταστική περίοδος</th></tr>';  
+        table += '<tr><th class="dcell"> <input type ="checkbox" id="checkall"> </th><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Βαθμός</th><th class="dcell">Εξεταστική περίοδος</th></tr>';  
 
         var courses = res.data().courses;
 
@@ -94,7 +94,14 @@ export default function Student_dilosi() {
         table += '</table>'; 
         var gib = document.getElementById("dyn11");  
         if (gib){ gib.innerHTML = table;}
+        jj();   
     }
+
+    function jj(){
+        var input = document.getElementById("checkall");
+        input.addEventListener('change',checkAll);
+    }
+
     // async function getChecked (){
     //     let table = '<table class="d-table2">';  
     //     table += '<tr><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Βαθμός</th><th class="dcell">Εξεταστική περίοδος</th></tr>';
@@ -130,11 +137,10 @@ export default function Student_dilosi() {
                 <Dropdown isVisible={isVisible} />
             </div>
             <div class="d-div1"> 
-                <div class="button-div"><button onClick={checkAll}> Επιλογή Όλων</button></div> 
                 <div id="dyn11"></div>
-                <div className="dilosi_rectangle1">
+            </div>
+            <div className="dilosi_rectangle1">
                     <div onClick={GetCheckboxValue2} className="dilosi_div">Επόμενο ➜</div>
-                </div>
             </div>
             <h4 class="error1" id="result"></h4>  
             <Footer />
