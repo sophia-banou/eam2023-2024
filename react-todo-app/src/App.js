@@ -39,6 +39,7 @@ import Teacher_mathimata from './pages/Teacher_mathimata';
 import Teacher_create from './pages/Teacher_create';
 import Edit_dilwsh from './pages/Edit_dilwsh';
 import View_dilwsh from './pages/View_dilwsh';
+import View_mathima from './pages/View_mathima';
 
 export default function App() {
   return (
@@ -72,7 +73,7 @@ export default function App() {
       <Route path="/proswrinh1" element={<Proswrinh1 db={db}/>} />
       <Route path="/oristikopoihsh1" element={<Oristikopoihsh1 db={db}/>} />
       <Route path="/istoriko" element={<Istoriko db={db}/>} />
-      <Route path="/proeskopisi" element={<Proeskopisi db={db}/>} />
+      <Route path="/proepiskopisi" element={<Proeskopisi db={db}/>} />
       <Route path="/teacher_profile" element={<Teacher_profile db={db}/>} />
       <Route path="/teacher_bathmologia" element={<Teacher_bathmologio db={db}/>} />
       <Route path="/teacher_mathimata" element={<Teacher_mathimata db={db}/>} />
@@ -80,6 +81,7 @@ export default function App() {
       <Route path="/edit_dilwsh" element={<Edit_dilwsh db={db}/>} />
       <Route path="/view_dilwsh" element={<View_dilwsh db={db}/>} />
       <Route path="/edit_profile" element={<Edit_profile db={db}/>} />
+      <Route path="/view_mathima" element={<View_mathima db={db}/>} />
 
     </Routes>
     </BrowserRouter>

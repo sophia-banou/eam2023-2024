@@ -78,7 +78,7 @@ const grades = [
 ]
 
 export function checkAll() {
-    var inputs = document.querySelectorAll('.cb');
+    var inputs = document.querySelectorAll('.bath');
     for (var i = 0; i < inputs.length; i++) {
         inputs[i].checked = true;
     }
@@ -120,7 +120,40 @@ export function generateTable() {
     if (gib){ gib.innerHTML = table;}
    
 }  
+export function GetCheckboxValue2() {
+    res = new Array();
+    var count = 0;
+    var inputs = document.querySelectorAll('.bath');
+        for (var i = 0; i < inputs.length; i++) {
+            if(inputs[i].checked === true){
+                res[count] = new Array(inputs[i].value, inputs[i].name, inputs[i].id)
+                count++;
+            }
+        }
+        if (count == 0){
+            return document.getElementById("result").innerHTML = "Δεν έχετε επιλέξει κάποια βαθμολογία";
+        }
+        else {
+            sessionStorage.setItem("res2", JSON.stringify(res));
+            window.location.href = '/proepiskopisi' ;
+        }
+}
+export function generateTable2() {  
+    var data = JSON.parse(sessionStorage.getItem("res2"));
 
+    let table = '<table class="d-table2">';  
+    table += '<tr><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Βαθμός</th><th class="dcell">Εξεταστική περίοδος</th></tr>';  
+   
+    for (var i=0; i<data.length; i++){
+        var course = data[i];
+        table += `<tr><th>${course[1]}</td><th>${course[0]}</td><th>${course[2]}</td></tr>`;
+    }
+    
+    table += '</table>';   
+    var gib = document.getElementById("dyn12");  
+    if (gib){ gib.innerHTML = table;}
+   
+} 
 export function logo() {
     if (localStorage.getItem('role') === "student") {
         window.location.href = '/students'

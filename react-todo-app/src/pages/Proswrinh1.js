@@ -90,6 +90,7 @@ export default function Proswrinh1() {
 
             <Nav2 />
             <Menu />
+            <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><Link to="/student_bathmologies">Δήλωση μαθημάτων / </Link><span>Προσωρινή αποθήκευση</span></div>
             <div class="icon-div">
                 <Link to="/student_dilosi">
                     <img src="back-arrow.png" class="arrow-icon"></img>

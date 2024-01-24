@@ -180,3 +180,100 @@
     margin: auto;
     margin-right:10px;
 }
+.mathima_div{
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 20px;
+    width: 100%;
+    height: 120px;
+    font-size: 20px;
+    text-align: center;
+}
+.m-table1{
+    position: relative;
+    width: 700px;
+    height: 50px;
+    margin:auto;
+    border-collapse: collapse;
+    font-family: "Montserrat", sans-serif;
+   
+    
+}
+.mcell{
+    background-color:#aeaeae;
+    padding: 6px;
+    border:1.2px  #aeaeae solid;   
+}
+.m-table2{
+    position: relative;
+    width: 700px;
+    height: 400px;
+    margin:auto;
+    border-collapse: collapse;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 10px;
+}
+.m-div1 {
+    margin:auto;
+    width: 100%;
+    height: 600px;
+    margin-bottom: 20px;
+    flex: content;
+    align-items: center;
+}
+.st-b-button {
+    margin-left: 5%;
+    border: 2px solid #547980;
+    width: 100px;
+    height: 35px;
+    padding: 10px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: white;
+    font-weight: 900;
+    text-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    background-color: #547980;
+    &:hover{
+        cursor:pointer;
+        background-color: white;
+        color: #547980;
+    }
+}
+.st-b-button-div {
+    position: relative;
+    top: 0;
+    padding: 8px 10px;
+    font-weight: 600;
+    font-size: 13px;
+  }
+.st-b-dropdown {
+    margin-left: 5%;
+    margin-bottom: 10px;
+    width: 80px;
+    height: fit-content;
+    padding: 10px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    text-shadow: none;  
+    color: #ffff; 
+    background-color: #404040;
+    
+}
+.st-b-dropdown-div {
+    position: relative;
+    top: 0;
+    padding: 8px 10px;
+    width: 60px;
+    height: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    &:hover{
+        cursor:pointer;
+        background-color: #2d2d2d;
+    }
+  }
