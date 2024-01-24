@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from 'react';
 import { db } from '../components/firebase.js';
-import {doc, getDoc} from 'firebase/firestore'
+import {doc, getDoc} from 'firebase/firestore';
 import {Link} from "react-router-dom";
 import {checkAll, GetCheckboxValue2} from '../Utils/Methods/index.js';
 import "./../css/HomePage.css";

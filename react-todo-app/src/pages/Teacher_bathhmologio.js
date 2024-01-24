@@ -10,8 +10,7 @@ import { Link } from "react-router-dom";
 function Button(props) {
     return (
       <button className="bath_rectangle" onClick={props.onClick}>
-        <div className="menu_div">Δημιουργία <br></br>Βαθμολογίου</div>
-        <div><img  className="plus" alt="" src="/plus.png" /> </div>
+        <div className="menu_div">Δημιουργία <br></br>Βαθμολογίου<img  className="plus" alt="" src="/plus.png" /></div>
       </button>
     );
 }

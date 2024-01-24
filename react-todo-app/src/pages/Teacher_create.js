@@ -11,7 +11,6 @@ function Button2(props) {
     return (
       <button className="bath_rectangle" onClick={props.onClick}>
         <div className="menu_div">Όνομα μαθήματος ▽ </div>
-        <div><img  className="plus" alt="" src="/plus.png" /> </div>
       </button>
     );
 }

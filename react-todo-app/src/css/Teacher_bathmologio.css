@@ -1,8 +1,8 @@
 .bath_rectangle {
     margin-left: 5%;
     border: 2px solid #547980;
-    width: 240px;
-    height: 70px;
+    width: 180px;
+    height: fit-content;
     padding: 10px 10px;
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
@@ -14,14 +14,12 @@
     background-color: #547980;
     &:hover{
         cursor:pointer;
-        background-color: white;
-        color: #547980;
     }
 }
 .menu_box {
     margin-left: 5%;
     margin-bottom: 5%;
-    width: 220px;
+    width: 160px;
     height: fit-content;
     padding: 10px 10px;
     text-align: left;
@@ -31,15 +29,10 @@
     font-weight: 900;
     text-shadow: none;
     background-color: #404040;
-    &:hover{
-        cursor:pointer;
-        background-color: #2d2d2d;
-    }
+    
 }
 .plus {
-    position: absolute;
-    top:5px;
-    left: 150px;
+    position: relative;
     max-width: 64px;
     max-height: 64px;
 }
@@ -47,7 +40,7 @@
     position: relative;
     top: 0;
     padding: 8px 10px;
-    width: 201px;
+    width: 150px;
     height: 34px;
     font-weight: 600;
     display: flex;
@@ -58,14 +51,26 @@
     position: relative;
     top: 0;
     padding: 8px 10px;
-    width: 201px;
+    width: 140px;
     height: 34px;
     font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;  
     color: #ffff;   
+    &:hover{
+        cursor:pointer;
+        background-color: #2d2d2d;
+    }
   }
   .link_deco{
     text-decoration: none;
   }
+.tm-div1 {
+    margin:auto;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: none;
+    flex: content;
+    align-items: center;
+}
