@@ -91,7 +91,7 @@ export default function Oristikopoihsh1() {
             <Menu />
 
             <div class="d-div1">
-                <div id="dyn1" class="div-table" ></div>
+                <div id="dyn10" class="div-table" ></div>
 
                 <div class="message"> Η δήλωση σας οριστικοποιήθηκε. Οι προηγούμενες δηλώσεις σας για αυτό το εξάμηνο θα διαγραφούν</div>
                 <div class="buttons">
