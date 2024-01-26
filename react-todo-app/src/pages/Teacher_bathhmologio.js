@@ -50,11 +50,11 @@ export default function StudentProfile() {
       const res2 = await getDoc(doc(db, "grades", id));
       if (res2.data().status == "Προσωρινή") {
         table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
-              <td> <img class="icont" src="./view-icon.png" value=${id} />   <img class="icont" src ="./edit-icon2.png" value=${id}>  </td></tr>`
+              <td> <img class="vicon2" src="./view-icon.png" value=${id} />   <img class="eicon2" src ="./edit-icon2.png" value=${id}>  </td></tr>`
       }
       else {
         table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
-              <td>  <img class="icont" src="./view-icon.png" value=${id} />  <img class="icont" src ="./edit-icon3.png"> </td></tr>`
+              <td>  <img class="vicon2" src="./view-icon.png" value=${id} />  <img class="icont" src ="./edit-icon3.png"> </td></tr>`
       }
 
 
@@ -66,9 +66,42 @@ export default function StudentProfile() {
 
     var gib = document.getElementById("dyn21");
     if (gib) { gib.innerHTML = table; }
-    //  jj();
+    jj();
 
   }
+
+  function handleClick (element){
+    console.log(element);
+    var value = element.getAttribute("value");
+    console.log(element, value);
+    sessionStorage.setItem("did",value);
+    window.location.assign('/view_grades');
+}
+
+function handleClick2 (element){
+    var value = element.getAttribute("value");
+    console.log(element, value);
+    sessionStorage.setItem("did",value);
+    window.location.assign('/edit_grades');
+}
+
+function jj(){
+    var inputs = document.querySelectorAll('.vicon2');
+    for (var i = 0; i < inputs.length; i++) {;
+        inputs[i].addEventListener('click', (function(e){
+            return function() {handleClick(e); };
+        }) (inputs[i]),false);
+
+    }
+
+    var inputs2 = document.querySelectorAll('.eicon2');
+    for (var i = 0; i < inputs2.length; i++) {
+        inputs2[i].addEventListener('click', (function(e){
+            return function() {handleClick2(e); };
+        }) (inputs2[i]),false);  
+    }
+
+}
 
   useEffect(() => {
     getGrades();
