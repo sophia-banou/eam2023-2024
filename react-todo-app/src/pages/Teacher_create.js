@@ -53,6 +53,7 @@ function Button2(props) {
     }
     async function getDilosi (element){
       var mathima = element.getAttribute("title");
+      sessionStorage.setItem("bath_mathima", mathima);
       console.log(mathima);
       const diloseis = await getDocs(collection(db, "diloseis"));
       diloseis.forEach(doc => {
@@ -120,9 +121,7 @@ function Button2(props) {
                 <Button2 onClick={toggleVisibility} />
                 <Dropdown2 isVisible={isVisible} />
                 <div id="dyn22"></div>
-                <div className="dilosi_rectangle1">
-                  <div onClick={GetBoxValue} className="dilosi_div">Προσωρινή Αποθήκευση</div>
-                </div>
+                  <div onClick={GetBoxValue} className="dilosi_rectangle1">Προσωρινή Αποθήκευση</div>
                 <h4 class="error1" id="result"></h4> 
             </div>
             <Footer />

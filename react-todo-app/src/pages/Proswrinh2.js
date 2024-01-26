@@ -91,6 +91,7 @@ export default function Proswrinh2() {
             <Nav2 />
             <Menu />
             <div className="breadcrumb_body2"><Link to ="/teachers">Αρχική / </Link> <Link to ="/teacher_bathmologia">Βαθμολόγια / </Link><Link to ="/teacher_create">Δημιουργία Βαθμολογίου / </Link><span>Προσωρινή Αποθήκευση</span></div>
+            <h3>{sessionStorage.getItem("bath_mathima")}</h3>
             <div class="icon-div">
                     <Link to="/teacher_create" class="arrow-icon">
                         <img src="back-arrow.png" ></img>
@@ -104,7 +105,7 @@ export default function Proswrinh2() {
                 <div class="warning-message"> <h>Προσοχή!</h> <br></br>Αν πατήσετε οριστική υποβολή δεν θα μπορείτε να επεξεργαστείτε
                     περαιτέρω αυτό το βαθμολόγιο</div>
 
-                <Link class="link" to="/oristikopoihsh1">
+                <Link class="link" to="/oristikopoihsh3">
                     <div className="dilosi_rectangle1">
                         <div className="dilosi_div">
                             Οριστική Υποβολή
