@@ -10,14 +10,32 @@ import Footer from "./../components/footer.js"
 import { Link } from "react-router-dom";
 import { doc, getDoc, updateDoc, deleteDoc, setDoc, collection, getDocs } from 'firebase/firestore'
 
-
-
+function getDate() {
+    const today = new Date();
+    return today;
+}
 
 export default function Istoriko() {
-   
+    const [currentDate, setCurrentDate] = useState(getDate());
 
     async function getDilwseis(){
+        const ref1 = doc(db, "prothesmia", "start");
+        const res1 = await getDoc(ref1);
 
+        const start_year = res1.data().year
+        const start_month = res1.data().month
+        const start_day = res1.data().day
+
+        const ref2 = doc(db, "prothesmia", "end");
+        const res2 = await getDoc(ref2);
+
+        const end_year = res2.data().year
+        const end_month = res2.data().month
+        const end_day = res2.data().day
+
+        const start = new Date(start_year, start_month - 1, start_day);
+        const end = new Date(end_year, end_month - 1, end_day);
+        
         const res = await getDoc(doc(db,"users",localStorage.getItem("email")));
         var d_id = res.data().d_id;
 
@@ -29,8 +47,15 @@ export default function Istoriko() {
 
             const res2 = await getDoc(doc(db,"diloseis",id));
             if (res2.data().status == "Προσωρινή") {
-                table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
-                <td> <img class="vicon" src="./view-icon.png" value=${id} />   <img class="eicon" src ="./edit-icon2.png" value=${id}>  </td></tr>`
+                if (start <= currentDate && currentDate <= end) {
+                    table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
+                    <td> <img class="vicon" src="./view-icon.png" value=${id} />   <img class="eicon" src ="./edit-icon2.png" value=${id}>  </td></tr>`
+                }
+                else {
+                    table += `<tr><td>${res2.data().date} </td><td>"Ληγμένη"</td> 
+                    <td>  <img class="vicon" src="./view-icon.png" value=${id} />  <img class="icont" src ="./edit-icon3.png"> </td></tr>`
+                }
+                
             } 
             else{
                 table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
