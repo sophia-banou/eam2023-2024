@@ -10,7 +10,53 @@ import { Link } from "react-router-dom";
 
 
 export default function Teacher_mathimata() {
-    async function getCourses (){
+    function Button2(props) {
+        return (
+          <button className="bath_rectangle" onClick={props.onClick}>
+            <div className="menu_div">Επιλέξτε μάθημα ▽ </div>
+          </button>
+        );
+    }
+      function Dropdown2(props) {
+        getCourses();
+        return (
+          <div>
+            {props.isVisible ? (
+            <div id="dyn31"/>
+            ) : null}
+          </div>
+        );
+    }
+    const [isVisible, setIsVisible] = useState(false);
+
+    const toggleVisibility = () => {
+        setIsVisible(!isVisible);
+    };
+    async function getCourses(){
+        var user_email = localStorage.getItem("email");
+        const ref = doc(db, "users", user_email); 
+        const res = await getDoc(ref);
+        var courses = res.data().courses;
+        let dropdown = '<div class="menu_box">';
+        for (var id = 0; id < courses.length; id++){
+          dropdown += `<div class="menu_div2" title="${courses[id].name}">${courses[id].name}</div>`;
+        }
+        dropdown += `</div>`;
+        var gib = document.getElementById("dyn31");  
+        if (gib){ gib.innerHTML = dropdown;}
+        jj();
+    }
+    function jj(){  
+        var inputs = document.querySelectorAll('.menu_div2');
+          for (var i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('click', (function(e){
+              return function() {getcourse(e) };
+          }) (inputs[i]),false);
+            
+          }
+    }
+    async function getcourse (element){
+        var mathima = element.getAttribute("title");
         var user_email = localStorage.getItem("email");
     
         const ref = doc(db, "users", user_email); 
@@ -18,6 +64,7 @@ export default function Teacher_mathimata() {
         var courses = res.data().courses;
         let table = '<div>';
         for (var id = 0; id < courses.length; id++){
+            if (courses[id].name === mathima){
             table += '<table class="d-table2">';  
             table += `<tr><th class="dcell">${courses[id].name}</th></tr></table>`;
             table += `<table class="d-table2"><tr><th>Τμήμα</th><td>${courses[id].department}</td></tr>`;
@@ -29,13 +76,14 @@ export default function Teacher_mathimata() {
             table += `<tr><th>Αρ.Εγγεγραμμένων Φοιτητών</th><td>${courses[id].numofstudents}</td></tr>`;
             table += `<tr><th>Ημ.Υποβολής Τελευταίου Βαθμολογίου</th><td>${5}</td></tr>`;
             table += '</table><br/>'; 
+            }
         }
         table += '</div>';
         var gib = document.getElementById("dyn20");  
         if (gib){ gib.innerHTML = table;}  
     }
     useEffect(()=> {
-        getCourses();
+        //getCourses();
         // Every time you try to enter this page check if you have a saved key at the local storage. 
         // If not, then do not allow user to enter this page and redirect to login page
         if (localStorage.getItem('role') !== "teacher") {
@@ -49,6 +97,9 @@ export default function Teacher_mathimata() {
             <Menu />
             <div class="tm-div1"> 
                 <div className="breadcrumb_body2"><Link to ="/teachers">Αρχική / </Link> <span>Μαθήματα</span></div>
+                <Button2 onClick={toggleVisibility} />
+                <Dropdown2 isVisible={isVisible} />
+                <br></br>
                 <div id="dyn20"></div>
             </div>
             <Footer />

@@ -52,6 +52,7 @@
     top: 0;
     padding: 8px 10px;
     width: 160px;
+    width: 160px;
     height: fit-content;
     font-weight: 600;
     display: flex;
@@ -70,6 +71,7 @@
     margin:auto;
     width: 100%;
     height: fit-content;
+    min-height: 400px;
     margin-bottom: none;
     flex: content;
     align-items: center;

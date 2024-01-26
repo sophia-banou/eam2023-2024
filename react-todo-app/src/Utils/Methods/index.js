@@ -63,6 +63,31 @@ export function btnTab3() {
     pbutton2.className = "cell"
     pbutton3.className = "active"
 }
+export function btnTab4() {
+
+    var table1 = document.getElementById("ttable1");
+    var table3 = document.getElementById("ttable3");
+    var pbutton1 = document.getElementById("tpb1");
+    var pbutton3 = document.getElementById("tpb3");
+
+    table1.style.display = "table";
+    table3.style.display = "none";
+    pbutton1.className = "active"
+    pbutton3.className = "cell"
+}
+
+export function btnTab5() {
+
+    var table1 = document.getElementById("ttable1");
+    var table3 = document.getElementById("ttable3");
+    var pbutton1 = document.getElementById("tpb1");
+    var pbutton3 = document.getElementById("tpb3");
+
+    table1.style.display = "none";
+    table3.style.display = "table";
+    pbutton1.className = "cell"
+    pbutton3.className = "active"
+}
 
 const courses = [
     { name: "Επικοινωνία Ανθρώπου Μηχανής", major: "A", semester: "7o", category: "Κατ'Επιλογήν Υποχρεωτικό", id: "eam" },
