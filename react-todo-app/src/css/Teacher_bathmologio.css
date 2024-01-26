@@ -96,3 +96,16 @@
     margin:auto;
     margin-top: 50px;
 }
+
+
+.eicon2{
+    &:hover{
+        cursor:pointer;
+    }
+}
+
+.vicon2{
+    &:hover{
+        cursor:pointer;
+    }
+}
