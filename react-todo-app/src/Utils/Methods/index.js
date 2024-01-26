@@ -165,7 +165,42 @@ export function generateTable2() {
     var gib = document.getElementById("dyn12");  
     if (gib){ gib.innerHTML = table;}
    
+}
+export function GetBoxValue() {
+    res = new Array();
+    var count = 0;
+    var inputs = document.querySelectorAll('.input2');
+        for (var i = 0; i < inputs.length; i++) {
+            console.log(inputs[i].value, inputs[i].id, inputs[i].name, inputs[i].title);
+            if(inputs[i].value !== ""){
+                res[count] = new Array(inputs[i].name, inputs[i].id, inputs[i].title, inputs[i].value)
+                count++;
+            }
+        }
+        if (count == 0){
+            return document.getElementById("result").innerHTML = "Δεν έχετε συμπληρώσει καμία βαθμολογία";
+        }
+        else {
+            sessionStorage.setItem("res3", JSON.stringify(res));
+            window.location.href = '/proswrinh2' ;
+        }
 } 
+export function generateTable3() {  
+    var data = JSON.parse(sessionStorage.getItem("res3"));
+
+    let table = '<table class="d-table2">';  
+    table += '<tr><th class="dcell">Όνομα Φοιτητή</th><th class="dcell">Α.Μ.</th><th class="dcell">Εξάμηνο φοίτησης</th><th class="dcell">Βαθμός</th></tr>';  
+   
+    for (var i=0; i<data.length; i++){
+        var course = data[i];
+        table += `<tr><th>${course[0]}</td><th>${course[1]}</td><th>${course[2]}</td><th>${course[3]}</td></tr>`;
+    }
+    
+    table += '</table>';   
+    var gib = document.getElementById("dyn24");  
+    if (gib){ gib.innerHTML = table;}
+   
+}
 export function logo() {
     if (localStorage.getItem('role') === "student") {
         window.location.href = '/students'

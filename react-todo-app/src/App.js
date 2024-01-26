@@ -42,6 +42,7 @@ import View_dilwsh from './pages/View_dilwsh';
 import View_mathima from './pages/View_mathima';
 import Proepiskopisi_aitisis from './pages/Proepiskopisi_aitisis';
 import Oristikopoihsh2 from './pages/Oristikopoihsh2';
+import Proswrinh2 from './pages/Proswrinh2';
 
 export default function App() {
   return (
@@ -86,6 +87,7 @@ export default function App() {
       <Route path="/view_mathima" element={<View_mathima db={db}/>} />
       <Route path="/proepiskopisi_aitisis" element={<Proepiskopisi_aitisis db={db}/>} />
       <Route path="/oristikopoihsh2" element={<Oristikopoihsh2 db={db}/>} />
+      <Route path="/proswrinh2" element={<Proswrinh2 db={db}/>} />
 
     </Routes>
     </BrowserRouter>
