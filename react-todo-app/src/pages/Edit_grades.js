@@ -6,7 +6,7 @@ import { db } from '../components/firebase.js';
 import "./../css/istoriko.css";
 import Footer from "./../components/footer.js"
 import { Link } from "react-router-dom";
-import { doc, getDoc, updateDoc, deleteDoc, setDoc } from 'firebase/firestore'
+import { doc, getDoc, updateDoc, deleteDoc, setDoc, getDocs, collection } from 'firebase/firestore'
 import { GetCheckboxValue } from '../Utils/Methods/index.js';
 
 export default function Edit_dilwsh() {
@@ -26,7 +26,7 @@ export default function Edit_dilwsh() {
 
 
     async function getDilosi() {
-        console.log(mathima);
+        
         const diloseis = await getDocs(collection(db, "diloseis"));
         diloseis.forEach(doc => {
           var courses = JSON.parse(doc.data().courses);
@@ -36,10 +36,10 @@ export default function Edit_dilwsh() {
             var exists = 0;
             for (var id = 0; id < courses.length; id++) {
               var course = courses[id];
-              if (course[0] === mathima) {
-                exists = 1;
-                break;
-              }
+              // if (course[0] === mathima) {
+              //   exists = 1;
+              //   break;
+              // }
             }
             if (exists === 1) {
               array.push(doc.data().user);
