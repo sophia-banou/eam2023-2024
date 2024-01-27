@@ -116,7 +116,7 @@ export default function Login({ db }) {
                     <img class="login-icon2" src="password-icon.png" />
                 </div>
                 <div class="button-div9">
-                    <button onClick={handleLogin} type='submit'>Σύνδεση</button>   
+                    <button type='submit'>Σύνδεση</button>   
                     <button > <a href='/register'>Εγγραφή</a></button>     
                 </div>
                 <div class="w-div">

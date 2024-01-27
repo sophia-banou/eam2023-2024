@@ -1,12 +1,24 @@
-.login{
-  width: 100vw;
+.register{
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(223, 223, 223);
 }
-.login h2{
+
+.register-container{
+    color: rgb(30, 30, 30);
+    width: 500px;
+    height: 400px;
+    margin: 0px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.register-container h2{
     text-align: center;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
@@ -14,43 +26,29 @@
     margin: 0px;
     margin-bottom: 20px;
 }
-.login-text{
-    text-align: center;
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    margin: 0px;
-}
-.login-container{
-  color: rgb(30, 30, 30);
-  width: 500px;
-  height: 380px;
-  margin: 0px;
-  padding: 20px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 5px;
-  position: relative;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
-.login-container button{
-    background-color: rgb(255, 255, 255);
+
+.register-container button{
+    background-color: rgb(86, 86, 86);
     border: none;
     padding: 8px;
     position: absolute;
     left: 13px;
-    top: 130px;
+    bottom: 13px;
     color: white;
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-.login-row{
+.register-row{
     text-align: center;
     padding: 3px;
-    padding-top: 20px;
+    float: right;
+    padding-top: 15px;
     margin-bottom: none;
+    margin-right: 85px;
 }
-.login-row input{
-    padding: 4px 50px;
+
+.register-row input{
+    padding: 4px 5px;
     color: rgb(30, 30, 30);
     background-color: rgb(240, 248, 255, 0);
     border: 1.5px solid rgb(30, 30, 30);
@@ -63,7 +61,7 @@
     vertical-align: middle;
     text-rendering: geometricprecision;
     height: 20px;
-    width: 200px;
+    width: 300px;
     outline: none;
     &:focus{
         background-color: rgb(230, 239, 247);
@@ -71,27 +69,9 @@
     }
 }
 
-
-  .login-icon1 {
-    position: absolute;
-    left:124px;
-    top:107px;
-  }
-
-    
-  .login-icon2 {
-    position: absolute;
-    left:124px;
-    top:177px;
-  }
-
-  .icon2 {
-    position: absolute;
-  }
-
-  .button-div9{
+.button-div9{
     width:350px;
-    height:120px;
+    height:80px;
     margin:auto;
     display: flex;
   }
@@ -134,11 +114,10 @@
         opacity: .5;
     }
   }
-
-  .button-div9 button a{
-    color:white;
-    text-decoration: none;
-    
+  .warning{
+  
+    color:#BC0000;
+    margin: auto;
   }
 
   .w-div{
@@ -146,18 +125,4 @@
     margin: auto;
     text-align: center;
     height: 20px;
-  }
-
-  .w-div2{
-    width: 350;
-    margin: auto;
-    text-align: center;
-    height: 30px;
-  }
-
-
-  .warning{
-  
-    color:#BC0000;
-    margin: auto;
   }
