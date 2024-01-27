@@ -448,6 +448,16 @@
     margin-bottom: 50px;
 }
 
+.breadcrumb_body2 span{
+    color: black;
+    text-decoration: none;
+}
+.blink{
+    color: rgb(96, 144, 234);
+    font-weight: bold;
+}
+
+
 .head{
     font-size: 25px  ;
     font-weight: bolder;

@@ -5,7 +5,7 @@ import { db } from '../firebase';
 import { Link } from "react-router-dom";
 
 
-export default function Login({ db }) {
+export default function Login2({ db }) {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -92,7 +92,9 @@ export default function Login({ db }) {
 
     return (
         <div className='login'>
+            <div class="w-div2"> <h class="warning" > Αν έχετε εγγραφεί ήδη, εισάγετε τα στοιχεία σας.</h></div>
             <form onSubmit={handleLogin} className='login-container'>
+                
                 <Link to="/">
                     <img src="back-arrow.png" class="icon2"></img>
                 </Link>

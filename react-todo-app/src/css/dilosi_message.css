@@ -29,3 +29,24 @@
     left:30%;
     font-size: 15px;
 }
+
+.warning-mes{
+    width: 1000px;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.hmes{
+    font-weight: bold;
+    margin: auto;   
+}
+
+
+.warning-mes ul li{
+    line-height: 0.2px;
+}
+
+.bold{
+    font-weight: 600;
+}

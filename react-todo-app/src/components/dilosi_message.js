@@ -61,7 +61,7 @@ export default function Message() {
         const res = await getDoc(ref);
 
         let table = '<table class="d-table2">';
-        table += '<tr><th class="dcell"></th><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Κατεύθυνση</th><th class="dcell">Εξάμηνο</th><th class="dcell">Κατηγορία</th></tr>';
+        table += '<tr><th class="dcell"> </th></th><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Κατεύθυνση</th><th class="dcell">Εξάμηνο</th><th class="dcell">Κατηγορία</th></tr>';
 
         var courses = res.data().courses;
 
@@ -70,7 +70,7 @@ export default function Message() {
             var name = courses[id].name;
             var semester = courses[id].semester;
             var category = courses[id].category;
-            table += `<tr><th><input type="checkbox" class="cb" name="${name}" value="${track}" id="${semester}" title="${category}"/></th><th>${name}</th><th>${track}</th><th>${semester}</th><th>${category}</th></tr>`;
+            table += `<tr><th><input type="checkbox" class="cb" name="${name}" value="${track}" id="${semester}" title="${category}"/></th><th> <span class="bold">${name} </span></th><th>${track}</th><th>${semester}</th><th>${category}</th></tr>`;
         }
         table += '</table>';
         var dil = document.getElementById("diloseis-table");
@@ -83,16 +83,16 @@ export default function Message() {
         const ref = doc(db, "users", user_email); 
         const res = await getDoc(ref);
         var courses = res.data().courses;
-        let table = '<div><h5>Μήπως θέλετε να δηλώσετε κάποιο από τα εξής</h5>';  
+        let message = '<div class="warning-mes"><span class="hmes">Μήπως θέλετε να δηλώσετε κάποιο από τα εξής; </span>   <ul>';  
         for (var id = 0; id < courses.length; id++){
             var grade = courses[id].grade;
             if (grade < 5){
-                table += `<h6>Όνομα μαθήματος:${courses[id].name}, κοπήκατε με βαθμό:${courses[id].grade} στην εξεταστική περίοδο ${courses[id].period}</h6>`;
+                message += `<li>  ${courses[id].name}: Kοπήκατε με βαθμό ${courses[id].grade} στην εξεταστική περίοδο ${courses[id].period} </li> <br> </br>`;
             }
         }
-        table += '</div>'; 
+        message += '</ul> </div>'; 
         var gib = document.getElementById("failed_classes");  
-        if (gib){ gib.innerHTML = table;}
+        if (gib){ gib.innerHTML = message;}
     }
 
     return (

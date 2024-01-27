@@ -22,6 +22,7 @@ import Help_teachers_profile from "./pages/Help_teachers_profile";
 import Teachers from "./pages/Teachers";
 import Register from './components/Register/index';
 import Login from './components/Login';
+import Login2 from './components/Login/index2';
 import Courses from './components/Courses';
 import Student_dilosi from './pages/Student_dilosi';
 import Student_bathmologies from './pages/Student_bathmologies';
@@ -70,6 +71,7 @@ export default function App() {
       <Route path="/help_teachers_profile" element = {<Help_teachers_profile />} /> 
       <Route path="/teachers" element = {<Teachers />} /> 
       <Route path="/login" element={<Login db={db} />} />
+      <Route path="/login2" element={<Login2 db={db} />} />
       <Route path="register" element={<Register db={db}/>} />
       <Route path="courses" element={<Courses db={db}/>} />
       <Route path="/student_dilosi" element={<Student_dilosi db={db}/>} />
