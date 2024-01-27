@@ -468,3 +468,64 @@
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
 }
+.buttons{
+    display:flex;
+    width: 1000px;
+    margin:auto;
+
+}
+
+.button1{
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    height: 40px;
+    margin:auto;
+    text-align: left;
+    text-decoration: none;
+    display: flex;
+    border-radius: 3px;
+    border: 2px solid #547980;
+    width: 180px;
+    padding: 10px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.2;
+    color: white;
+    font-weight: 900;
+    text-shadow: none;
+    background-color: #547980;
+    &:hover{
+        cursor: pointer;
+        background-color: #445e63;
+        border: 2px solid #445e63;
+    }
+
+}
+.button2{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    height: 40px;
+    margin:auto;
+    text-align: left;
+    text-decoration: none;
+    display: flex;
+    border-radius: 3px;
+    border: 2px solid #547980;
+    width: 180px;
+    padding: 10px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.2;
+    color: white;
+    font-weight: 900;
+    text-shadow: none;
+    background-color: #547980;
+    &:hover{
+        cursor: pointer;
+        background-color: #445e63;
+        border: 2px solid #445e63;
+    }
+
+}

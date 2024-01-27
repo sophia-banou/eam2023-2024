@@ -22,7 +22,7 @@ function Dropdown(props) {
     <div>
       {props.isVisible ? (
         <div className="menu_box">
-          <div className="menu_div2">Μαζικά</div>
+          {/* <div className="menu_div2">Μαζικά</div> */}
           <Link className="link_deco" to="/teacher_create"><div className="menu_div2">Μεμονομένα</div></Link>
         </div>
       ) : null}

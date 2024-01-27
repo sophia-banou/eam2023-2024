@@ -70,8 +70,13 @@ export default function Oristikopoihsh3() {
             <div class="d-div1">
                 <div class="message">Το βαθμολόγιο καταχωρήθηκε οριστικά.</div>
                 <div class="buttons">
-                    <Link class="button" to="/teachers">
+                    <Link class="button1" to="/teachers">
                         <div>Επιστροφή στην Αρχική Σελίδα </div> <img class="home_icon" src="./home-icon.png"></img>
+                    </Link>
+                </div>
+                <div class="buttons">
+                    <Link class="button2" to="/teacher_bathmologia">
+                        <div>Δείτε το βαθμολόγιο σας </div> 
                     </Link>
                 </div>
             </div>

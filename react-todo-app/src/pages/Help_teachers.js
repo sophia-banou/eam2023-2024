@@ -18,36 +18,36 @@ export default function Help_teachers() {
         <div>{nav}</div>
         <div className="breadcrumb_body">{Arxiki()} <Link to="/help">Βοήθεια / </Link><span>Διδάσκοντες</span></div>
         <div className="body2">
-            <div className="div2">Κατηγορίες</div>
+            <div className="hdiv2">Κατηγορίες</div>
             <Link to="/help_dhmiourgia">
             <div className="rectangle-parent">
                 <img className="himage" alt="" src="/bathmologia.png" />
-                <div className="div">Δημιουργία Βαθμολογίου
-                    <div className="div1">Δημιουργία καινούργιου βαθμολογίου, μαζικά ή μεμονωμένα</div>
+                <div className="hdiv">Δημιουργία Βαθμολογίου
+                    <div className="hdiv1">Δημιουργία καινούργιου βαθμολογίου, μαζικά ή μεμονωμένα</div>
                 </div>  
             </div>
             </Link>
             <Link to="/help_bathmologio">
             <div className="rectangle-container">
                 <img className="himage" alt="" src="/aithseis.png" />
-                <div className="div">Παλαιότερα Βαθμολόγια
-                    <div className="div1">Προβολή και επεξεργασία παλαιότερων βαθμολογιών</div>
+                <div className="hdiv">Παλαιότερα Βαθμολόγια
+                    <div className="hdiv1">Προβολή και επεξεργασία παλαιότερων βαθμολογιών</div>
                 </div>
             </div>
             </Link>
             <Link to="/help_mathimata_didaskontwn">
                 <div className="group-div">
                 <img className="himage" alt="" src="/mathima.png" />
-                <div className="div">Πληροφορίες Μαθημάτων
-                    <div className="div1"> Πληροφορίες για όλα τα μαθήματα που διδάσκετε</div>
+                <div className="hdiv">Πληροφορίες Μαθημάτων
+                    <div className="hdiv1"> Πληροφορίες για όλα τα μαθήματα που διδάσκετε</div>
                 </div>
             </div>
             </Link>
             <Link to="/help_teachers_profile">
             <div className="rectangle-parent1">
                 <img className="himage" alt="" src="/profile.png" />
-                <div className="div">Επεξεργασία Προφίλ
-                    <div className="div1">Δυνατότητα προβολής και επεξεργασίας του προφίλ</div>
+                <div className="hdiv">Επεξεργασία Προφίλ
+                    <div className="hdiv1">Δυνατότητα προβολής και επεξεργασίας του προφίλ</div>
                 </div>
             </div>
             </Link>

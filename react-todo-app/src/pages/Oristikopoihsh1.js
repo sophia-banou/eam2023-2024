@@ -98,8 +98,11 @@ export default function Oristikopoihsh1() {
 
                 <div class="message"> Η δήλωση σας οριστικοποιήθηκε. Οι προηγούμενες δηλώσεις σας για αυτό το εξάμηνο θα διαγραφούν</div>
                 <div class="buttons">
-                    <Link class="button" to="/students">
+                    <Link class="button1" to="/students">
                         <div>Επιστροφή στην Αρχική Σελίδα </div> <img class="home_icon" src="./home-icon.png"></img>
+                    </Link>
+                    <Link class="button2" to="/istoriko">
+                        <div>Δείτε την δήλωση σας</div>
                     </Link>
                 </div>
             </div>

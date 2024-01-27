@@ -1,6 +1,6 @@
 import React from "react"
 import { useEffect, useState } from 'react';
-import { GetBoxValue } from '../Utils/Methods/index.js';
+import { Button3 } from "../components/Button1.js";
 import { db } from '../components/firebase.js';
 import { collection, getDocs, getDoc, doc } from "firebase/firestore";
 import Nav2 from "./../components/Nav2.js"
@@ -14,10 +14,12 @@ import { Link } from "react-router-dom";
 var array = new Array();
 
 export default function Teacher_create() {
+  const [button, setButton] = useState();
+
   function Button2(props) {
     return (
       <button className="bath_rectangle" onClick={props.onClick}>
-        <div className="menu_div">Όνομα μαθήματος ▽ </div>
+        <div className="menu_div">Επιλέξτε μάθημα ▽ </div>
       </button>
     );
   }
@@ -75,7 +77,8 @@ export default function Teacher_create() {
       }
       
     })
-
+    var b = <Button3 />
+    setButton(b);
     getStudent()
   }
   async function getStudent() {
@@ -133,11 +136,12 @@ export default function Teacher_create() {
       <Nav2 />
       <Menu />
       <div className="breadcrumb_body2"><Link to="/teachers">Αρχική / </Link> <Link to="/teacher_bathmologia">Βαθμολόγια / </Link><span>Δημιουργία Βαθμολογίου</span></div>
-      <div>
+      <div className="tm-div1">
         <Button2 onClick={toggleVisibility} />
         <Dropdown2 isVisible={isVisible} />
         <div id="dyn22"></div>
-        <div onClick={GetBoxValue} className="dilosi_rectangle1">Προσωρινή Αποθήκευση</div>
+        <div>{button}</div>
+        {/* <div onClick={GetBoxValue} className="dilosi_rectangle1">Προσωρινή Αποθήκευση</div> */}
         <h4 class="error1" id="result"></h4>
       </div>
       <Footer />

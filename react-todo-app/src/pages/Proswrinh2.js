@@ -70,14 +70,14 @@ export default function Proswrinh2() {
             <Nav2 />
             <Menu />
             <div className="breadcrumb_body2"><Link to ="/teachers">Αρχική / </Link> <Link to ="/teacher_bathmologia">Βαθμολόγια / </Link><Link to ="/teacher_create">Δημιουργία Βαθμολογίου / </Link><span>Προσωρινή Αποθήκευση</span></div>
-            <h3>{sessionStorage.getItem("bath_mathima")}</h3>
+            <div className='rectangle_long1'>
+                <div className="Message_div">Το βαθμολόγιο αυτό δεν έχει οριστικοποιηθεί</div> 
+            </div>
+            <h3 className="course_title">{sessionStorage.getItem("bath_mathima")}</h3>
             <div class="icon-div">
                     <Link to="/teacher_create" class="arrow-icon">
                         <img src="back-arrow.png" ></img>
                     </Link>
-            </div>
-            <div className='rectangle_long1'>
-                <div className="Message_div">Το βαθμολόγιο αυτό δεν έχει οριστικοποιηθεί</div> 
             </div>
             <div class="d-div1">
        
