@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { doc, setDoc } from 'firebase/firestore'
+import { doc, setDoc , getDocs, collection} from 'firebase/firestore'
 import { courses } from '../../Utils/Objects/objects';
-import './index.css'
+import './index2.css'
+import { Link } from "react-router-dom";
 
 export default function Register({db}){
 
@@ -14,45 +15,94 @@ export default function Register({db}){
   // Handles the register functionality of the user
   async function handleRegister(e){
     e.preventDefault()
-    
+    var message;
+    var docUser;
+
+    if (email =="" || password =="" || name =="" || role == "" || AM ==""){
+        message = "Δεν έχετε συμπληρώσει όλα τα πεδία.";
+        let m = document.getElementById("w5");
+        m.innerHTML = message;
+        return;
+    }
+
+    const res = await getDocs(collection(db,"users"));
+    var flag = false;
+    res.forEach( (user) => {
+        
+        if (user.data().email === email) {
+            flag=true;
+    }}
+    );
+
+    if (flag == true) {
+        message = "Το email χρησιμοποιείται ήδη."
+        let m = document.getElementById("w5");
+        m.innerHTML = message;
+        return;
+    }
+
+
+    if(role == "student"){
+        docUser = {
+            email: email,
+            password: password,
+            name: name,
+            AM: AM,
+            role: role,
+            d_id: new Array,
+            courses: new Array,
+            aithseis: new Array,
+            current_period: "Χειμερινό 2023-24"
+           
+        };
+    } else if(role == "teacher") {
+        docUser = {
+            email: email,
+            password: password,
+            name: name,
+            AM: AM,
+            role: role,
+            grade_id: new Array,
+            courses: new Array,
+            current_period: "Χειμερινό 2023-24"
+           
+        };
+    } else {
+        message = "Έχετε εισάγει λάθος ρόλο.";
+        let m = document.getElementById("w5");
+        m.innerHTML = message;
+        return;
+    }
     // This object represents the user's form that it will be saved in our database.
-    const docUser = {
-        email: email,
-        password: password,
-        name: name,
-        AM: AM,
-        role: role,
-        courses: [
-          {
-            name: "Επικοινωνία Ανθρώπου Μηχανής",
-            grade: 10,
-          },
-        ],
-    };
+   
+   
 
     try{
        // Create a Firebase doc that 'points' to our db and creates a collection "users" with primary key the email of the user
-      const ref_user = doc(db, "users", email)
+      
+      
       // Then we use setDoc to push the 'user object' to the referenced user
-      const res_user = await setDoc(ref_user, docUser);
+      await setDoc(doc(db, "users", email), docUser);
 
       // At the same time we push all the courses at the db.
       // We create a 'courses' collection with primary key 'all_courses'
-      const ref_courses = doc(db, "courses", "all_courses")
-      const res_courses = await setDoc(ref_courses, courses);
+     
 
       // Redirect to login route
-      window.location.href = '/'
+      window.location.href = '/login'
 
     }catch(e){
-      console.log(e)
+      console.log(e);
     }
     
   }
     return(
       <div className='register'>
         <form onSubmit={handleRegister} className='register-container'>
-            <h2>Register</h2>
+                <Link to="/login">
+                    <img src="back-arrow.png" class="icon2"></img>
+                </Link>
+            <h2>Δημιουργία Νέου Λογαριασμού</h2>
             <div className='register-row'>
                 <label>Email:</label>
                 &nbsp;&nbsp;&nbsp;
@@ -63,7 +113,7 @@ export default function Register({db}){
                 />
             </div>
             <div className='register-row'>
-                <label>Password:</label>
+                <label>Κωδικός:</label>
                 &nbsp;&nbsp;&nbsp;
                 <input
                     type="password"
@@ -72,7 +122,7 @@ export default function Register({db}){
                 />
             </div>
             <div className='register-row'>
-                <label>Name:</label>
+                <label>Όνομα:</label>
                 &nbsp;&nbsp;&nbsp;
                 <input
                     type="name"
@@ -90,7 +140,7 @@ export default function Register({db}){
                 />
             </div>
             <div className='register-row'>
-                <label>Role:</label>
+                <label>Ρόλος:</label>
                 &nbsp;&nbsp;&nbsp;
                 <input
                     type="role"
@@ -98,8 +148,13 @@ export default function Register({db}){
                     onChange={(e) => setrole(e.target.value)}
                 />
             </div>
-            <button type='submit'>Register</button>
-            <a href='/'>Already have an Account?</a>
+
+            <div class="button-div9">
+                <button type='submit'>Εγγραφή</button>
+            </div>
+            <div class="w-div">
+                    <h id="w5" class="warning" ></h>
+            </div>
         </form>
       </div>
     )
