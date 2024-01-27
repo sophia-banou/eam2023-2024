@@ -74,7 +74,6 @@ export default function Teacher_mathimata() {
             table += `<tr><th>Τύπος μαθήματος</th><td>${courses[id].category}</td></tr>`;
             table += `<tr><th>Κατεύθυνση</th><td>${courses[id].track}</td></tr>`;
             table += `<tr><th>Αρ.Εγγεγραμμένων Φοιτητών</th><td>${courses[id].numofstudents}</td></tr>`;
-            table += `<tr><th>Ημ.Υποβολής Τελευταίου Βαθμολογίου</th><td>${5}</td></tr>`;
             table += '</table><br/>'; 
             }
         }
@@ -95,7 +94,7 @@ export default function Teacher_mathimata() {
         <div>
             <Nav2 />
             <Menu />
-            <div class="tm-div1"> 
+            <div class="tm-div2"> 
                 <div className="breadcrumb_body2"><Link to ="/teachers">Αρχική / </Link> <span>Μαθήματα</span></div>
                 <Button2 onClick={toggleVisibility} />
                 <Dropdown2 isVisible={isVisible} />
