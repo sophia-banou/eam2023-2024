@@ -25,7 +25,7 @@
     width: 500px;
     height: 380px;
     margin: auto;
-    margin-top: 100px;
+    top: 100px;
     padding: 10px;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
@@ -152,7 +152,6 @@
   .w-div2{
     width: 350;
     margin: auto;
-    
     text-align: center;
     height: 30px;
   }

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Nav2 from "./../components/Nav2.js"
 import Menu from "./../components/teacher_menu.js"
 import "./../css/student_profile.css";
@@ -9,6 +9,15 @@ import {doc, getDoc,updateDoc } from 'firebase/firestore'
 import { db } from '../components/firebase.js';
 
 export default function Edit_teacher_profile() {
+
+    useEffect(() => {
+        // Every time you try to enter this page check if you have a saved key at the local storage. 
+        // If not, then do not allow user to enter this page and redirect to login page
+        if (localStorage.getItem('role') !== "teacher") {
+            window.location.href = '/login2'
+        }
+    }, [])
+
 
     const [mStatus, setMStatus] = useState('');
     const [pobStatus, setPobStatus] = useState('');

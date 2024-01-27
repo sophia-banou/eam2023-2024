@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { doc, getDoc, updateDoc, deleteDoc, setDoc, getDocs, collection } from 'firebase/firestore'
 import { GetCheckboxValue } from '../Utils/Methods/index.js';
 
-export default function Edit_dilwsh() {
+export default function Edit_grades() {
 
 
 
@@ -18,7 +18,7 @@ export default function Edit_dilwsh() {
         // Every time you try to enter this page check if you have a saved key at the local storage. 
         // If not, then do not allow user to enter this page and redirect to login page
         if (localStorage.getItem('role') !== "teacher") {
-            window.location.href = '/'
+            window.location.href = '/login2'
         }
     }, [])
 
