@@ -25,8 +25,9 @@
     color:#BC0000;
 }
 .Message_div{
-    position:absolute;
-    left:30%;
+    position:relative;
+    width: 100%;
+    text-align: center;
     font-size: 15px;
 }
 
@@ -49,4 +50,11 @@
 
 .bold{
     font-weight: 600;
+}
+.dicon{
+    width: 30px;
+    height: 30px;
+    &:hover{
+        cursor:pointer;
+    }
 }

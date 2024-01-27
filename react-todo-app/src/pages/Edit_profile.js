@@ -94,6 +94,7 @@ export default function Edit_profile() {
         <div>
             <Nav2 />
             <Menu />
+            <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><Link to="/student_profile">Προφίλ / </Link><span>Επεξεργασία Προφίλ</span></div>
             <div class="icon-div">
                 <Link to="/student_profile">
                     <img src="back-arrow.png" class="arrow-icon"></img>

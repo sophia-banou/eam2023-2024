@@ -76,7 +76,9 @@ export default function Proswrinh2() {
                         <img src="back-arrow.png" ></img>
                     </Link>
             </div>
-
+            <div className='rectangle_long1'>
+                <div className="Message_div">Το βαθμολόγιο αυτό δεν έχει οριστικοποιηθεί</div> 
+            </div>
             <div class="d-div1">
        
                 <div id="dyn24" class="div-table" ></div>

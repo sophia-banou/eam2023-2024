@@ -59,7 +59,7 @@ export default function View_dilwsh() {
 
             <Nav2 />
             <Menu />
-
+            <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><Link to="/student_profile">Προφίλ / </Link><Link to="/istoriko">Ιστορικό / </Link><span>Προβολή Δήλωσης</span></div>
             <Link to="/istoriko">
                 <img src="back-arrow.png" class="arrow-icon2"></img>
             </Link>

@@ -21,6 +21,7 @@ export default function StudentProfile() {
         <div>
             <Nav2 />
             <Menu />
+            <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><span>Προφίλ</span></div>
             <div class="sp">
 
                 <div class="sp-div">

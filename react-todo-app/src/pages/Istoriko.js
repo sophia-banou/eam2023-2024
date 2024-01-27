@@ -152,7 +152,7 @@ export default function Istoriko() {
             
             <Nav2 />
             <Menu />
-
+            <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><Link to="/student_profile">Προφίλ / </Link><span>Ιστορικό</span></div>
             <Link to="/student_profile">
                     <img src="back-arrow.png" class="arrow-icon2"></img>
             </Link>

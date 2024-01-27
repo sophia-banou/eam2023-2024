@@ -120,8 +120,7 @@ export default function Edit_dilwsh() {
 
             <Nav2 />
             <Menu />
-
-
+            <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><Link to="/student_profile">Προφίλ / </Link><Link to="/istoriko">Ιστορικό / </Link><span>Επεξεργασία Δήλωσης</span></div>
             <div>
                 <div className='rectangle_long1'>
                     <div className="Message_div">
