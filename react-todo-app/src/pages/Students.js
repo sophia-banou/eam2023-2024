@@ -26,7 +26,7 @@ export default function HomePage() {
             <Link to="/student_mathimata">
               <div className="teacher_div1">
                 <img className="timage" alt="" src="/mathima.png" />
-                <div className="teachers_div">Τα Μαθήματα Μου
+                <div className="teachers_div">Μαθήματα
                     <div className="teachers_div1">Δείτε τα μαθήματα του <br></br>Προγράμματος Σπουδών σας</div>
                 </div>
               </div>
@@ -34,7 +34,7 @@ export default function HomePage() {
             <Link to="/student_bathmologies">
               <div className="teacher_div2">
                   <img className="timage" alt="" src="/bathmologia.png" />
-                  <div className="teachers_div">Οι Βαθμολογίες Μου
+                  <div className="teachers_div">Βαθμολογίες
                     <div className="teachers_div1">Δείτε και εκτυπώστε τις <br></br>βαθμολογίες σας</div>
                   </div>
               </div>
