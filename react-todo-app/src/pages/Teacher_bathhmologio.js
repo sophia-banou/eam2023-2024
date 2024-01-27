@@ -121,11 +121,13 @@ function jj(){
         <Button onClick={toggleVisibility} />
         <Dropdown isVisible={isVisible} />
       </div>
-      <div class="btable">
-        <div class="table1">
-          <h>Βαθμολόγια</h>
+      <div className="tm-div1">
+        <div class="btable">
+          <div class="table1">
+            <h>Βαθμολόγια</h>
+          </div>
+          <div id="dyn21" class="div-table" ></div>
         </div>
-        <div id="dyn21" class="div-table" ></div>
       </div>
       <Footer />
 

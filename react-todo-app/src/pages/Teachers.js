@@ -20,20 +20,14 @@ export default function Teachers() {
     
     <div>
       <Nav2 />
-      {/* <Menu /> */}
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      
+      {/* <Menu /> */}      
       <div id="header-image-menu-students" className="main-teach">
-        <img src="teachers-banner.jpg" alt="National and Kapodistrian University of Athens" />
+        <img src="teach-banner.png" alt="National and Kapodistrian University of Athens" />
         <div className="teachers_body">
             <Link to="/teacher_bathmologia">
             <div className="teacher_div1">
                 <img className="timage" alt="" src="/bathmologia.png" />
-                <div className="teachers_div">Τα Βαθμολόγια Μου
+                <div className="teachers_div">Βαθμολόγια
                     <div className="teachers_div1">Δείτε βαθμολόγια που έχετε <br></br>δημιουργήσει στο παρελθόν</div>
                 </div>
             </div>
@@ -54,12 +48,14 @@ export default function Teachers() {
                 </div>
             </div>
             </Link>
-            {/* <div className="teacher_div4">
-                <img className="timage" alt="" src="/mazika.png" />
-                <div className="teachers_div">Δημιουργία Νέου Βαθμολογίου Μαζικά
-                    <div className="teachers_div1">Δημιουργήστε νέο βαθμολόγιο με <br></br>ανέβασμα αρχείου</div>
+            <Link to="/edit_teacher_profile">
+            <div className="teacher_div4">
+                <img className="timage" alt="" src="/profile.png" />
+                <div className="teachers_div">Επεξεργασία προφίλ
+                    <div className="teachers_div1">Ενημερώστε το προφίλ σας με τα<br></br>πρόσφατα προσωπικά σας στοιχεία</div>
                 </div>
-            </div> */}
+            </div>
+            </Link>
         </div>
       </div>
       <Footer />
