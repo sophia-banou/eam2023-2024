@@ -36,6 +36,7 @@ export default function Message() {
     useEffect(() => {
         getLimit();
         getCourse();
+        getfails();
     }, [])
 
     const smonth = localStorage.getItem("startmonth");
@@ -76,6 +77,24 @@ export default function Message() {
         if (dil) { dil.innerHTML = table; }
         jj();
     }
+    async function getfails() {
+        var user_email = localStorage.getItem("email");
+    
+        const ref = doc(db, "users", user_email); 
+        const res = await getDoc(ref);
+        var courses = res.data().courses;
+        let table = '<div><h5>Μήπως θέλετε να δηλώσετε κάποιο από τα εξής</h5>';  
+        for (var id = 0; id < courses.length; id++){
+            var grade = courses[id].grade;
+            if (grade < 5){
+                table += `<h6>Όνομα μαθήματος:${courses[id].name}, κοπήκατε με βαθμό:${courses[id].grade} στην εξεταστική περίοδο ${courses[id].period}</h6>`;
+            }
+        }
+        table += '</div>'; 
+        var gib = document.getElementById("failed_classes");  
+        if (gib){ gib.innerHTML = table;}
+    }
+
     return (
         <div>
             <div className='rectangle_long1'>
@@ -85,6 +104,8 @@ export default function Message() {
             </div>
             <div class="d-div1">
                 <div id="diloseis-table"></div>
+                <br></br>
+                <div id="failed_classes"></div>
             </div>
             <div className="dilosi_rectangle1">
                     <div onClick={GetCheckboxValue} className="dilosi_div">Προσωρινή Αποθήκευση</div>

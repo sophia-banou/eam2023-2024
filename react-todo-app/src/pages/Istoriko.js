@@ -44,15 +44,18 @@ export default function Istoriko() {
 
         for (var i=0; i<d_id.length; i++){
             var id = d_id[i];
-
-            const res2 = await getDoc(doc(db,"diloseis",id));
+            
+            const ref2 = doc(db,"diloseis",id);
+            const res2 = await getDoc(ref2);
             if (res2.data().status == "Προσωρινή") {
                 if (start <= currentDate && currentDate <= end) {
                     table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
                     <td> <img class="vicon" src="./view-icon.png" value=${id} />   <img class="eicon" src ="./edit-icon2.png" value=${id}>  </td></tr>`
                 }
                 else {
-                    table += `<tr><td>${res2.data().date} </td><td>"Ληγμένη"</td> 
+                    var data ={ status: "Ληγμένη"};
+                    updateDoc(ref2, data);
+                    table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
                     <td>  <img class="vicon" src="./view-icon.png" value=${id} />  <img class="icont" src ="./edit-icon3.png"> </td></tr>`
                 }
                 
