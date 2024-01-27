@@ -50,6 +50,7 @@ export default function Oristikopoihsh3() {
             id: new_id,
             grades: res3,
             status: "Οριστική",
+            class_name: sessionStorage.getItem("bath_mathima"),
             date: currentDate,
             professor: localStorage.getItem("email"),
 

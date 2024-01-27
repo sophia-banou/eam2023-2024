@@ -43,6 +43,7 @@ export default function Proswrinh2() {
             grades: res3,
             status: "Προσωρινή",
             date: currentDate,
+            class_name: sessionStorage.getItem("bath_mathima"),
             professor: localStorage.getItem("email"),
 
         });
