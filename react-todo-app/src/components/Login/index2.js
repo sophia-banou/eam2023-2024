@@ -1,12 +1,17 @@
 import './index.css'
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { doc, getDoc, setDoc } from 'firebase/firestore'
 import { db } from '../firebase';
 import { Link } from "react-router-dom";
 
 
-export default function Login2({ db }) {
+export default function Login({ db }) {
 
+    useEffect(()=> {
+       localStorage.clear();
+       sessionStorage.clear();
+    },[]);
+    
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -92,9 +97,7 @@ export default function Login2({ db }) {
 
     return (
         <div className='login'>
-            <div class="w-div2"> <h class="warning" > Αν έχετε εγγραφεί ήδη, εισάγετε τα στοιχεία σας.</h></div>
             <form onSubmit={handleLogin} className='login-container'>
-                
                 <Link to="/">
                     <img src="back-arrow.png" class="icon2"></img>
                 </Link>
@@ -122,7 +125,7 @@ export default function Login2({ db }) {
                     <button > <a href='/register'>Εγγραφή</a></button>     
                 </div>
                 <div class="w-div">
-                    <h id="w1" class="warning" ></h>
+                    <h id="w1" class="warning" >Εάν έχετε ήδη εγγραφεί, εισάγετε τα στοιχεία σας.</h>
                 </div>
             </form>
             

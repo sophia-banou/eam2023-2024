@@ -2,12 +2,22 @@ import React from "react"
 import './../css/HomePage.css';
 import './../css/Teachers.css';
 import Nav2 from "./../components/Nav2.js"
+import { useState, useEffect } from 'react';
 import Footer from "./../components/footer.js"
 import Menu from "./../components/teacher_menu.js"
 import { Link } from "react-router-dom";
 
 export default function Teachers() {
+  useEffect(()=> {
+    //getDilosi();
+    // Every time you try to enter this page check if you have a saved key at the local storage. 
+    // If not, then do not allow user to enter this page and redirect to login page
+    if (localStorage.getItem('role') !== "teachers") {
+        window.location.href = '/login2'
+    }
+},[])
   return (
+    
     <div>
       <Nav2 />
       <Menu />

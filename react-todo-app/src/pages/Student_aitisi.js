@@ -14,7 +14,7 @@ export default function Student_aitisi() {
         // Every time you try to enter this page check if you have a saved key at the local storage. 
         // If not, then do not allow user to enter this page and redirect to login page
         if (localStorage.getItem('role') !== "student") {
-            window.location.href = '/'
+            window.location.href = '/login2'
         }
     }, [])
 

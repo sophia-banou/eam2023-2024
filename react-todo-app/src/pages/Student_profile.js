@@ -1,12 +1,21 @@
 import React from "react"
 import Nav2 from "./../components/Nav2.js"
 import Menu from "./../components/student_menu.js"
+import { useEffect } from 'react';
 import "./../css/student_profile.css";
 import { logout, btnTab1, btnTab2, btnTab3 } from '../Utils/Methods/index.js';
 import Footer from "./../components/footer.js"
 import { Link } from "react-router-dom";
 
 export default function StudentProfile() {
+
+    useEffect(() => {
+        // Every time you try to enter this page check if you have a saved key at the local storage. 
+        // If not, then do not allow user to enter this page and redirect to login page
+        if (localStorage.getItem('role') !== "student") {
+            window.location.href = '/login2'
+        }
+    }, [])
 
     return (
         <div>
