@@ -10,11 +10,15 @@ export default function HomePage() {
       <Nav1 />
       <div id="header-image-menu">
         <img src="header-image.png" alt="National and Kapodistrian University of Athens" />
-        <h2 id="image-text">
-          Γραμματείες Πανεπιστημίου<br></br> Αθηνών
-        </h2>
+        <div class="header-text">
+          <div class="header-div"> 
+            <h2 class="image-text"> ΓΡΑΜΜΑΤΕΙΕΣ ΠΑΝΕΠΙΣΤΗΜΙΟΥ ΑΘΗΝΩΝ </h2>
+            <span class="image-text2">Εισάγετε τα στοιχεία σας για να αποκτήσετε <br></br> πρόσβαση στις υπηρεσείες της πλατφόρμας.</span>
+          </div>
+          <div class="button-div1"><button class="header-button"> ΣΥΝΔΕΣΗ</button></div>
+        </div>
       </div>
-      <Login  />
+
       <Footer />
     </div>
   );
