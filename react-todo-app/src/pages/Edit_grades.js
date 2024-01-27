@@ -16,6 +16,7 @@ export default function Edit_grades() {
   const [bdate, setBdate] = useState();
 
     useEffect(() => {
+        getGrade();
         // Every time you try to enter this page check if you have a saved key at the local storage. 
         // If not, then do not allow user to enter this page and redirect to login page
         if (localStorage.getItem('role') !== "teacher") {
