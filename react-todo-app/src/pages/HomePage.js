@@ -35,7 +35,7 @@ export default function HomePage() {
           </div>
           <div class="info-box1">
             <div class="info-img-div">
-              <img src="pr-icon2.png" class="info-box-img"></img>
+              <img src="pr-icon.png" class="info-box-img"></img>
             </div>
             <div class="info-b-text">
                 <div>
