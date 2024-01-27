@@ -1,9 +1,8 @@
 
 /*	Styling header image	*/
 #header-image-menu{
-	top: 10px;
-	position: relative;
-	margin: 0px;
+	margin:none;
+	margin-top: 50px;
 }
 
 #header-image-menu img{
@@ -11,15 +10,69 @@
 	padding: 0px;
 }
 
-#image-text{
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  font-family: 'Helvetica Neue';
+.image-text{
+
+  margin: auto;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
   color: #ffffff;
-  font-size: 40px;  
+  font-size: 32px;  
   text-align: center;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
+}
+
+.button-div1{
+	width: 400px;
+	margin-top: 10px;
+}
+
+.header-button{
+	min-height: 45px;
+	min-width: 180px;
+	padding: 10px 10px;
+	border-radius: 25px;
+	border: none;
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	background-color: #cd5b3c;
+	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+	&:hover {
+		background-color: #bd4f31;
+		cursor: pointer;
+	}
+
+}
+.image-text2{
+
+	width: 400px;
+	float:left;
+	font-family: 'Helvetica Neue';
+	margin-top: 10px;
+	font-size: 18px;
+	color: white;
+	
+}
+
+.header-text{
+	display: block;
+	position: absolute;
+	left: 100px;
+	top: 200px;
+	text-align: left;
+	max-width: 700px;
+	height: 300px;
+}
+
+.header-text button{
+	
+	margin:auto;
+	width: 100px;
+	height: 20px;
+}
+
+.header-div{
+	margin:auto;
+	height: 100px
 }
 
 /* Styling header */
