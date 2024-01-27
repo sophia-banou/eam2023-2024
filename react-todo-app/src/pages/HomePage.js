@@ -29,20 +29,20 @@ export default function HomePage() {
             <div class="info-b-text">
                 <div>
                     <span class="info-span1"> Φοιτητές</span> <br></br>
-                    <span class="info-span2"> Δείτε τις βαθμολογίες σας, δείτε τις προθεσμίες των δηλώσεων και δηλώστε μαθήματα,και δημιουργήστε αιτήσεις για πιστοποιητικά</span>
+                    <span class="info-span2"> Δείτε τις βαθμολογίες σας, δείτε τις προθεσμίες των δηλώσεων και δηλώστε μαθήματα, δημιουργήστε αιτήσεις για πιστοποιητικά</span>
                 </div>
             </div>
           </div>
           <div class="info-box1">
             <div class="info-img-div">
-              <img src="pr-icon2.png" class="info-box-img"></img>
+              <img src="pr-icon.png" class="info-box-img"></img>
             </div>
             <div class="info-b-text">
                 <div>
                     <span class="info-span1"> Διδάσκοντες</span> <br></br>
-                    <span class="info-span2"> Δείτε τις βαθμολόγια σας και δημιουργήστε καινούργια, Δείτε πληροφορίες για τα μαθήματα που διδάσκετε</span>
+                    <span class="info-span2"> Δείτε τις βαθμολόγια σας και δημιουργήστε καινούργια, δείτε πληροφορίες για τα μαθήματα που διδάσκετε</span>
                 </div>
-            </div>
+            </div>  
            
           </div>
 
