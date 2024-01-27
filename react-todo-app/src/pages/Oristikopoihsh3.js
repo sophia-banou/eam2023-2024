@@ -6,7 +6,7 @@ import "./../css/HomePage.css";
 import "./../css/Student_dilosi.css";
 import Nav2 from "./../components/Nav2.js"
 import Footer from "./../components/footer.js"
-import Menu from "./../components/student_menu.js"
+import Menu from "./../components/teacher_menu.js"
 import { doc, getDoc, updateDoc, deleteDoc, setDoc } from 'firebase/firestore'
 
 export default function Oristikopoihsh3() {

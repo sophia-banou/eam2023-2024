@@ -47,6 +47,7 @@ import Proswrinh2 from './pages/Proswrinh2';
 import Oristikopoihsh3 from './pages/Oristikopoihsh3';
 import Edit_teacher_profile from './pages/Edit_teacher_profile';
 import Edit_grades from './pages/Edit_grades';
+import View_grade from './pages/View_grade';
 
 export default function App() {
   return (
@@ -96,6 +97,7 @@ export default function App() {
       <Route path="/oristikopoihsh3" element={<Oristikopoihsh3 db={db}/>} />
       <Route path="/edit_teacher_profile" element={<Edit_teacher_profile db={db}/>} />
       <Route path="/edit_grades" element={<Edit_grades db={db}/>} />
+      <Route path="/view_grades" element={<View_grade db={db}/>} />
 
     </Routes>
     </BrowserRouter>
