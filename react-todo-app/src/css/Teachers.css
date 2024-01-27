@@ -11,7 +11,9 @@
 .teacher_div1,
 .teacher_div2,
 .teacher_div3,
-.teacher_div4{
+.teacher_div4,
+.teacher_div5,
+.teacher_div6{
     border-radius: 6px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
@@ -46,6 +48,16 @@
     top: 220px;
     left: 520px;
 }
+.teacher_div5{
+    position: absolute;
+    top: 390px;
+    left: 70px;
+}
+.teacher_div6{
+    position: absolute;
+    top: 390px;
+    left: 520px;
+}
 .timage {
     position: absolute;
     left: 5%;
@@ -73,10 +85,14 @@
     line-height: 1;
 }
 .teachers_body {
-    position: relative;
-    top: 0;
+    position: absolute;
+    top: 20%;
     left: 15%;
     width: 70%;
-    height: 500px;
+    height: 600px;
     overflow: hidden;
   }
+.main-teach{
+    position: relative;
+    top: 500px;
+}

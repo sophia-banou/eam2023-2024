@@ -20,12 +20,16 @@ export default function Teachers() {
     
     <div>
       <Nav2 />
-      <Menu />
-      <div id="header-image-menu-students">
+      {/* <Menu /> */}
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      
+      <div id="header-image-menu-students" className="main-teach">
         <img src="teachers-banner.jpg" alt="National and Kapodistrian University of Athens" />
-      </div>
-      <div className="teachers_body">
-            <div className="teacher_box">
+        <div className="teachers_body">
             <Link to="/teacher_bathmologia">
             <div className="teacher_div1">
                 <img className="timage" alt="" src="/bathmologia.png" />
@@ -56,8 +60,8 @@ export default function Teachers() {
                     <div className="teachers_div1">Δημιουργήστε νέο βαθμολόγιο με <br></br>ανέβασμα αρχείου</div>
                 </div>
             </div> */}
-            </div>
         </div>
+      </div>
       <Footer />
     </div>
   );
