@@ -149,6 +149,9 @@
 .bold {
     font-weight: 600;
 }
+.light {
+    color: #7b7b7b;
+}
 
 .dicon {
     width: 30px;

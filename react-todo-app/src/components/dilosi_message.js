@@ -90,12 +90,15 @@ export default function Message() {
     
         const ref = doc(db, "users", user_email); 
         const res = await getDoc(ref);
-        var courses = res.data().courses;
+        var fgrades = res.data().grades;
         let message = '<div class="warning-mes"><span class="hmes">Μήπως θέλετε να δηλώσετε κάποιο από τα εξής; </span>   <ul>';  
-        for (var id = 0; id < courses.length; id++){
-            var grade = courses[id].grade;
-            if (grade < 5){
-                message += `<li>  ${courses[id].name}: Σημειώθηκε μη προβιβάσιμος βαθμός (${courses[id].grade}) στην εξεταστική περίοδο ${courses[id].period} </li> <br> </br>`;
+        for (var id = 0; id < fgrades.length; id++){
+            var period = fgrades[id].courses;
+            for (var id2 = 1; id2 < period.length; id2++){
+                var grade = period[id2].grade;
+                if (grade < 5){
+                    message += `<li>  ${period[id2].name}: Σημειώθηκε μη προβιβάσιμος βαθμός (${period[id2].grade}) στην εξεταστική περίοδο ${period[0]} </li> <br> </br>`;
+                }
             }
         }
         message += '</ul> </div>'; 

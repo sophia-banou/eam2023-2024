@@ -6,17 +6,27 @@ import {doc, getDoc} from 'firebase/firestore'
 import "./../css/HomePage.css";
 import "./../css/Student_dilosi.css";
 import Nav1 from "./../components/Nav1.js"
+import Nav2 from "./../components/Nav2.js"
 import Footer from "./../components/footer.js"
 import Menu from "./../components/student_menu.js"
 
 export default function Student_mathimata() {
-  
+    if (localStorage.getItem('role') === null) {
+        var nav = <div> <Nav1 />
+        <div class="breadcrumb_body5"><Link to="/">Αρχική / </Link> <Link to="/student_mathimata">Μαθήματα / </Link><span>Πληροφορίες μαθήματος</span></div>
+    </div>;
+        
+    } else if (localStorage.getItem('role') === "student"){
+        var nav = <div> <Nav2 />
+            <Menu />
+            <div class="breadcrumb_body5"><Link to="/students">Αρχική / </Link> <Link to="/student_mathimata">Μαθήματα / </Link><span>Πληροφορίες μαθήματος</span></div>
+        </div>;
+    }
     return (
         <div> 
-            <Nav1 />
-            <div className="breadcrumb_body2"><Link to="/">Αρχική / </Link><Link to="/student_mathimata">Μαθήματα / </Link><span>Πληροφορίες μαθήματος</span></div>
+            <div>{nav}</div>
             <div class="m-div1"> 
-                <div className="mathima_div">{sessionStorage.getItem("m_name")}</div>
+                <div className="title">{sessionStorage.getItem("m_name")}</div>
                 <table class="m-table1">
                             <tr>
                                 <th class="mcell">Γενικές Πληροφορίες</th>
