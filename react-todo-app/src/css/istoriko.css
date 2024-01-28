@@ -5,6 +5,18 @@
     height:auto;
 }
 
+.picon{
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.dicon{
+    &:hover{
+        cursor: pointer;
+    }
+}
+
 .div2{
     height:60px;
     margin-left:none;

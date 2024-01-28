@@ -19,11 +19,14 @@ export default function Proswrinh1() {
         var current_period = res.data().current_period;
         var flag = true;
 
+        console.log(d_id);
+
         for (var i = 0; i < d_id.length; i++) {
             const ref2 = doc(db, "diloseis", d_id[i]);
             const res2 = await getDoc(ref2);
 
             if (res2.data().period == current_period) {
+                console.log(res2.data())
                 await deleteDoc(doc(db, "diloseis", res2.data().id));
                 var new_id = d_id[i];
                 flag = false;
@@ -47,6 +50,7 @@ export default function Proswrinh1() {
             d_id: d_id,
         };
 
+        console.log(data);
         await updateDoc(ref, data);
 
         var new_id2 = new_id.toString();

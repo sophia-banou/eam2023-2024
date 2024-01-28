@@ -137,8 +137,8 @@ export default function Istoriko() {
             var aithsh = a_array[i];
 
        
-                table += `<tr><td>${aithsh.date} </td><td>${aithsh.category}</td> <td> <img class="picon" value="${aithsh.category}" src="./view-icon.png"  /> 
-                <img src="./download-icon.png"  /> </td></tr>`
+                table += `<tr><td class="ddcell">${aithsh.date} </td><td class="dscell">${aithsh.category}</td> <td class="decell"> <img class="picon" value="${aithsh.category}" src="./view-icon.png"  /> 
+                <img src="./download-icon.png" class="dicon" /> </td></tr>`
         } 
         table += '</table>';   
         var gib = document.getElementById("dyn5");  

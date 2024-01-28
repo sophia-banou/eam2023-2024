@@ -34,11 +34,11 @@ export default function Proepiskopisi_aitisis() {
                         </tr>
                         <tr class="row2">
                             <th>Όνομα και Επώνυμο Πατέρα:</th>
-                            <td>{localStorage.getItem("father_name")}</td>
+                            <td>{localStorage.getItem("fn")}</td>
                         </tr>
                         <tr>
                             <th>Όνομα και Επώνυμο Μητέρας:</th>
-                            <td>{localStorage.getItem("mother_name")}</td>
+                            <td>{localStorage.getItem("mn")}</td>
                         </tr>
                         <tr class="row2">
                             <th>Ημερομηνία Γέννησης:</th>

@@ -4,17 +4,64 @@
 .group-div, 
 .rectangle-parent1,
 .rectangle-parent2 {
-    border-radius: 6px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    width: 20%;
-    height: 10%;
+    height: 80px;
+    width: 280px;
+    margin: auto;
+    margin-top:5px;
+    padding: 10px 10px;
+    padding-right:none;
     display: flex;
+    justify-content: center;
     align-items: center;
+    border: 1px rgba(0, 0, 0, 0.2) solid;
+    border-radius: 3px;
+
     &:hover {
-        border: 2px solid rgba(0, 0, 0, 0.2);
+        border: 2px rgba(0, 0, 0, 0.2) solid;
+        cursor: pointer;
     }
 }
+
+.rectangle-parent img, 
+.rectangle-group img, 
+.rectangle-container img, 
+.group-div img, 
+.rectangle-parent1 img,
+.rectangle-parent2 img {
+    margin: auto;
+    max-width: 64px;
+    max-height: 64px;
+}
+
+.rectangle-parent p, 
+.rectangle-group p, 
+.rectangle-container p, 
+.group-div p, 
+.rectangle-parent1 p,
+.rectangle-parent2 p {
+    
+    width: 210px;
+    height: 80px;
+    padding:none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+    margin: auto;
+    margin-left: 30px;
+}
+
+.rectangle-parent p h, 
+.rectangle-group p h, 
+.rectangle-container p h, 
+.group-div p h, 
+.rectangle-parent1 p h,
+.rectangle-parent2 p h {
+    width: 210px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
 .rectangle-parent {
     position: absolute;
     top: 26px;
@@ -22,6 +69,7 @@
     width: 349px;
     height: 120px;
 }
+
 .rectangle-group {
     position: absolute;
     top: 310px;
@@ -95,7 +143,6 @@
 }
 .body2{
    position: relative;
-   margin-top: 5%;
    left: 10%;
    width: 80%;
    height: 610px;
@@ -103,4 +150,43 @@
    color: #000;
    display: flex;
    align-items: center;
+}
+
+.sp-box {
+    height: 100px;
+    width: 280px;
+    margin: auto;
+    margin-top: 130px;
+    text-align: left;
+    padding: 10px 10px;
+    display: flex;
+    border: 1px rgba(0, 0, 0, 0.2) solid;
+    border-radius: 3px;
+
+    &:hover {
+        border: 2px rgba(0, 0, 0, 0.2) solid;
+        cursor: pointer;
+    }
+}
+
+.sp-box img {
+    margin: auto;
+    max-width: 64px;
+    max-height: 64px;
+}
+
+.sp-box p {
+    width: 200px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+    margin: auto;
+
+}
+
+.sp-box p h {
+    width: 200px;
+    font-weight: bold;
+    font-size: 18px;
+
 }

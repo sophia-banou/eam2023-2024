@@ -16,25 +16,25 @@ export default function Help() {
     return (
         <div>
             <div> {nav} </div>
-            <div className="breadcrumb_body">{Arxiki()} <span>Βοήθεια</span></div>
+            <div className="breadcrumb_body5">{Arxiki()} <span>Βοήθεια</span></div>
             <div className="help_body">
-                <div className="help_div2">ΒΟΗΘΕΙΑ</div>
+                <div class="title">Βοήθεια</div>
                 
 
-                <Link to="/help_students">
+                <Link class="link" to="/help_students">
                     <div class="help_rectangle1">
                         <div className="help_div">Φοιτητές /τριες</div>
-                        <div><img id="help-icon" src="student_icon.png" alt="Student"></img></div>
+                        <div><img class="himage2" src="st-icon.png" alt="Student"></img></div>
                     </div>
                 </Link>
 
 
 
                 <br></br>
-                <Link to="/help_teachers">
-                    <div className="help_rectangle2">
+                <Link class="link" to="/help_teachers">
+                    <div className="help_rectangle1">
                         <div className="help_div">Διδάσκοντες /ουσες</div>
-                        <div><img id="help-icon" src="teacher_icon.png" alt="Student"></img></div>
+                        <div><img class="himage2" src="pr-icon.png" alt="Teacher"></img></div>
                     </div>
                 </Link>
             </div>
