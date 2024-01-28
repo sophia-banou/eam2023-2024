@@ -694,6 +694,10 @@
        margin-bottom: none;
   }
   
+  .print-icon1{
+    max-width: 27px;
+    margin-left: 10px;
+  }
   
   .filter-div1-button {
     height: 35px;
