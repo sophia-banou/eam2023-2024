@@ -25,6 +25,9 @@ export default function Student_dilosi() {
 
         const ref1 = doc(db, "prothesmia", "start");
         const res1 = await getDoc(ref1);
+        if(res1 == null){
+            return;
+        }
 
         const start_year = res1.data().year
         const start_month = res1.data().month
@@ -32,6 +35,9 @@ export default function Student_dilosi() {
 
         const ref2 = doc(db, "prothesmia", "end");
         const res2 = await getDoc(ref2);
+        if(res2 == null){
+            return;
+        }
 
         const end_year = res2.data().year
         const end_month = res2.data().month

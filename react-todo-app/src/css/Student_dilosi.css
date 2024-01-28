@@ -387,7 +387,7 @@
 .m-table2 {
     font-size: 17px;
     width: 700px;
-    height: 400px;
+    height: auto;
     margin: auto;
     border-collapse: collapse;
     font-family: "Montserrat", sans-serif;

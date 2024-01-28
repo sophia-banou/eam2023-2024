@@ -18,7 +18,8 @@ export default function Message() {
 
         const ref = doc(db, "limits", semester);
         const res = await getDoc(ref);
-        limit = res.data().mathimata;
+        if(res){ limit = res.data().mathimata;} 
+        
     }
 
     async function handleChange(e) {
@@ -62,14 +63,19 @@ export default function Message() {
 
     async function getCourse() {
         const ref = doc(db, "courses", "all_courses");
+       
         const res = await getDoc(ref);
-
+       
+        if(res === null) {
+            return;
+        }
         let table = '<table class="d-table2">';
         table += '<tr><th class="dcell"> </th></th><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Κατεύθυνση</th><th class="dcell">Εξάμηνο</th><th class="dcell">Κατηγορία</th></tr>';
 
         var courses = res.data().courses;
 
-        for (var id = 0; id < courses.length; id++) {
+        for (var id = 0; id < courses.length; id++) 
+        {
             var track = courses[id].track;
             var name = courses[id].name;
             var semester = courses[id].semester;
@@ -90,7 +96,13 @@ export default function Message() {
     
         const ref = doc(db, "users", user_email); 
         const res = await getDoc(ref);
+        if(res === null) {
+            return;
+        }
+        
         var fgrades = res.data().grades;
+        console.log(fgrades)
+        
         let message = '<div class="warning-mes"><span class="hmes">Μήπως θέλετε να δηλώσετε κάποιο από τα εξής; </span>   <ul>';  
         for (var id = 0; id < fgrades.length; id++){
             var period = fgrades[id].courses;

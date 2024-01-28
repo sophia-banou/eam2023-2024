@@ -1,8 +1,5 @@
 import React from "react";
-import { useEffect } from 'react';
-import { db } from '../components/firebase.js';
 import {Link} from "react-router-dom";
-import {doc, getDoc} from 'firebase/firestore'
 import "./../css/HomePage.css";
 import "./../css/Student_dilosi.css";
 import Nav1 from "./../components/Nav1.js"

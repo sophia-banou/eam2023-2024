@@ -10,6 +10,7 @@ export default function Register({ db }) {
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
     const [am, setAM] = useState('');
+    const [semester, setSemester] = useState('');
     const [selectedOption, setSelectedOption] = useState("student");
 
     function onValueChange(event) {
@@ -23,8 +24,16 @@ export default function Register({ db }) {
         var docUser;
         let role = selectedOption;
 
-        if (email == "" || password == "" || name == "" || am == "") {
+        if (email == "" || password == "" || name == "" || am == "" || semester =="") {
             message = "Δεν έχετε συμπληρώσει όλα τα πεδία.";
+            let m = document.getElementById("w5");
+            m.innerHTML = message;
+            return;
+        }
+
+        if ((semester != "1o") && (semester != "2o") && (semester != "3o") && (semester != "4o")&& (semester != "5o") && (semester != "6o") &&(semester != "7o") && (semester != "8o")){
+            console.log(semester)
+            message = "Έχετε συμπληρώσει λάθος εξάμηνο.";
             let m = document.getElementById("w5");
             m.innerHTML = message;
             return;
@@ -62,7 +71,7 @@ export default function Register({ db }) {
                 pob: "",
                 id: "",
                 AMKA: "",
-                semester: "",
+                semester: semester,
                 year1: "",
                 date1: "",
                 address: "",
@@ -71,7 +80,7 @@ export default function Register({ db }) {
                 phone2: "",
                 code: "",
                 d_id: new Array,
-                courses: new Array,
+                grades: new Array,
                 aithseis: new Array,
                 current_period: "Χειμερινό 2023-24"
 
@@ -172,6 +181,16 @@ export default function Register({ db }) {
                             type="AM"
                             value={am}
                             onChange={(e) => setAM(e.target.value)}
+                        />
+                    </div>
+                    <div className='register-row'>
+
+                        &nbsp;&nbsp;&nbsp;
+                        <input
+                            placeholder='Eξάμηνο Φοίτησης'
+                            type="sem"
+                            value={semester}
+                            onChange={(e) => setSemester(e.target.value)}
                         />
                     </div>
                     <div class="reg-log-span-div2">Επιλέξτε ιδιότητα:</div>
