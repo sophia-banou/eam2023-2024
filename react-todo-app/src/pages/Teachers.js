@@ -19,9 +19,8 @@ export default function Teachers() {
   return (
     
     <div>
-      <Nav2 />
-      {/* <Menu /> */}      
-      <div id="header-image-menu-students">
+      <Nav2 />  
+      <div class="header-image-menu-teachers">
         <img src="teach-banner.png" alt="National and Kapodistrian University of Athens" />
         <div className="teachers_body">
             <Link to="/teacher_bathmologia">
@@ -43,7 +42,7 @@ export default function Teachers() {
             <Link to="/teacher_create">
             <div className="teacher_div3">
                 <img className="timage" alt="" src="/memwnomena.png" />
-                <div className="teachers_div">Δημιουργία Νέου Βαθμολογίου Μεμονωμένα
+                <div className="teachers_div">Δημιουργία Νέου Βαθμολογίου
                     <div className="teachers_div1">Δημιουργήστε νέο βαθμολόγιο με <br></br>μεμονωμένη εισαγωγή βαθμών</div>
                 </div>
             </div>

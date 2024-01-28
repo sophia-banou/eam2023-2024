@@ -1,14 +1,13 @@
 .bath_rectangle {
-    margin-left: 5%;
-    width: 180px;
+    margin-left: 14.5%;
+    width: 210px;
     height: fit-content;
-    padding: 10px 10px;
     text-align: left;
 }
 .menu_box {
-    margin-left: 7%;
+    margin-left: 14.8%;
     margin-bottom: 5%;
-    width: 180px;
+    width: 250x;
     position: absolute;
     height: fit-content;
     text-align: left;
@@ -19,6 +18,17 @@
     text-shadow: none;
     background-color: #404040;
     
+}
+
+.divbox-2 span{
+    height:60px;
+    margin-left:none;
+    position: inherit;
+    text-align: left;
+    font-size: 18px;
+}
+.divbox-2 span{
+    font-weight: bold;
 }
 .plus {
     position: relative;
@@ -40,8 +50,7 @@
     position: relative;
     top: 0;
     padding: 8px 10px;
-    width: 160px;
-    width: 160px;
+    width: 200px;
     height: fit-content;
     font-weight: 600;
     display: flex;
@@ -56,11 +65,102 @@
   .link_deco{
     text-decoration: none;
   }
+
+  .active2 {
+    cursor: pointer;
+    background-color: rgb(158, 158, 158);
+    color: white;
+    border: 1.2px rgb(158, 158, 158) solid;
+    padding: 6px;
+    max-width: 350px;
+    width: 339px; 
+}
+
+.cell2 {
+    max-width: 350px;
+    width: 339px; 
+    background-color: #aeaeae;
+    padding: 6px;
+    border: 1.2px #aeaeae solid;
+
+    &:hover,
+    active {
+        cursor: pointer;
+        background-color: #aeaeae;
+        color: white;
+
+    }
+}
+
+.pr-table2 {
+    width: 700px;
+    margin: auto;
+    border-collapse: collapse;
+    font-family: "Montserrat", sans-serif;
+}
+
+.pr-table2 tr {
+    border: 1px rgb(226, 226, 226) solid;
+
+}
+
+
+
+.sp-save-div2 {
+    height: 45px;
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    margin-left: 50px;;
+}
+
+.sp-save-div-b2 {
+
+    height: 45px;
+    position: relative;
+    width: 180px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    margin: auto;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #cd5b3c;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+
+    &:hover {
+        background-color: #bd4f31;
+        cursor: pointer;
+    }
+}
+
+.pr-table2 tr th {
+    padding: 5px 10px;
+    width: 280px;
+    text-align: left;
+    padding-left: 60px;
+    border: 1px rgb(226, 226, 226) solid;
+}
+
+.pr-table2 tr td {
+    padding: 8px 10px;
+    width: 280px;
+    text-align: left;
+    padding-left: 60px;
+}
+
+
 .tm-div1 {
     margin:auto;
     width: 100%;
-    height: fit-content;
-    min-height: 350px;
+
+    height: auto;
+    min-height: 600px;
     margin-bottom: none;
     flex: content;
     align-items: center;
@@ -106,10 +206,11 @@
 
 .bathmologio-pr-div-b {
     height: 45px;
-    width: 190px;
+    width: 210px;
     display:flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 5px 10px;
     border-radius: 25px;
     border: none;
@@ -122,6 +223,28 @@
 
     &:hover {
         background-color: #bd4f31;
+        cursor: pointer;
+    }
+}
+
+.bathmologio-pr-div-b2 {
+    height: 45px;
+    width: 210px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border:1.5px solid #cd5b3c;
+    color: #cd5b3c;
+    margin: auto;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: white;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+
+    &:hover {
+        background-color: #f2f2f2;
         cursor: pointer;
     }
 }

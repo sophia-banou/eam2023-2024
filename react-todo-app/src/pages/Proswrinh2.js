@@ -107,7 +107,7 @@ export default function Proswrinh2() {
                     περαιτέρω αυτό το βαθμολόγιο</div>
 
                 <div class="dilosi-pr-div" id="popup-b1">
-                    <div class="dilosi-pr-div-b">Οριστική Υποβολή</div>
+                    <div class="dilosi-pr-div-b">ΟΡΙΣΤΙΚΗ ΥΠΟΒΟΛΗ</div>
                 </div>
 
             </div>
@@ -123,9 +123,9 @@ export default function Proswrinh2() {
         
                     <div class="pop-flexbox">
                         <Link class="link" to ="/oristikopoihsh3">
-                    <button class="fst-button"> Ναι   
+                    <button class="fst-button"> ΝΑΙ 
                     </button> </Link>
-                    <button class="snd-button" id="close-popup"> Ακύρωση
+                    <button class="snd-button" id="close-popup"> ΑΚΥΡΩΣΗ
                     </button>
                     </div>
                 </div>

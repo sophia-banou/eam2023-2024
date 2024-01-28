@@ -13,7 +13,7 @@ export default function Teacher_mathimata() {
     function Button2(props) {
         return (
           <div className="bath_rectangle" onClick={props.onClick}>
-            <div className="bathmologio-pr-div-b">Επιλέξτε μάθημα ▽ </div>
+            <div className="bathmologio-pr-div-b2">ΕΠΙΛΕΞΤΕ ΜΑΘΗΜΑ ▽ </div>
           </div>
         );
     }

@@ -57,13 +57,17 @@ export default function View_grade() {
                 <Link to="/teacher_bathmologia">
                     <img src="back-arrow.png" class="arrow-icon2"></img>
                 </Link>
-                <div class="d-div1">
-                    <div class="div2">
+                <div class="d-div2">
+                    <div class="div1">
+                    <div class="divbox-2">
                         <p> Όνομα Μαθήματος: <span> {bname}</span> <br></br>
                             Κατάσταση: <span> {bstatus}</span><br></br>
                             Ημερομηνία: <span> {bdate}</span> </p>
                     </div>
                     <div id="grades-table2"></div>
+                    </div>
+                    
+                   
                 </div>
             </div>
             <Footer />

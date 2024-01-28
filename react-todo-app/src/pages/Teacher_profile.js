@@ -57,14 +57,13 @@ export default function TeacherProfile() {
                     <div class="div-table">
                         <table class="sp-table1">
                             <tr>
-                                <th id="tpb1" onClick={btnTab4} class="active">Προσωπικά Στοιχεία</th>
-                                {/*<th id="pb2" onClick={btnTab2} class="cell">Επαγγελματική Σταδιοδρομία</th> */}
-                                <th id="tpb3" onClick={btnTab5} class="cell">Πληροφορίες Επικοινωνίας</th>
+                                <th id="tpb1" onClick={btnTab4} class="active2">Προσωπικά Στοιχεία</th>
+                                <th id="tpb3" onClick={btnTab5} class="cell2">Πληροφορίες Επικοινωνίας</th>
 
                             </tr>
                         </table>
 
-                        <table id="ttable1" class="sp-table2">
+                        <table id="ttable1" class="pr-table2">
                             <tr>
                                 <th>Ονοματεπώνυμο</th>
                                 <td>{localStorage.getItem("name")}</td>
@@ -73,10 +72,7 @@ export default function TeacherProfile() {
                                 <th>Ημερομηνία Γέννησης</th>
                                 <td>{localStorage.getItem("dob")}</td>
                             </tr>
-                            {/* <tr>
-                                <th>Αριθμός Μητρώου</th>
-                                <td>{localStorage.getItem("am")}</td>
-                            </tr> */}
+                         
                             <tr>
                                 <th>Οικογενειακή Κατάσταση</th>
                                 <td>{localStorage.getItem("marital_status")}</td>
@@ -102,23 +98,8 @@ export default function TeacherProfile() {
                                 <td>{localStorage.getItem("AMKA")}</td>
                             </tr>
                         </table>
-                        {/* <table id="table2" class="sp-table2">
-
-                            <tr>
-                                <th>Εξάμηνο Φοίτησης</th>
-                                <td>{localStorage.getItem("semester")}</td>
-                            </tr>
-                            <tr class="row2">
-                                <th>Ακαδημαϊκό Έτος 1ης Εγγραφής</th>
-                                <td>{localStorage.getItem("year1")}</td>
-                            </tr>
-                            <tr>
-                                <th>Ημερομηνία 1ης Εγγραφής</th>
-                                <td>{localStorage.getItem("date1")}</td>
-                            </tr>
-
-                        </table> */}
-                        <table id="ttable3" class="sp-table2">
+                       
+                        <table id="ttable3" class="pr-table2">
 
                             <tr>
                                 <th>Διεύθυνση Κατοικίας</th>

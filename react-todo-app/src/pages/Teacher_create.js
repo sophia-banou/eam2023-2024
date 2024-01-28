@@ -19,7 +19,7 @@ export default function Teacher_create() {
   function Button2(props) {
     return (
       <div className="bath_rectangle" onClick={props.onClick}>
-        <div className="bathmologio-pr-div-b">Επιλέξτε μάθημα ▽ </div>
+        <div className="bathmologio-pr-div-b2">ΕΠΙΛΕΞΤΕ ΜΑΘΗΜΑ ▽ </div>
       </div>
     );
   }
@@ -53,6 +53,7 @@ export default function Teacher_create() {
     if (gib) { gib.innerHTML = dropdown; }
     jj();
   }
+
   async function getDilosi(element) {
     var mathima = element.getAttribute("title");
     sessionStorage.setItem("bath_mathima", mathima);
@@ -135,7 +136,7 @@ export default function Teacher_create() {
     <div>
       <Nav2 />
       <Menu />
-      <div className="breadcrumb_body5"><Link to="/teachers">Αρχική / </Link> <Link to="/teacher_bathmologia">Βαθμολόγια / </Link><span>Δημιουργία Βαθμολογίου Μεμονωμένα</span></div>
+      <div className="breadcrumb_body5"><Link to="/teachers">Αρχική / </Link> <Link to="/teacher_bathmologia">Βαθμολόγια / </Link><span>Δημιουργία Βαθμολογίου</span></div>
       <div className="tm-div1">
         <div class="title">Δημιουργία Βαθμολογίου</div>
         <Button2 onClick={toggleVisibility} />
@@ -144,7 +145,6 @@ export default function Teacher_create() {
         <br></br>
         <br></br>
         <div>{button}</div>
-        {/* <div onClick={GetBoxValue} className="dilosi_rectangle1">Προσωρινή Αποθήκευση</div> */}
         <h4 class="error1" id="result"></h4>
       </div>
       <Footer />

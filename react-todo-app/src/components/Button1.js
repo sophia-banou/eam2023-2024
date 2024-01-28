@@ -22,7 +22,7 @@ export function Button2() {
 export function Button3() {
     return( 
         <div class="dilosi-pr-div">
-        <div onClick={GetBoxValue} className="dilosi-pr-div-b">Προσωρινή Αποθήκευση</div>
+        <div onClick={GetBoxValue} className="dilosi-pr-div-b">ΠΡΟΣΩΡΙΝΗ ΑΠΟΘΗΚΕΥΣΗ</div>
         </div>
     )
 }

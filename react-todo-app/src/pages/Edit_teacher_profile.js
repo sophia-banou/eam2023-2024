@@ -19,6 +19,11 @@ export default function Edit_teacher_profile() {
     }, [])
 
 
+    const [nameStatus, setNameStatus] = useState('');
+    const [dobStatus, setDobStatus] = useState('');
+    const [fnStatus, setfnStatus] = useState('');
+    const [mnStatus, setmnStatus] = useState('');
+
     const [mStatus, setMStatus] = useState('');
     const [pobStatus, setPobStatus] = useState('');
     const [idStatus, setIdStatus] = useState('');
@@ -40,6 +45,10 @@ export default function Edit_teacher_profile() {
             marital_status: mStatus,
             pob: pobStatus,
             id: idStatus,
+            name: nameStatus,
+            father_name: fnStatus,
+            mother_name: mnStatus,
+            dob: dobStatus,
             AMKA: amkaStatus,
             address: addressStatus,
             city: cityStatus,
@@ -69,6 +78,18 @@ export default function Edit_teacher_profile() {
         if (codeStatus == "") {
             data.code = localStorage.getItem("code")
         }
+        if (nameStatus == "") {
+            data.name = localStorage.getItem("name")
+        }
+        if (dobStatus == "") {
+            data.dob = localStorage.getItem("dob")
+        }
+        if (fnStatus == "") {
+            data.father_name = localStorage.getItem("fn")
+        }
+        if (mnStatus == "") {
+            data.mother_name = localStorage.getItem("mn")
+        }
         if (phone1Status == "") {
             data.phone1 = localStorage.getItem("phone1")
         }
@@ -85,6 +106,10 @@ export default function Edit_teacher_profile() {
         localStorage.setItem('phone1', data.phone1) 
         localStorage.setItem('phone2', data.phone2)
         localStorage.setItem('code', data.code)
+        localStorage.setItem('fn', data.father_name)
+        localStorage.setItem('mn', data.mother_name)
+        localStorage.setItem('dob', data.dob)
+        localStorage.setItem('name', data.name)
 
         updateDoc(ref,data);
         window.location.href = './teacher_profile'
@@ -115,24 +140,20 @@ export default function Edit_teacher_profile() {
                     <div class="div-table">
                         <table class="sp-table1">
                             <tr>
-                                <th id="tpb1" onClick={btnTab4} class="active">Προσωπικά Στοιχεία</th>
-                                <th id="tpb3" onClick={btnTab5} class="cell">Πληροφορίες Επικοινωνίας</th>
+                                <th id="tpb1" onClick={btnTab4} class="active2">Προσωπικά Στοιχεία</th>
+                                <th id="tpb3" onClick={btnTab5} class="cell2">Πληροφορίες Επικοινωνίας</th>
 
                             </tr>
                         </table>
                         <form onSubmit={handleEdit}>
-                        <table id="ttable1" class="sp-table2">
+                        <table id="ttable1" class="pr-table2">
                             <tr>
                                 <th>Ονοματεπώνυμο</th>
-                                <td>{localStorage.getItem("name")}</td>
+                                <td><input value={nameStatus} onChange={(e) => setNameStatus(e.target.value)} /></td>
                             </tr>
                             <tr class="row2">
                                 <th>Ημερομηνία Γέννησης</th>
-                                <td>{localStorage.getItem("dob")}</td>
-                            </tr>
-                            <tr>
-                                <th>Αριθμός Μητρώου</th>
-                                <td>{localStorage.getItem("am")}</td>
+                                <td><input value={dobStatus} onChange={(e) => setDobStatus(e.target.value)} /></td>
                             </tr>
                             <tr class="row2">
                                 <th>Οικογενειακή Κατάσταση</th>
@@ -140,11 +161,11 @@ export default function Edit_teacher_profile() {
                             </tr>
                             <tr>
                                 <th>Όνομα Πατέρα</th>
-                                <td>{localStorage.getItem("father_name")}</td>
+                                <td><input value={fnStatus} onChange={(e) => setfnStatus(e.target.value)} /></td>
                             </tr>
                             <tr class="row2">
                                 <th>Όνομα Μητέρας</th>
-                                <td>{localStorage.getItem("mother_name")}</td>
+                                <td><input value={mnStatus} onChange={(e) => setmnStatus(e.target.value)} /></td>
                             </tr>
                             <tr>
                                 <th>Πολή/ Χωριό Γέννησης</th>
@@ -159,23 +180,8 @@ export default function Edit_teacher_profile() {
                                 <td><input value={amkaStatus} onChange={(e) => setAmkaStatus(e.target.value)} /></td>
                             </tr>
                         </table>
-                        {/* <table id="table2" class="sp-table2">
-
-                            <tr>
-                                <th>Εξάμηνο Φοίτησης</th>
-                                <td>{localStorage.getItem("semester")}</td>
-                            </tr>
-                            <tr class="row2">
-                                <th>Ακαδημαϊκό Έτος 1ης Εγγραφής</th>
-                                <td>{localStorage.getItem("year1")}</td>
-                            </tr>
-                            <tr>
-                                <th>Ημερομηνία 1ης Εγγραφής</th>
-                                <td>{localStorage.getItem("date1")}</td>
-                            </tr>
-
-                        </table> */}
-                        <table id="ttable3" class="sp-table2">
+                
+                        <table id="ttable3" class="pr-table2">
 
                             <tr>
                                 <th>Διεύθυνση Κατοικάς</th>
@@ -203,8 +209,8 @@ export default function Edit_teacher_profile() {
                             </tr>
 
                         </table>
-                        <div class="sp-save-div">
-                            <button type="submit" class="sp-save-div-b">Αποθήκευση</button>
+                        <div class="sp-save-div2">
+                            <button type="submit" class="sp-save-div-b2">Αποθήκευση</button>
                         </div>
                         </form>
                     </div>

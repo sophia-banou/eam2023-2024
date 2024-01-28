@@ -71,8 +71,8 @@ export function btnTab4() {
 
     table1.style.display = "table";
     table3.style.display = "none";
-    pbutton1.className = "active"
-    pbutton3.className = "cell"
+    pbutton1.className = "active2"
+    pbutton3.className = "cell2"
 }
 
 export function btnTab5() {
@@ -84,8 +84,8 @@ export function btnTab5() {
 
     table1.style.display = "none";
     table3.style.display = "table";
-    pbutton1.className = "cell"
-    pbutton3.className = "active"
+    pbutton1.className = "cell2"
+    pbutton3.className = "active2"
 }
 
 const courses = [

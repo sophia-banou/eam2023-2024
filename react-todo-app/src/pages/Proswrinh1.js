@@ -155,9 +155,9 @@ export default function Proswrinh1() {
         
                     <div class="pop-flexbox">
                         <Link class="link" to ="/oristikopoihsh1">
-                    <button class="fst-button"> Ναι   
+                    <button class="fst-button"> ΝΑΙ 
                     </button> </Link>
-                    <button class="snd-button" id="close-popup"> Ακύρωση
+                    <button class="snd-button" id="close-popup"> ΑΚΥΡΩΣΗ
                     </button>
                     </div>
                 </div>

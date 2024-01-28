@@ -175,6 +175,10 @@
 	border-radius: 30px;
 	background-color: #cd5b3c;
 
+	&:hover{
+		background-color: #c3593b;
+	}
+
 }
 
 .info-div3{

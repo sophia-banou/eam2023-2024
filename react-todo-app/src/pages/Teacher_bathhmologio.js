@@ -12,7 +12,7 @@ import { doc, getDoc, updateDoc, deleteDoc, setDoc, collection, getDocs } from '
 function Button(props) {
   return (
     <div className="bath_rectangle" onClick={props.onClick}>
-      <Link className="link_deco" to="/teacher_create"><div className="bathmologio-pr-div-b">Δημιουργία Βαθμολογίου Μεμονωμένα</div></Link>
+      <Link className="link_deco" to="/teacher_create"><div className="bathmologio-pr-div-b">ΔΗΜΙΟΥΡΓΙΑ ΒΑΘΜΟΛΟΓΙΟΥ</div></Link>
     </div>
   );
 }
@@ -46,28 +46,6 @@ export default function Teacher_bathmologio() {
     }
     table += '</div>';
     
-
-    // let table3 = '<table class="d-table2">';
-    // table += '<tr> <th class="dcell"> Όνομα Μαθήματος</th> <th class="dcell">Ημερομηνία</th><th class="dcell">Κατάσταση</th><th class="dcell">Ενέργειες</th> ';
-
-    // for (var i = 0; i < grades.length; i++) {
-    //   var id = grades[i];
-
-    //   const res2 = await getDoc(doc(db, "grades", id));
-    //   if (res2.data().status == "Προσωρινή") {
-    //     table += `<tr> <td>${res2.data().class_name} </td> <td>${res2.data().date} </td><td>${res2.data().status}</td> 
-    //           <td> <img class="vicon2" src="./view-icon.png" value=${id} />   <img class="eicon2" src ="./edit-icon2.png" value=${id}>  </td></tr>`
-    //   }
-    //   else {
-    //     table += `<tr> <td>${res2.data().class_name} </td> <td>${res2.data().date} </td><td>${res2.data().status}</td> 
-    //           <td>  <img class="vicon2" src="./view-icon.png" value=${id} />  <img class="icont" src ="./edit-icon3.png"> </td></tr>`
-    //   }
-
-
-    // }
-
-
-    //table += '</table>';
 
 
     var gib = document.getElementById("dyn21");

@@ -69,7 +69,7 @@ export default function Edit_profile() {
         if (fnStatus == "") {
             data.father_name = localStorage.getItem("fn")
         }
-        if (nameStatus == "") {
+        if (mnStatus == "") {
             data.mother_name = localStorage.getItem("mn")
         }
         if (pobStatus == "") {

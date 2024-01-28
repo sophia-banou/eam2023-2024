@@ -58,12 +58,12 @@ export default function Oristikopoihsh2() {
                 <div class="message"> Η αίτηση σας υποβλήθηκε.</div>
                 <div class="buttons">
                     <Link class="button1" to="/students">
-                        <div>Επιστροφή στην Αρχική Σελίδα </div> <img class="home_icon" src="./home-icon.png"></img>
+                        <div>ΕΠΙΣΤΡΟΦΗ ΣΤΗΝ ΑΡΧΙΚΗ ΣΕΛΙΔΑ </div> <img class="home_icon" src="./home-icon.png"></img>
                     </Link>
                 </div>
                 <div class="buttons">
                     <Link class="button2" to="/istoriko">
-                        <div>Δείτε το πιστοποιητικό σας </div> 
+                        <div>ΔΕΙΤΕ ΤΟ ΠΙΣΤΟΠΟΙΗΤΙΚΟ ΣΑΣ </div> 
                         <img class="home_icon" src="pistopoihtiko2.png"></img>
                     </Link>
                 </div>
