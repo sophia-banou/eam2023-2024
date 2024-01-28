@@ -142,7 +142,7 @@ export default function Message() {
                     Η προθεσμία δήλωσης μαθημάτων για το χειμερινό εξάμηνο είναι από τις {start} μέχρι τις {end}
                 </div>
             </div>
-            <div class="filter-div">
+            <div class="filter-div-f">
                 <div class="filter-div1" onClick={toggleVisibility}><div class="filter-div1-button">
                     <div>ΦΙΛΤΡΑ</div>
                     <div>

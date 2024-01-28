@@ -235,7 +235,7 @@ export default function Student_mathimata() {
 
             
             <div class="title">Προπτυχιακά Μαθήματα </div>
-            <div class="filter-div">
+            <div class="filter-div-f">
                 <div class="filter-div1" onClick={toggleVisibility}><div class="filter-div1-button">
                     <div>ΦΙΛΤΡΑ</div>
                     <div>

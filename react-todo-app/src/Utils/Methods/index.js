@@ -105,7 +105,6 @@ const grades = [
 
 export function checkAll() {
     var inputs = document.querySelectorAll('.bath');
-    let count = 0;
     let all = document.getElementById("checkall");
 
     if (all.checked == true) {
@@ -119,6 +118,18 @@ export function checkAll() {
         }
     }
 }
+
+export function checkAll2() {
+    var inputs = document.querySelectorAll('.bath');
+
+    
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].checked = true;
+    }
+}
+ 
+
+
 var res = [];
 
 export function GetCheckboxValue() {
