@@ -28,12 +28,6 @@ export default function Proepiskopisi_aitisis() {
             <div className="aitisi_body2">
                 <div class="aithsh_div1">Πιστοποιητικό {sessionStorage.getItem("ppid")}</div>
                 <div class="m-div1"> 
-                    <table class="m-table1">
-                        <tr>
-                            <th class="mcell">ΠΡΟΣ:</th>
-                            <th class="mcell">Την Γραμματεία του Τμήματος Πληροφορικής και Τηλεπικοινωνιών</th>
-                        </tr>
-                    </table> 
                     <table id="table1" class="m-table2">
                         <tr>
                             <th>Ονοματεπώνυμο:</th><td>{localStorage.getItem("name")}</td>
