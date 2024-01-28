@@ -53,7 +53,7 @@ export default function Oristikopoihsh2() {
         <div>
             <Nav2 />
             <Menu />
-            <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><Link to="/student_aitisi">Αίτηση Πιστοποιητικού / </Link><Link to="/proepiskopisi_aitisis">Προεπισκόπηση / </Link><span>Οριστική Υποβολή</span></div>
+            <div className="breadcrumb_body5"><Link to="/students">Αρχική / </Link><Link to="/student_aitisi">Αίτηση Πιστοποιητικού / </Link><Link to="/proepiskopisi_aitisis">Προεπισκόπηση / </Link><span>Οριστική Υποβολή</span></div>
             <div class="d-div1">
                 <div class="message"> Η αίτηση σας υποβλήθηκε.</div>
                 <div class="buttons">
@@ -64,6 +64,7 @@ export default function Oristikopoihsh2() {
                 <div class="buttons">
                     <Link class="button2" to="/istoriko">
                         <div>Δείτε το πιστοποιητικό σας </div> 
+                        <img class="home_icon" src="pistopoihtiko2.png"></img>
                     </Link>
                 </div>
             </div>

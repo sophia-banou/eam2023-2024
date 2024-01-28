@@ -35,28 +35,34 @@ export default function Student_aitisi() {
             <Nav2 />
             <Menu />
             <div className="breadcrumb_body5"><Link to="/students">Αρχική / </Link><span>Αίτηση Πιστοποιητικού</span></div>
-            <div class="title">ΑΙΤΗΣΗ ΠΙΣΤΟΠΟΙΗΤΙΚΟΥ</div>
+            <div class="title">Αίτηση Πιστοποιητικού</div>
             <div className="aitisi_body">
+                <div class="head"> <button> Κατηγορίες </button></div>
+
                 <form onSubmit={formSubmit}>
-                    <h class="head">Κατηγορίες <br></br></h>
-                    <label>
-                        <input type="radio" value="Φοιτητικής Ιδιότητας" checked={selectedOption === "Φοιτητικής Ιδιότητας"} onChange={onValueChange} /> <span class="label">Φοιτητικής Ιδιότητας</span>
-                    </label>
-                    <br />
-                    <label>
-                        <input type="radio" value="Αναλυτικής βαθμολογίας με προβιβάσιμους βαθμούς" checked={selectedOption === "Αναλυτικής βαθμολογίας με προβιβάσιμους βαθμούς"} onChange={onValueChange} /> <span class="label"> Αναλυτική βαθμολογία με προβιβάσιμους βαθμούς</span>
-                    </label>
-                    <br />
-                    <label>
-                        <input type="radio" value="Στρατολογικής χρήσης" checked={selectedOption === "Στρατολογικής χρήσης"} onChange={onValueChange} /> <span class="label">Στρατολογικής χρήσης</span>
-                    </label>
-                    <br />
-                    <label>
-                        <input type="radio" value="Φορολογικής χρήσης" checked={selectedOption === "Φορολογικής χρήσης"} onChange={onValueChange} /> <span class="label">Φορολογικής χρήσης </span>
-                    </label>
-                    <br />
-                    <button className="st-a-button" type="submit">Επιλογή</button>
+                    <div class="aitisi-form-div">
+                        <label>
+                            <input type="radio" value="Φοιτητικής Ιδιότητας" checked={selectedOption === "Φοιτητικής Ιδιότητας"} onChange={onValueChange} /> <span class="label">Φοιτητικής Ιδιότητας</span>
+                        </label>
+                        <br />
+                        <label>
+                            <input type="radio" value="Αναλυτικής βαθμολογίας με προβιβάσιμους βαθμούς" checked={selectedOption === "Αναλυτικής βαθμολογίας με προβιβάσιμους βαθμούς"} onChange={onValueChange} /> <span class="label"> Αναλυτική βαθμολογία με προβιβάσιμους βαθμούς</span>
+                        </label>
+                        <br />
+                        <label>
+                            <input type="radio" value="Στρατολογικής χρήσης" checked={selectedOption === "Στρατολογικής χρήσης"} onChange={onValueChange} /> <span class="label">Στρατολογικής χρήσης</span>
+                        </label>
+                        <br />
+                        <label>
+                            <input type="radio" value="Φορολογικής χρήσης" checked={selectedOption === "Φορολογικής χρήσης"} onChange={onValueChange} /> <span class="label">Φορολογικής χρήσης </span>
+                        </label>
+                        <br />
+                    </div>
+                    <div class="grades-next-div">
+                        <button type="submit" class="grades-next-div-b">ΕΠΙΛΟΓΗ</button>
+                    </div>
                 </form>
+
 
             </div>
             <Footer />
