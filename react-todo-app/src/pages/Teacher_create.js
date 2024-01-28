@@ -18,15 +18,15 @@ export default function Teacher_create() {
 
   function Button2(props) {
     return (
-      <button className="bath_rectangle" onClick={props.onClick}>
-        <div className="menu_div">Επιλέξτε μάθημα ▽ </div>
-      </button>
+      <div className="bath_rectangle" onClick={props.onClick}>
+        <div className="bathmologio-pr-div-b">Επιλέξτε μάθημα ▽ </div>
+      </div>
     );
   }
   function Dropdown2(props) {
     getCourses();
     return (
-      <div>
+      <div >
         {props.isVisible ? (
           <div id="dyn23" />
         ) : null}
@@ -135,8 +135,9 @@ export default function Teacher_create() {
     <div>
       <Nav2 />
       <Menu />
-      <div className="breadcrumb_body2"><Link to="/teachers">Αρχική / </Link> <Link to="/teacher_bathmologia">Βαθμολόγια / </Link><span>Δημιουργία Βαθμολογίου</span></div>
+      <div className="breadcrumb_body5"><Link to="/teachers">Αρχική / </Link> <Link to="/teacher_bathmologia">Βαθμολόγια / </Link><span>Δημιουργία Βαθμολογίου Μεμονωμένα</span></div>
       <div className="tm-div1">
+        <div class="title">Δημιουργία Βαθμολογίου</div>
         <Button2 onClick={toggleVisibility} />
         <Dropdown2 isVisible={isVisible} />
         <div id="dyn22"></div>

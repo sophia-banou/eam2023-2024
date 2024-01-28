@@ -9,59 +9,65 @@ import { Link } from "react-router-dom";
 import { db } from '../components/firebase.js';
 import { doc, getDoc, updateDoc, deleteDoc, setDoc, collection, getDocs } from 'firebase/firestore'
 
-
 function Button(props) {
   return (
-    <button className="bath_rectangle" onClick={props.onClick}>
-      <div className="menu_div">Δημιουργία <br></br>Βαθμολογίου<img className="plus" alt="" src="/plus.png" /></div>
-    </button>
-  );
-}
-function Dropdown(props) {
-  return (
-    <div>
-      {props.isVisible ? (
-        <div className="menu_box">
-          {/* <div className="menu_div2">Μαζικά</div> */}
-          <Link className="link_deco" to="/teacher_create"><div className="menu_div2">Μεμονομένα</div></Link>
-        </div>
-      ) : null}
+    <div className="bath_rectangle" onClick={props.onClick}>
+      <Link className="link_deco" to="/teacher_create"><div className="bathmologio-pr-div-b">Δημιουργία Βαθμολογίου Μεμονωμένα</div></Link>
     </div>
   );
 }
-export default function Teacher_bathmologio() {
-  const [isVisible, setIsVisible] = useState(false);
 
-  const toggleVisibility = () => {
-    setIsVisible(!isVisible);
-  };
+export default function Teacher_bathmologio() {
 
   async function getGrades() {
 
     const res = await getDoc(doc(db, "users", localStorage.getItem("email")));
-    var grades = res.data().grade_id;
-
-    let table = '<table class="d-table2">';
-    table += '<tr> <th class="dcell"> Όνομα Μαθήματος</th> <th class="dcell">Ημερομηνία</th><th class="dcell">Κατάσταση</th><th class="dcell">Ενέργειες</th> ';
-
-    for (var i = 0; i < grades.length; i++) {
-      var id = grades[i];
-
-      const res2 = await getDoc(doc(db, "grades", id));
-      if (res2.data().status == "Προσωρινή") {
-        table += `<tr> <td>${res2.data().class_name} </td> <td>${res2.data().date} </td><td>${res2.data().status}</td> 
-              <td> <img class="vicon2" src="./view-icon.png" value=${id} />   <img class="eicon2" src ="./edit-icon2.png" value=${id}>  </td></tr>`
+    var courses = res.data().courses;
+    let table = '<div>';
+    for (var i = 0; i < courses.length; i++){
+      table += `<div class="mathima-sem-div"> <button>${courses[i].name}</button> </div>`
+      table += '<table class="d-table2"><tr> <th class="dcell">Ημερομηνία</th><th class="dcell">Κατάσταση</th><th class="dcell">Ενέργειες</th> ';
+      var grades = res.data().grade_id;
+      for (var j = 0; j < grades.length; j++) {
+        var id = grades[i];
+        const res2 = await getDoc(doc(db, "grades", id));
+        if (res2.data().class_name === courses[i].name){
+          if (res2.data().status == "Προσωρινή") {
+            table += `<tr> <td>${res2.data().date} </td><td>${res2.data().status}</td> 
+                  <td> <img class="vicon2" src="./view-icon.png" value=${id} />   <img class="eicon2" src ="./edit-icon2.png" value=${id}>  </td></tr>`
+          }
+          else {
+            table += `<tr> <td>${res2.data().date} </td><td>${res2.data().status}</td> 
+                  <td>  <img class="vicon2" src="./view-icon.png" value=${id} />  <img class="icont" src ="./edit-icon3.png"> </td></tr>`
+          }
+        }
       }
-      else {
-        table += `<tr> <td>${res2.data().class_name} </td> <td>${res2.data().date} </td><td>${res2.data().status}</td> 
-              <td>  <img class="vicon2" src="./view-icon.png" value=${id} />  <img class="icont" src ="./edit-icon3.png"> </td></tr>`
-      }
-
-
+      table += '</table><br></br>';
     }
+    table += '</div>';
+    
+
+    // let table3 = '<table class="d-table2">';
+    // table += '<tr> <th class="dcell"> Όνομα Μαθήματος</th> <th class="dcell">Ημερομηνία</th><th class="dcell">Κατάσταση</th><th class="dcell">Ενέργειες</th> ';
+
+    // for (var i = 0; i < grades.length; i++) {
+    //   var id = grades[i];
+
+    //   const res2 = await getDoc(doc(db, "grades", id));
+    //   if (res2.data().status == "Προσωρινή") {
+    //     table += `<tr> <td>${res2.data().class_name} </td> <td>${res2.data().date} </td><td>${res2.data().status}</td> 
+    //           <td> <img class="vicon2" src="./view-icon.png" value=${id} />   <img class="eicon2" src ="./edit-icon2.png" value=${id}>  </td></tr>`
+    //   }
+    //   else {
+    //     table += `<tr> <td>${res2.data().class_name} </td> <td>${res2.data().date} </td><td>${res2.data().status}</td> 
+    //           <td>  <img class="vicon2" src="./view-icon.png" value=${id} />  <img class="icont" src ="./edit-icon3.png"> </td></tr>`
+    //   }
 
 
-    table += '</table>';
+    // }
+
+
+    //table += '</table>';
 
 
     var gib = document.getElementById("dyn21");
@@ -116,16 +122,11 @@ function jj(){
     <div>
       <Nav2 />
       <Menu />
-      <div className="breadcrumb_body2"><Link to="/teachers">Αρχική / </Link> <span>Βαθμολόγια</span></div>
-      <div>
-        <Button onClick={toggleVisibility} />
-        <Dropdown isVisible={isVisible} />
-      </div>
+      <div className="breadcrumb_body5"><Link to="/teachers">Αρχική / </Link> <span>Βαθμολόγια</span></div>
       <div className="tm-div1">
+        <div class="title">Βαθμολόγια</div>
+        <Button/>
         <div class="btable">
-          <div class="table1">
-            <h>Βαθμολόγια</h>
-          </div>
           <div id="dyn21" class="div-table" ></div>
         </div>
       </div>
