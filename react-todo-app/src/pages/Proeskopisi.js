@@ -11,8 +11,6 @@ import Menu from "./../components/student_menu.js"
 
 export default function Proeskopisi() {
     useEffect(() => {
-        // Every time you try to enter this page check if you have a saved key at the local storage. 
-        // If not, then do not allow user to enter this page and redirect to login page
         if (localStorage.getItem('role') !== "student") {
             window.location.href = '/login2'
         }
@@ -22,7 +20,7 @@ export default function Proeskopisi() {
         <div onLoad={generateTable2}>
             <Nav2 />
             <Menu />
-            <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><Link to="/student_bathmologies">Βαθμολογίες / </Link><span>Προεπισκόπιση</span></div>
+            <div className="breadcrumb_body5"><Link to="/students">Αρχική / </Link><Link to="/student_bathmologies">Βαθμολογίες / </Link><span>Προεπισκόπιση</span></div>
             <div class="icon-div">
                 <Link to="/student_bathmologies">
                     <img src="back-arrow.png" class="arrow-icon"></img>
@@ -31,9 +29,10 @@ export default function Proeskopisi() {
 
             <div class="d-div1">
                 <div id="dyn12" class="div-table" ></div>
-                <div className="dilosi_rectangle1">
-                    <div className="dilosi_div">
-                        Εκτύπωση 🖨️
+                <div class="grades-next-div">
+                    <div class="grades-next-div-b">
+                        <div>ΕΚΤΥΠΩΣΗ </div>
+                        <img src="print-icon1.png" alt="Print" class="print-icon1"></img>
                     </div>
                 </div>
             </div>

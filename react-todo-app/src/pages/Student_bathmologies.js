@@ -18,51 +18,31 @@ export default function Student_bathmologies() {
 
     var selectedOption1 = "Επιλογή"
 
-    // function getSuccess(){
-    //     success = 1;
-    //     fail = 0;
-    //     getCourse();
-    // }
-    // function getFail(){
-    //     success = 0;
-    //     fail = 1;
-    //     getCourse();
-    // }
-    // function getAll(){
-    //     success = 0;
-    //     fail = 0;
-    //     getCourse();
-    // }
-
-
-    function Dropdown(props) {
-        // return (
-        // <div>
-        //     {props.isVisible ? (
-        //     <div className="st-b-dropdown">
-        //         <div onClick={getAll} className="st-b-dropdown-div">Όλα</div>
-        //         <div onClick={getSuccess} className="st-b-dropdown-div">Επιτυχίες</div>
-        //         <div onClick={getFail} className="st-b-dropdown-div">Αποτυχίες</div>
-        //     </div>
-        //     ) : null}
-        // </div>
-        // );
-    }
-
 
     async function getGrade() {
         var user_email = localStorage.getItem("email");
 
         const ref = doc(db, "users", user_email);
         const res = await getDoc(ref);
-        var courses = res.data().courses;
+        var grades = res.data().grades;
 
-        for (var id = 0; id < courses.length; id++) {
-            var grade = courses[id].grade;
-            if (grade >= 5) {
-                sum_of_ects += courses[id].ECTs;
-                sum_of_grade += courses[id].ECTs * grade;
+        console.log(grades);
+        for (var id = 0; id < grades.length; id++) {
+
+            var period = grades[id].courses;
+            console.log(period);
+
+            for (var j = 1; j < period.length; j++) {
+                var course = period[j];
+                console.log(course);
+
+                if (course.grade >= 5) {
+                    sum_of_ects += course.ECTs;
+                    sum_of_grade += course.ECTs * course.grade;
+       
+                }
             }
+
         }
         let div = `<div class="div-20"><table class="d-table3"><tr><th>Σύνολο ECTs</th> <th>Μ.Ο βαθμών</th> </tr> <tr><td>${sum_of_ects}</td><td> ${(Math.round((sum_of_grade / sum_of_ects) * 100)) / 100}</td> </tr></table></div>`
         var gib = document.getElementById("grade");
@@ -101,7 +81,6 @@ export default function Student_bathmologies() {
 
             table += '<table class="d-table2"><tr><th class="dcell"> </th><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Βαθμός</th><th class="dcell">ECTs</th></tr>';
             for (var id2 = 1; id2 < period.length; id2++) {
-                console.log(period[id2])
                 var name = period[id2].name;
                 var grade = period[id2].grade;
                 var ects = period[id2].ECTs;
@@ -134,18 +113,18 @@ export default function Student_bathmologies() {
             <div class="title">Βαθμολογίες</div>
             <div class="div9">
 
-            <div class="filter-div">
-                <div class="filter-div1" onClick={toggleVisibility}><div class="filter-div1-button">
-                    <div>ΦΙΛΤΡΑ</div>
-                    <div>
-                        <img src="filter-icon1.png" alter="Filter" class="filter-button-m-icon"></img></div></div> </div>
-                <div class="filter-div2" onClick={checkAll2}> <div class="filter-div2-button">
-                    <div>ΕΠΙΛΟΓΗ ΟΛΩΝ</div>
-                    <div>
+                <div class="filter-div">
+                    <div class="filter-div1" onClick={toggleVisibility}><div class="filter-div1-button">
+                        <div>ΦΙΛΤΡΑ</div>
+                        <div>
+                            <img src="filter-icon1.png" alter="Filter" class="filter-button-m-icon"></img></div></div> </div>
+                    <div class="filter-div2" onClick={checkAll2}> <div class="filter-div2-button">
+                        <div>ΕΠΙΛΟΓΗ ΟΛΩΝ</div>
+                        <div>
                         </div></div> </div>
-            </div>
+                </div>
 
-        
+
 
 
                 <div class="filter-container2" id="f-t-container3">
