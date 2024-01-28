@@ -133,7 +133,7 @@ export function GetCheckboxValue() {
         }
     }
     if (count == 0) {
-        return document.getElementById("result").innerHTML = "Δεν έχετε επιλέξει κάποιο μάθημα";
+        return document.getElementById("result").innerHTML = "Δεν έχετε επιλέξει κάποιο μάθημα.";
     }
     else {
         sessionStorage.setItem("res", JSON.stringify(res));
@@ -168,7 +168,7 @@ export function GetCheckboxValue2() {
         }
     }
     if (count == 0) {
-        return document.getElementById("result").innerHTML = "Δεν έχετε επιλέξει κάποια βαθμολογία";
+        return document.getElementById("result").innerHTML = "Δεν έχετε επιλέξει κάποια βαθμολογία.";
     }
     else {
         sessionStorage.setItem("res2", JSON.stringify(res));
@@ -183,6 +183,7 @@ export function generateTable2() {
 
     for (var i = 0; i < data.length; i++) {
         var course = data[i];
+        
         table += `<tr><th>${course[1]}</td><th>${course[0]}</td><th>${course[2]}</td></tr>`;
     }
 
@@ -209,10 +210,10 @@ export function GetBoxValue() {
     }
 
     if (flag == true) {
-        return document.getElementById("result").innerHTML = "Έχετε εισάγει λανθασμένη βαθμολογία";
+        return document.getElementById("result").innerHTML = "Έχετε εισάγει λανθασμένη βαθμολογία.";
     }
     if (count == 0) {
-        return document.getElementById("result").innerHTML = "Δεν έχετε συμπληρώσει καμία βαθμολογία";
+        return document.getElementById("result").innerHTML = "Δεν έχετε συμπληρώσει καμία βαθμολογία.";
     }
     else {
         sessionStorage.setItem("res3", JSON.stringify(res));

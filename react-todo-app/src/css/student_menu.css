@@ -1,5 +1,5 @@
 .menu-item {
-    position: relative;
+    position: inherit;
     top:140px;
     width: 100%;
     height: 50px;   
@@ -25,23 +25,25 @@
   }
 
   .menu_body {
-    position: relative;
-    top: -40px;
+
     width: 100%;
-    height: 240px;
-    overflow: hidden;
+    height: 50px;
+    margin:none;
+    
   }
 
   #header-image-menu-students {
-    top: -40px;
     position: relative;
-    margin: 0px;
+    height: 751.53px;
+    margin: none;
   }
 
   
   #header-image-menu-students img{
     width: 100%;
-    padding: 0px;
+   
+    margin:none;
+    padding: none;
   }
   
   .link-menu{

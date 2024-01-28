@@ -34,7 +34,7 @@ export default function Student_aitisi() {
         <div>
             <Nav2 />
             <Menu />
-            <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><span>Αίτηση Πιστοποιητικού</span></div>
+            <div className="breadcrumb_body5"><Link to="/students">Αρχική / </Link><span>Αίτηση Πιστοποιητικού</span></div>
             <div class="title">ΑΙΤΗΣΗ ΠΙΣΤΟΠΟΙΗΤΙΚΟΥ</div>
             <div className="aitisi_body">
                 <form onSubmit={formSubmit}>

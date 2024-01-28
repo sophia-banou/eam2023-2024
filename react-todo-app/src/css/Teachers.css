@@ -96,3 +96,10 @@
     position: relative;
     top: 500px;
 }
+
+.space-div2{
+	width: 100%;
+	background-color: rgb(37, 36, 36);
+	margin: none;
+	height: 220px;
+}

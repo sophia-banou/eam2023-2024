@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { db } from './firebase';
 import "./../css/HomePage.css";
 import "./../css/Nav2.css";
-import { Button2 } from "./Button1.js";
 import { logo } from "../Utils/Methods/index.js"
 import { profil } from "../Utils/Methods/index.js"
 
@@ -34,8 +33,8 @@ export default function Nav2() {
                     </div>
 
                     <div class="profile_container" onClick={profil}>
-                        <div class="profile-name-div"> <span class="profile-name-span"> {localStorage.getItem("name")} </span></div>
-                        <div class="profile-img-div"> <img className="profile-image" alt="" src="/profile-icon.png" /></div>
+                        <div class="profile-name-div">  <span>{localStorage.getItem("name")} </span></div>
+                        <div class="profile-img-div"> <img className="profile-image" alt="" src="/avatar-icon.png" /></div>
 
                     </div>
 

@@ -59,7 +59,7 @@
 
 .sp-div2{
     width:1000px;
-    height: 130px;
+    height: 200px;
     margin: auto;
     display: flex;
 }
@@ -74,8 +74,8 @@
 }
 .sp-icon{
     margin:10px;
-    width:100px;
-    height:100px;
+    max-width:150px;
+    max-height:150px;
 }
 
 .sp-text1{

@@ -15,6 +15,11 @@ export default function Nav1() {
                         <img src="logo.png" alt="Logo" /></Link>
                 </div>
                 <div class="menu">
+                    <div class="menu-item-div">
+                        <Link class="link" to='/student_mathimata'>
+                            <span class="menu-item-span"> ΜΑΘΗΜΑΤΑ</span>
+                        </Link>
+                    </div>
 
                     <div class="menu-item-div">
                         <Link class="link" to='/help'>

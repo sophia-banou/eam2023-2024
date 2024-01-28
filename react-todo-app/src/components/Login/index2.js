@@ -1,31 +1,29 @@
 import './index.css'
-import React, { useState,useEffect } from 'react';
-import { doc, getDoc, setDoc } from 'firebase/firestore'
-import { db } from '../firebase';
+import React, { useState, useEffect } from 'react';
+import { doc, getDoc} from 'firebase/firestore'
 import { Link } from "react-router-dom";
-
 
 export default function Login({ db }) {
 
-    useEffect(()=> {
-       localStorage.clear();
-       sessionStorage.clear();
-    },[]);
-    
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    useEffect(() => {
+        sessionStorage.clear();
+        localStorage.clear();
+    }, [])
 
     // Handles the login functionality of the user
     async function handleLogin(e) {
         e.preventDefault()
         var message;
-        if (email == ""){
+        if (email == "") {
             message = "Δεν έχετε εισάγει e-mail.";
             let m = document.getElementById("w1");
             m.innerHTML = message;
             return;
         }
-        
+
         // We create a doc that 'points' at collection 'users' with primary key user's input email 
         const ref = doc(db, "users", email);
         // Now "Bring me, from the collection 'users' the document with name/value 'email'"
@@ -87,7 +85,7 @@ export default function Login({ db }) {
             }
             console.log("Found User:", res.data());
         } else {
-            message= "Το e-mail ή ο κωδικός που εισάγατε είναι λάθος.";
+            message = "Το e-mail ή ο κωδικός που εισάγατε είναι λάθος.";
             let m = document.getElementById("w1");
             m.innerHTML = message;
 
@@ -96,39 +94,59 @@ export default function Login({ db }) {
     }
 
     return (
-        <div className='login'>
+        
+        <div class='login'>
+            <div class="login-avatar-div">
+                    <img src="avatar-icon.png" alt="Default Avatar"></img>
+            </div>
             <form onSubmit={handleLogin} className='login-container'>
                 <Link to="/">
                     <img src="back-arrow.png" class="icon2"></img>
                 </Link>
-                <h2>ΣΥΝΔΕΣΗ</h2>
-                <div className='login-row'>
-                    <div className='login-text'>E-mail</div>
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <img class="login-icon1" src="email-icon.png" />
-                </div>
-                <div className='login-row'>
-                    <div className='login-text'>Κωδικός</div>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <img class="login-icon2" src="password-icon.png" />
-                </div>
-                <div class="button-div9">
-                    <button type='submit'>Σύνδεση</button>   
-                    <button > <a href='/register'>Εγγραφή</a></button>     
-                </div>
-                <div class="w-div">
+                <div class="login1-input-div">
+                    <div className='login-row'>
+                       
+                        <input
+                            placeholder='Email'
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        /> 
+                         <img src = "email-icon.png" class="login-form-icon" alt="Email"></img>
+                       
+              
+
+                    </div>
+                    <div className='login-row'>
+                  
+                        <input
+                            placeholder='Κωδικός'
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                          <img src = "lock-icon.png" class="login-form-icon"></img>
+
+                    </div>
+                    <div class="w-div">
                     <h id="w1" class="warning" >Εάν έχετε ήδη εγγραφεί, εισάγετε τα στοιχεία σας.</h>
                 </div>
+                    <div class="button-div8">
+                        <div class="log-button-div1"><button type="submit"> ΣΥΝΔΕΣΗ</button> </div>
+                    </div>
+                </div>
+                <div class="register-log-div">
+                    <div class="reg-log-span-div">
+                        Δεν έχετε λογαριασμό;
+                    </div>
+                    <div>
+                        <Link class="link" to="/register"><div class="reg-button-div1" alt ="Lock"><button> ΕΓΓΡΑΦΗ</button> </div></Link>
+                        
+                    </div>
+                </div>
+                
             </form>
-            
+
         </div>
     )
 }

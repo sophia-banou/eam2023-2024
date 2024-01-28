@@ -21,7 +21,7 @@ export default function StudentProfile() {
         <div>
             <Nav2 />
             <Menu />
-            <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><span>Προφίλ</span></div>
+            <div className="breadcrumb_body5"><Link to="/students">Αρχική / </Link><span>Προφίλ</span></div>
             <div class="sp">
 
                 <div class="sp-div">
@@ -38,7 +38,7 @@ export default function StudentProfile() {
 
                 <div class="sp-div1">
                     <div class="sp-div2">
-                        <img src="profile-icon.png" class="sp-icon"></img>
+                        <img src="avatar-icon.png" class="sp-icon"></img>
                         <div class="sp-div3">
                             <div className="sp-text1">{localStorage.getItem("name")} </div>
                             <div className="sp-text2">{localStorage.getItem("am")} </div>

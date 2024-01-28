@@ -15,7 +15,7 @@
     display: flex;
     padding: 0px 5px; 
     border-radius: 5px;
-    margin-left: 40px;
+    margin-left: 50px;
     &:hover{
         background-color: rgb(241, 241, 241);
         cursor:pointer;
@@ -24,13 +24,15 @@
 
 }
 .profile-name-div{
-    width: 200px;
+    display : flex;
+    align-items : center;
+    justify-content: center;
+    width: 160px;
+    padding-top: 4px;
     height: 50px;
-    padding-top: 15px;
-    margin:auto;
 }
 
-.profile-name-span{
+.profile-name-div span{
     color: black;
     font-size: 14px;
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;

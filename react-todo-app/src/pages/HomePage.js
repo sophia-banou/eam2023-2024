@@ -43,7 +43,7 @@ export default function HomePage() {
               <div class="info-b-text">
                 <div>
                   <span class="info-span1"> Διδάσκοντες</span> <br></br>
-                  <span class="info-span2"> Δείτε τις βαθμολόγια σας και δημιουργήστε καινούργια, δείτε πληροφορίες για τα μαθήματα που διδάσκετε</span>
+                  <span class="info-span2"> Δείτε τα βαθμολόγια σας και δημιουργήστε καινούργια, δείτε πληροφορίες για τα μαθήματα που διδάσκετε</span>
                 </div>
 
               </div>
