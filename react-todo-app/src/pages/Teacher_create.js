@@ -141,6 +141,8 @@ export default function Teacher_create() {
         <Button2 onClick={toggleVisibility} />
         <Dropdown2 isVisible={isVisible} />
         <div id="dyn22"></div>
+        <br></br>
+        <br></br>
         <div>{button}</div>
         {/* <div onClick={GetBoxValue} className="dilosi_rectangle1">Προσωρινή Αποθήκευση</div> */}
         <h4 class="error1" id="result"></h4>

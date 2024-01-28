@@ -20,24 +20,39 @@ export default function TeacherProfile() {
         <div>
             <Nav2 />
             <Menu />
-            <div className="breadcrumb_body2"><Link to ="/teachers">Αρχική / </Link> <span>Προφίλ</span></div>
+            <div className="breadcrumb_body5"><Link to ="/teachers">Αρχική / </Link> <span>Προφίλ</span></div>
+            <div class="pr-button-div">
+                <div class="pr-button-div2">
+                    <div class="edit-div1" >
+                        <Link class="link" to="/edit_teacher_profile">
+                        <div class="edit-div1-button">
+
+                            <div>ΕΠΕΞΕΡΓΑΣΙΑ ΠΡΟΦΙΛ</div>
+                            <img src="edit-icon.png" alter="Edit" class="edit-icon"></img>
+
+                        </div>
+                        </Link>
+
+
+                    </div>
+
+                    <div class="edit-div1" >
+                        <div onClick={logout}  class="edit-div2-button">
+                            <div>ΑΠΟΣΥΝΔΕΣΗ</div>
+                            <img src="logout-icon.png" alter="Logout" class="edit-icon"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="sp">
                 <div class="sp-div">
                 </div>
                 <div class="sp-div1" onLoad={btnTab4}>
                     <div class="sp-div2">
-                        <img src="profile-icon.png" class="sp-icon"></img>
+                        <img src="avatar-icon.png" class="sp-icon"></img>
                         <div class="sp-div3">
                             <div className="sp-text1">{localStorage.getItem("name")} </div>
-                            <div className="sp-text2">{localStorage.getItem("am")} </div>
                         </div>
-                        <button onClick={logout} className='logout'>Αποσύνδεση</button>
-                        <Link to="/edit_teacher_profile">
-                            <button class="edit-button">
-                                <img src="./edit-icon.png" class="edit-icon"></img>
-                                <p>Επεξεργασία</p>
-                            </button>
-                        </Link>
                     </div>
                     <div class="div-table">
                         <table class="sp-table1">

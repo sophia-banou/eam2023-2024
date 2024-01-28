@@ -38,14 +38,12 @@ export default function StudentProfile() {
                     </div>
 
                     <div class="edit-div1" >
-                        <Link class="link" to="/edit_profile">
                             <div onClick={logout}  class="edit-div2-button">
 
                                 
                                 <div>ΑΠΟΣΥΝΔΕΣΗ</div>
                                 <img src="logout-icon.png" alter="Logout" class="edit-icon"></img>
                             </div>
-                        </Link>
 
                     </div>
                 </div>

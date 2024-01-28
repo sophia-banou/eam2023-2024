@@ -52,7 +52,7 @@ export default function View_grade() {
         <div>
             <Nav2 />
             <Menu />
-            <div className="breadcrumb_body2"><Link to="/teachers">Αρχική / </Link><Link to="/teacher_bathmologia">Βαθμολόγια / </Link><span>Προβολή Βαθμολογίου</span></div>
+            <div className="breadcrumb_body5"><Link to="/teachers">Αρχική / </Link><Link to="/teacher_bathmologia">Βαθμολόγια / </Link><span>Προβολή Βαθμολογίου</span></div>
             <div>
                 <Link to="/teacher_bathmologia">
                     <img src="back-arrow.png" class="arrow-icon2"></img>
