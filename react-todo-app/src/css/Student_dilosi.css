@@ -690,7 +690,6 @@
 .filter-div1 {
     height: 70px;
     width: 100px;
-    margin: auto;
     padding-top: 10px;
        margin-bottom: none;
   }
@@ -723,13 +722,20 @@
     }
   }
 
+  .filter-div-f{
+    height:auto;
+    width: 1000px;
+    margin:auto;
+    text-align: left;
+    
+  }
 
   .filter-div2 {
     height: 70px;
-    width: 1000px;
-    margin: auto;
+    width: 200px;
+
     padding-top: 10px;
-       margin-bottom: none;
+    margin-bottom: none;
   }
   
   
@@ -782,7 +788,7 @@
     display: none;
   }
 
-  .filter-containe1-s{
+  .filter-container1-s{
     height:150px;
     width: 400px;
     padding:15px;
