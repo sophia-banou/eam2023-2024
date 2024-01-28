@@ -49,7 +49,7 @@ export default function Istoriko() {
             const res2 = await getDoc(ref2);
             if (res2.data().status == "Προσωρινή") {
                 if (start <= currentDate && currentDate <= end) {
-                    table += `<tr><td>${res2.data().date} class="ddcell" </td><td class="dscell">${res2.data().status}</td> 
+                    table += `<tr><td  class="ddcell">${res2.data().date} </td><td class="dscell">${res2.data().status}</td> 
                     <td class="decell"> <img class="vicon" src="./view-icon.png" value=${id} />   <img class="eicon" src ="./edit-icon2.png" value=${id}>  </td></tr>`
                 }
                 else {
