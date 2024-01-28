@@ -29,7 +29,7 @@ export default function Teacher_bathmologio() {
       table += '<table class="d-table2"><tr> <th class="dcell">Ημερομηνία</th><th class="dcell">Κατάσταση</th><th class="dcell">Ενέργειες</th> ';
       var grades = res.data().grade_id;
       for (var j = 0; j < grades.length; j++) {
-        var id = grades[i];
+        var id = grades[j];
         const res2 = await getDoc(doc(db, "grades", id));
         if (res2.data().class_name === courses[i].name){
           if (res2.data().status == "Προσωρινή") {

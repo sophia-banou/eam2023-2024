@@ -109,21 +109,6 @@ export default function Teacher_create() {
     }
   }
 
-  function jj2() {
-    var inputs = document.querySelectorAll('.input2');
-    for (var i = 0; i < inputs.length; i++) {
-      inputs[i].addEventListener('submit', getValues);
-    }
-  }
-
-  function getValues(event) {
-    event.preventDefault();
-    if (this.value >= 10) {
-      console.log("error");
-    }
-  }
-
-
 
   useEffect(() => {
     // Every time you try to enter this page check if you have a saved key at the local storage. 
