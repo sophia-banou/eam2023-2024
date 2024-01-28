@@ -491,6 +491,9 @@
 
 
 .div-table {
+    width:1000;
+    height:auto;
+    margin:auto;
     margin-bottom: 100px;
 }
 
@@ -699,6 +702,8 @@
     max-width: 27px;
     margin-left: 10px;
   }
+
+  
   
   .filter-div1-button {
     height: 35px;

@@ -22,6 +22,34 @@ export default function StudentProfile() {
             <Nav2 />
             <Menu />
             <div className="breadcrumb_body5"><Link to="/students">Αρχική / </Link><span>Προφίλ</span></div>
+            <div class="pr-button-div">
+                <div class="pr-button-div2">
+                    <div class="edit-div1" >
+                        <Link class="link" to="/edit_profile">
+                        <div class="edit-div1-button">
+
+                            <div>ΕΠΕΞΕΡΓΑΣΙΑ ΠΡΟΦΙΛ</div>
+                            <img src="edit-icon.png" alter="Edit" class="edit-icon"></img>
+
+                        </div>
+                        </Link>
+
+
+                    </div>
+
+                    <div class="edit-div1" >
+                        <Link class="link" to="/edit_profile">
+                            <div onClick={logout}  class="edit-div2-button">
+
+                                
+                                <div>ΑΠΟΣΥΝΔΕΣΗ</div>
+                                <img src="logout-icon.png" alter="Logout" class="edit-icon"></img>
+                            </div>
+                        </Link>
+
+                    </div>
+                </div>
+            </div>
             <div class="sp">
 
                 <div class="sp-div">
@@ -43,13 +71,8 @@ export default function StudentProfile() {
                             <div className="sp-text1">{localStorage.getItem("name")} </div>
                             <div className="sp-text2">{localStorage.getItem("am")} </div>
                         </div>
-                        <button onClick={logout} className='logout'>Αποσύνδεση</button>
-                        <Link to="/edit_profile">
-                            <button class="edit-button">
-                                <img src="./edit-icon.png" class="edit-icon"></img>
-                                <p>Επεξεργασία</p>
-                            </button>
-                        </Link>
+
+
                     </div>
                     <div class="div-table">
                         <table class="sp-table1">
@@ -80,11 +103,11 @@ export default function StudentProfile() {
                             </tr>
                             <tr>
                                 <th>Όνομα Πατέρα</th>
-                                <td>{localStorage.getItem("father_name")}</td>
+                                <td>{localStorage.getItem("fn")}</td>
                             </tr>
                             <tr class="row2">
                                 <th>Όνομα Μητέρας</th>
-                                <td>{localStorage.getItem("mother_name")}</td>
+                                <td>{localStorage.getItem("mn")}</td>
                             </tr>
                             <tr>
                                 <th>Πολή/ Χωριό Γέννησης</th>

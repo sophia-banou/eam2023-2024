@@ -6,11 +6,10 @@ import { doc, getDoc, setDoc } from 'firebase/firestore'
 import { Link } from "react-router-dom";
 
 export function logout() {
-    if (localStorage.getItem('role') !== null || localStorage.getItem('email') !== null || localStorage.getItem('AM') !== null || localStorage.getItem('name') !== null) {
         localStorage.clear();
         sessionStorage.clear();
-        window.location.href = '/'
-    }
+        window.location.href = '/login'
+    
 }
 
 
