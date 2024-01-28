@@ -49,20 +49,20 @@ export default function Istoriko() {
             const res2 = await getDoc(ref2);
             if (res2.data().status == "Προσωρινή") {
                 if (start <= currentDate && currentDate <= end) {
-                    table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
-                    <td> <img class="vicon" src="./view-icon.png" value=${id} />   <img class="eicon" src ="./edit-icon2.png" value=${id}>  </td></tr>`
+                    table += `<tr><td>${res2.data().date} class="ddcell" </td><td class="dscell">${res2.data().status}</td> 
+                    <td class="decell"> <img class="vicon" src="./view-icon.png" value=${id} />   <img class="eicon" src ="./edit-icon2.png" value=${id}>  </td></tr>`
                 }
                 else {
                     var data ={ status: "Ληγμένη"};
                     updateDoc(ref2, data);
-                    table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
-                    <td>  <img class="vicon" src="./view-icon.png" value=${id} />  <img class="icont" src ="./edit-icon3.png"> </td></tr>`
+                    table += `<tr><td class="ddcell" >${res2.data().date} </td><td class="dscell">${res2.data().status}</td> 
+                    <td class="decell" >  <img class="vicon" src="./view-icon.png" value=${id} />  <img class="icont" src ="./edit-icon3.png"> </td></tr>`
                 }
                 
             } 
             else{
-                table += `<tr><td>${res2.data().date} </td><td>${res2.data().status}</td> 
-                <td>  <img class="vicon" src="./view-icon.png" value=${id} />  <img class="icont" src ="./edit-icon3.png"> </td></tr>`
+                table += `<tr><td  class="ddcell">${res2.data().date} </td><td class="dscell">${res2.data().status}</td> 
+                <td class="decell">  <img class="vicon" src="./view-icon.png" value=${id} />  <img class="icont" src ="./edit-icon3.png"> </td></tr>`
             }
            
             
@@ -164,19 +164,19 @@ export default function Istoriko() {
             
             <Nav2 />
             <Menu />
-            <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><Link to="/student_profile">Προφίλ / </Link><span>Ιστορικό</span></div>
+            <div className="breadcrumb_body5"><Link to="/students">Αρχική / </Link><Link to="/student_profile">Προφίλ / </Link><span>Ιστορικό</span></div>
             <Link to="/student_profile">
                     <img src="back-arrow.png" class="arrow-icon2"></img>
             </Link>
 
          
-            <div class="table1">
-                <h>Δηλώσεις</h>
+            <div class="table8">
+             <div class="head"> <button> Δηλώσεις </button></div>
             </div>
         
             <div id="dyn" class="div-table" ></div>
-            <div class="table1">
-                <h>Πιστοποιητικά</h>
+            <div class="table8">
+            <div class="head"> <button> Πιστοποιητικά </button></div>
             </div>
             <div id="dyn5" class="div-table" ></div>
             <Footer />

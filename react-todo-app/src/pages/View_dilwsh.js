@@ -10,9 +10,6 @@ import { doc, getDoc, updateDoc, deleteDoc, setDoc } from 'firebase/firestore'
 
 export default function View_dilwsh() {
     useEffect(()=> {
-        //getDilosi();
-        // Every time you try to enter this page check if you have a saved key at the local storage. 
-        // If not, then do not allow user to enter this page and redirect to login page
         if (localStorage.getItem('role') !== "student") {
             window.location.href = '/login2'
         }
@@ -45,9 +42,7 @@ export default function View_dilwsh() {
 
 
     useEffect(() => {
-        //getCourses();
-        // Every time you try to enter this page check if you have a saved key at the local storage. 
-        // If not, then do not allow user to enter this page and redirect to login page
+        getCourses();
         if (localStorage.getItem('role') !== "student") {
             window.location.href = '/'
         }
@@ -55,11 +50,11 @@ export default function View_dilwsh() {
 
     return (
 
-        <div onLoad={getCourses}>
+        <div >
 
             <Nav2 />
             <Menu />
-            <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><Link to="/student_profile">Προφίλ / </Link><Link to="/istoriko">Ιστορικό / </Link><span>Προβολή Δήλωσης</span></div>
+            <div className="breadcrumb_body5"><Link to="/students">Αρχική / </Link><Link to="/student_profile">Προφίλ / </Link><Link to="/istoriko">Ιστορικό / </Link><span>Προβολή Δήλωσης</span></div>
             <Link to="/istoriko">
                 <img src="back-arrow.png" class="arrow-icon2"></img>
             </Link>

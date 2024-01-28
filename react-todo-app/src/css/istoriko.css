@@ -1,16 +1,29 @@
 .div1{
     width:1000px;
     margin:auto;
-    height:900px;
+    min-height: 400px;
+    height:auto;
 }
 
 .div2{
-    height:100px;
+    height:60px;
     margin-left:none;
     position: inherit;
     text-align: left;
     font-size: 18px;
 }
+
+.ddcell{
+    width: 200px;
+}
+
+.decell{
+    width: 200px;
+}
+.dscell{
+    width: 700px;
+}
+
 
 .div2 span{
     font-weight: bold;
