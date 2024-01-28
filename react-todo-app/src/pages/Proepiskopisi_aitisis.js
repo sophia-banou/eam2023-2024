@@ -17,13 +17,7 @@ export default function Proepiskopisi_aitisis() {
         }
     },[])
     function dosubmit(){
-        var b = document.getElementById("aicheckbox");
-        if (b.checked == true){
-            window.location.href = '/oristikopoihsh2';
-        }
-        else {
-            document.getElementById("result").innerHTML = `<div class="message1"> Δεν έχετε αποδεχτεί τους όρους χρήσης! </div>`;
-        }
+        window.location.href = '/oristikopoihsh2';
     }
     return (
         <div>
@@ -88,13 +82,11 @@ export default function Proepiskopisi_aitisis() {
                         </tr>
                     </table>
                     <br></br>
-                    <input type="checkbox" id="aicheckbox" /><label class="label">Με ατομική μου ευθύνη και γνωρίζοντας τις κυρώσεις, που προβλέπονται από τις διατάξεις της παρ. 6 του άρθρου 22 του Ν. 1599/1986, δηλώνω ότι επιθυμώ να αιτηθώ για το εξής πιστοποιητικό:{sessionStorage.getItem("aitisi")}</label>
-                    
+                                        
                     <div className="dilosi_rectangle1">
                         <div onClick={dosubmit} className="dilosi_div">Υποβολή</div>
                     </div>
             </div>
-            <h4 class="error1" id="result"></h4> 
             </div>
             <Footer />
         </div>
