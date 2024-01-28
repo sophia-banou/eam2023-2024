@@ -23,7 +23,12 @@ export default function Proepiskopisi_aitisis() {
         <div>
             <Nav2 />
             <Menu />
-            <div className="breadcrumb_body2"><Link to="/students">Αρχική / </Link><Link to="/student_aitisi">Αίτηση Πιστοποιητικού / </Link><span>Προεπισκόπηση</span></div>
+            <div className="breadcrumb_body5"><Link to="/students">Αρχική / </Link><Link to="/student_aitisi">Αίτηση Πιστοποιητικού / </Link><span>Προεπισκόπηση</span></div>
+            <div class="icon-div">
+                <Link to="/student_aitisi">
+                    <img src="back-arrow.png" class="arrow-icon"></img>
+                </Link>
+            </div>
             <div className="aitisi_body2">
                 <div class="aithsh_div1">Αίτηση {sessionStorage.getItem("aitisi")}</div>
                 <div class="m-div1"> 
@@ -83,8 +88,8 @@ export default function Proepiskopisi_aitisis() {
                     </table>
                     <br></br>
                                         
-                    <div className="dilosi_rectangle1">
-                        <div onClick={dosubmit} className="dilosi_div">Υποβολή</div>
+                    <div class="grades-next-div">
+                        <button onClick={dosubmit} class="grades-next-div-b">ΥΠΟΒΟΛΗ</button>
                     </div>
             </div>
             </div>
