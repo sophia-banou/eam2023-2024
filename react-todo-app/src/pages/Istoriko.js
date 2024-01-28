@@ -49,7 +49,7 @@ export default function Istoriko() {
             const res2 = await getDoc(ref2);
             if (res2.data().status == "Προσωρινή") {
                 if (start <= currentDate && currentDate <= end) {
-                    table += `<tr><td  class="ddcell">${res2.data().date} </td><td class="dscell">${res2.data().status}</td> 
+                    table += `<tr><td class="ddcell">${res2.data().date} </td><td class="dscell">${res2.data().status}</td> 
                     <td class="decell"> <img class="vicon" src="./view-icon.png" value=${id} />   <img class="eicon" src ="./edit-icon2.png" value=${id}>  </td></tr>`
                 }
                 else {
@@ -93,6 +93,12 @@ export default function Istoriko() {
         sessionStorage.setItem("did",value);
         window.location.assign('/edit_dilwsh');
     }
+    function handleClick3 (element){
+        var value = element.getAttribute("value");
+        console.log(element, value);
+        sessionStorage.setItem("ppid",value);
+        window.location.assign('/view_pistopoihtiko');
+    }
 
     function jj(){
         var inputs = document.querySelectorAll('.vicon');
@@ -108,6 +114,12 @@ export default function Istoriko() {
             inputs2[i].addEventListener('click', (function(e){
                 return function() {handleClick2(e); };
             }) (inputs2[i]),false);  
+        }
+        var inputs3 = document.querySelectorAll('.picon');
+        for (var i = 0; i < inputs3.length; i++) {
+            inputs3[i].addEventListener('click', (function(e){
+                return function() {handleClick3(e); };
+            }) (inputs3[i]),false);  
         }
 
     }
@@ -125,13 +137,13 @@ export default function Istoriko() {
             var aithsh = a_array[i];
 
        
-                table += `<tr><td class="ddcell">${aithsh.date} </td><td class="dscell">${aithsh.category}</td> <td class="decell"> <img  src="./view-icon.png"  /> 
+                table += `<tr><td>${aithsh.date} </td><td>${aithsh.category}</td> <td> <img class="picon" value="${aithsh.category}" src="./view-icon.png"  /> 
                 <img src="./download-icon.png"  /> </td></tr>`
         } 
         table += '</table>';   
         var gib = document.getElementById("dyn5");  
         if (gib){ gib.innerHTML = table;}
-
+        jj();
     }
 
  
