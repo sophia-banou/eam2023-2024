@@ -17,6 +17,9 @@ export default function Help() {
     <div>
         <div>{nav}</div>
         <div className="breadcrumb_body5">{Arxiki()} <Link to="/help">Βοήθεια / </Link><Link to="/help_teachers">Διδάσκοντες / </Link><span>Δημιουργία Βαθμολογίου</span></div>
+        <Link to="/help_teachers">
+                <img src="back-arrow.png" class="arrow-icon3"></img>
+        </Link>
         <div className="body_hdilosis">
             <div className="little_box">
             <img className="himage3" alt="" src="/bathmologia.png" />

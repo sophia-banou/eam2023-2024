@@ -16,6 +16,17 @@
     }
 }
 
+.arrow-icon3{
+    width: 30px;
+    margin:auto;
+    margin-left: 140px; 
+}
+.arrow-icon4{
+    width: 30px;
+    margin:auto;
+    margin-left: 360px; 
+}
+
 .help_rectangle2 {
     position: absolute;
     top: 240px;

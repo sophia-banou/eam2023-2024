@@ -17,8 +17,8 @@ export default function Help() {
     <div>
         <div>{nav}</div>
         <div className="breadcrumb_body5">{Arxiki()} <Link to="/help">Βοήθεια / </Link> <Link to="/help_students">Φοιτητές / </Link> <span>Παλαιότερες Αιτήσεις και Δηλώσεις</span></div>
-        <Link to="/help-students">
-                <img src="back-arrow.png" class="arrow-icon2"></img>
+        <Link to="/help_students">
+                <img src="back-arrow.png" class="arrow-icon3"></img>
         </Link>
         <div className="body_hdilosis">
             <div className="little_box">
