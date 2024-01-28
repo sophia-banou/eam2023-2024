@@ -12,9 +12,9 @@ import { Link } from "react-router-dom";
 export default function Teacher_mathimata() {
     function Button2(props) {
         return (
-          <button className="bath_rectangle" onClick={props.onClick}>
-            <div className="menu_div">Επιλέξτε μάθημα ▽ </div>
-          </button>
+          <div className="bath_rectangle" onClick={props.onClick}>
+            <div className="bathmologio-pr-div-b">Επιλέξτε μάθημα ▽ </div>
+          </div>
         );
     }
       function Dropdown2(props) {
@@ -94,12 +94,13 @@ export default function Teacher_mathimata() {
         <div>
             <Nav2 />
             <Menu />
+            <div className="breadcrumb_body5"><Link to ="/teachers">Αρχική / </Link> <span>Μαθήματα</span></div>
             <div class="tm-div1"> 
-                <div className="breadcrumb_body2"><Link to ="/teachers">Αρχική / </Link> <span>Μαθήματα</span></div>
-                <Button2 onClick={toggleVisibility} />
-                <Dropdown2 isVisible={isVisible} />
-                <br></br>
-                <div id="dyn20"></div>
+              <div class="title">Μαθήματα</div>
+              <Button2 onClick={toggleVisibility} />
+              <Dropdown2 isVisible={isVisible} />
+              <br></br>
+              <div id="dyn20"></div>
             </div>
             <Footer />
 
