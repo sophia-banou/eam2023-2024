@@ -21,6 +21,11 @@ export default function Edit_profile() {
 
     const [mStatus, setMStatus] = useState('');
     const [pobStatus, setPobStatus] = useState('');
+    
+    const [nameStatus, setNameStatus] = useState('');
+    const [dobStatus, setDobStatus] = useState('');
+    const [fnStatus, setfnStatus] = useState('');
+    const [mnStatus, setmnStatus] = useState('');
     const [idStatus, setIdStatus] = useState('');
     const [amkaStatus, setAmkaStatus] = useState('');
     const [addressStatus, setAddressStatus] = useState('');
@@ -39,6 +44,10 @@ export default function Edit_profile() {
         var data = {
             marital_status: mStatus,
             pob: pobStatus,
+            name: nameStatus,
+            father_name: fnStatus,
+            mother_name: mnStatus,
+            dob: dobStatus,
             id: idStatus,
             AMKA: amkaStatus,
             address: addressStatus,
@@ -50,6 +59,18 @@ export default function Edit_profile() {
         
         if (mStatus == "") {
             data.marital_status = localStorage.getItem("marital_status")
+        }
+        if (nameStatus == "") {
+            data.name = localStorage.getItem("name")
+        }
+        if (dobStatus == "") {
+            data.dob = localStorage.getItem("dob")
+        }
+        if (fnStatus == "") {
+            data.father_name = localStorage.getItem("fn")
+        }
+        if (nameStatus == "") {
+            data.mother_name = localStorage.getItem("mn")
         }
         if (pobStatus == "") {
             data.pob = localStorage.getItem("pob")
@@ -84,9 +105,13 @@ export default function Edit_profile() {
         localStorage.setItem('city', data.city)
         localStorage.setItem('phone1', data.phone1) 
         localStorage.setItem('phone2', data.phone2)
+        localStorage.setItem('fn', data.father_name)
+        localStorage.setItem('mn', data.mother_name)
+        localStorage.setItem('dob', data.dob)
+        localStorage.setItem('name', data.name)
         localStorage.setItem('code', data.code)
 
-        updateDoc(ref,data);
+        await updateDoc(ref,data);
         window.location.href = './student_profile'
     }
 
@@ -101,12 +126,11 @@ export default function Edit_profile() {
                 </Link>
             </div>
             <div class="sp">
-                <div class="sp-div">
-                </div>
+             
 
-                <div class="sp-div1">
+                <div class="sp-div12">
                     <div class="sp-div2">
-                        <img src="profile-icon.png" class="sp-icon"></img>
+                        <img src="avatar-icon.png" class="sp-icon"></img>
                         <div class="sp-div3">
                             <div className="sp-text1">{localStorage.getItem("name")} </div>
                             <div className="sp-text2">{localStorage.getItem("am")} </div>
@@ -126,11 +150,11 @@ export default function Edit_profile() {
                         <table id="table1" class="sp-table2">
                             <tr>
                                 <th>Ονοματεπώνυμο</th>
-                                <td>{localStorage.getItem("name")}</td>
+                                <td><input value={nameStatus} onChange={(e) => setNameStatus(e.target.value)}/></td>
                             </tr>
                             <tr class="row2">
                                 <th>Ημερομηνία Γέννησης</th>
-                                <td>{localStorage.getItem("dob")}</td>
+                                <td><input value={dobStatus} onChange={(e) => setDobStatus(e.target.value)}/></td>
                             </tr>
                             <tr>
                                 <th>Αριθμός Μητρώου</th>
@@ -142,11 +166,11 @@ export default function Edit_profile() {
                             </tr>
                             <tr>
                                 <th>Όνομα Πατέρα</th>
-                                <td>{localStorage.getItem("father_name")}</td>
+                                <td><input value={fnStatus} onChange={(e) => setfnStatus(e.target.value)}/></td>
                             </tr>
                             <tr class="row2">
                                 <th>Όνομα Μητέρας</th>
-                                <td>{localStorage.getItem("mother_name")}</td>
+                                <td><input value={mnStatus} onChange={(e) => setmnStatus(e.target.value)}/></td>
                             </tr>
                             <tr>
                                 <th>Πολή/ Χωριό Γέννησης</th>
@@ -205,7 +229,9 @@ export default function Edit_profile() {
                             </tr>
 
                         </table>
-                        <div class="submit-div"><button class="submit" type='submit'> <p>Αποθήκευση</p></button> </div>
+                        <div class="sp-save-div">
+                            <button type="submit" class="sp-save-div-b">ΑΠΟΘΗΚΕΥΣΗ</button>
+                        </div>
                         </form>
                     </div>
                     

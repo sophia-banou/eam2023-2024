@@ -9,7 +9,7 @@ export default function Register({ db }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
-    const [AM, setAM] = useState('');
+    const [am, setAM] = useState('');
     const [selectedOption, setSelectedOption] = useState("student");
 
     function onValueChange(event) {
@@ -23,7 +23,7 @@ export default function Register({ db }) {
         var docUser;
         let role = selectedOption;
 
-        if (email == "" || password == "" || name == "" || AM == "") {
+        if (email == "" || password == "" || name == "" || am == "") {
             message = "Δεν έχετε συμπληρώσει όλα τα πεδία.";
             let m = document.getElementById("w5");
             m.innerHTML = message;
@@ -53,8 +53,23 @@ export default function Register({ db }) {
                 email: email,
                 password: password,
                 name: name,
-                AM: AM,
+                am: am,
                 role: role,
+                dob: "",
+                marital_status: "",
+                father_name: "",
+                mother_name: "",
+                pob: "",
+                id: "",
+                AMKA: "",
+                semester: "",
+                year1: "",
+                date1: "",
+                address: "",
+                city: "",
+                phone1: "",
+                phone2: "",
+                code: "",
                 d_id: new Array,
                 courses: new Array,
                 aithseis: new Array,
@@ -66,7 +81,18 @@ export default function Register({ db }) {
                 email: email,
                 password: password,
                 name: name,
-                AM: AM,
+                dob: "",
+                marital_status: "",
+                father_name: "",
+                mother_name: "",
+                pob: "",
+                id: "",
+                address: "",
+                city: "",
+                phone1: "",
+                phone2: "",
+                code: "",
+                AMKA: "",
                 role: role,
                 grade_id: new Array,
                 courses: new Array,
@@ -144,7 +170,7 @@ export default function Register({ db }) {
                         <input
                             placeholder='Αριθμός Μητρώου'
                             type="AM"
-                            value={AM}
+                            value={am}
                             onChange={(e) => setAM(e.target.value)}
                         />
                     </div>
