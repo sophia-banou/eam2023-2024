@@ -1,9 +1,9 @@
 import React from "react";
 import { useEffect, useState } from 'react';
 import { db } from '../components/firebase.js';
-import {doc, getDoc} from 'firebase/firestore';
-import {Link} from "react-router-dom";
-import {checkAll, GetCheckboxValue2} from '../Utils/Methods/index.js';
+import { doc, getDoc } from 'firebase/firestore';
+import { Link } from "react-router-dom";
+import { checkAll2, GetCheckboxValue2 } from '../Utils/Methods/index.js';
 import "./../css/HomePage.css";
 import "./../css/Student_dilosi.css";
 import Nav2 from "./../components/Nav2.js"
@@ -15,6 +15,8 @@ export default function Student_bathmologies() {
     var fail = 0;
     var sum_of_ects = 0;
     var sum_of_grade = 0;
+
+    var selectedOption1 = "Επιλογή"
 
     // function getSuccess(){
     //     success = 1;
@@ -32,16 +34,6 @@ export default function Student_bathmologies() {
     //     getCourse();
     // }
 
-    function Button(props) {
-        return (
-            <button className="st-b-button" onClick={props.onClick}>
-                <div id="div76">
-                    ΦΙΛΤΡΑ <img class="ficon" src="filter-icon.png" />
-                </div>
-            </button>
-        );
-    }
-
 
     function Dropdown(props) {
         // return (
@@ -57,113 +49,136 @@ export default function Student_bathmologies() {
         // );
     }
 
-    const [isVisible, setIsVisible] = useState(false);
 
-    const toggleVisibility = () => {
-        setIsVisible(!isVisible);
-    };
-    async function getGrade (){
+    async function getGrade() {
         var user_email = localStorage.getItem("email");
-    
-        const ref = doc(db, "users", user_email); 
+
+        const ref = doc(db, "users", user_email);
         const res = await getDoc(ref);
         var courses = res.data().courses;
 
-        for (var id = 0; id < courses.length; id++){
+        for (var id = 0; id < courses.length; id++) {
             var grade = courses[id].grade;
-            if (grade >= 5){
+            if (grade >= 5) {
                 sum_of_ects += courses[id].ECTs;
                 sum_of_grade += courses[id].ECTs * grade;
             }
         }
-        let div = `<div class="div-20"><table class="d-table3"><tr><th>Σύνολο ECTs</th> <th>Μ.Ο βαθμών</th> </tr> <tr><td>${sum_of_ects}</td><td> ${(Math.round((sum_of_grade/sum_of_ects)*100))/100}</td> </tr></table></div>`
-        var gib = document.getElementById("grade");  
-        if (gib){ gib.innerHTML = div;}
+        let div = `<div class="div-20"><table class="d-table3"><tr><th>Σύνολο ECTs</th> <th>Μ.Ο βαθμών</th> </tr> <tr><td>${sum_of_ects}</td><td> ${(Math.round((sum_of_grade / sum_of_ects) * 100)) / 100}</td> </tr></table></div>`
+        var gib = document.getElementById("grade");
+        if (gib) { gib.innerHTML = div; }
 
     }
-    async function getCou (){
+
+    function toggleVisibility() {
+        let x = document.getElementById("f-t-container3");
+        if (x) {
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    }
+
+    function handleDChange1(event) {
+        selectedOption1 = event.target.value;
+        getCourse();
+
+    }
+
+    async function getCourse() {
         var user_email = localStorage.getItem("email");
-    
-        const ref = doc(db, "users", user_email); 
+
+        const ref = doc(db, "users", user_email);
         const res = await getDoc(ref);
         var grades = res.data().grades;
-        let table = '<div>'
-        for (var id = 0; id < grades.length; id++){
+        let table = '<div class="grades-b-div">'
+        for (var id = 0; id < grades.length; id++) {
             var period = grades[id].courses;
-            table += '<table class="d-table2">';  
-            table += `<tr><th class="dcell">Εξεταστική περίοδος ${period[0]}</th></tr></table>`;
-            table += '<table class="d-table2"><tr><th class="dcell"> <input type ="checkbox" id="checkall"> </th><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Βαθμός</th><th class="dcell">ECTs</th></tr>';  
-            for (var id2 = 1; id2 < period.length; id2++){
+            table += `<div class="mathima-sem-div"> <button>${period[0]}</button> </div>`
+            table += '<table class="d-table2">';
+
+            table += '<table class="d-table2"><tr><th class="dcell"> </th><th class="dcell">Όνομα Μαθήματος</th><th class="dcell">Βαθμός</th><th class="dcell">ECTs</th></tr>';
+            for (var id2 = 1; id2 < period.length; id2++) {
                 console.log(period[id2])
                 var name = period[id2].name;
                 var grade = period[id2].grade;
                 var ects = period[id2].ECTs;
-                table += `<tr><th><input type="checkbox" class="bath" value="${grade}" name="${name}" id="${period[0]}"/></th><th>${name}</td><th>${grade}</td><td>${ects}</td></tr>`;
+
+                if ((selectedOption1 === "Επιτυχίες" && grade >= 5) || (selectedOption1 === "Αποτυχίες" && grade < 5) || selectedOption1 === "Επιλογή")
+                    table += `<tr><th class="gccell""><input type="checkbox" class="bath" value="${grade}" name="${name}" id="${period[0]}"/></th><th class="gncell">${name}</td><th class="ggcell">${grade}</td><td class="gecell">${ects}</td></tr>`;
             }
             table += '</table><br></br>';
-            // if (success === 0 && fail === 0){
-            //     var grade = courses[id].grade;
-            //     var name = courses[id].name;
-            //     var period = courses[id].period;
-            //     table += `<tr><th><input type="checkbox" class="bath" value="${grade}" name="${name}" id="${period}"/></th><th>${name}</td><th>${grade}</td><td>${period}</td></tr>`;
-            // }
-            // else if (success === 1 && fail === 0){
-            //     var grade = courses[id].grade;
-            //     var name = courses[id].name;
-            //     var period = courses[id].period;
-            //     if (grade >= 5){
-            //         table += `<tr><th><input type="checkbox" class="bath" value="${grade}" name="${name}" id="${period}"/></th><th>${name}</td><th>${grade}</td><td>${period}</td></tr>`;
-            //     }
-            // }
-            // else if (success === 0 && fail === 1){
-            //     var grade = courses[id].grade;
-            //     var name = courses[id].name;
-            //     var period = courses[id].period;
-            //     if (grade < 5){
-            //         table += `<tr><th><input type="checkbox" class="bath" value="${grade}" name="${name}" id="${period}"/></th><th>${name}</td><th>${grade}</td><td>${period}</td></tr>`;
-            //     }
-            // }
         }
-        table += '</div>'; 
-        var gib = document.getElementById("dyn11");  
-        if (gib){ gib.innerHTML = table;}
-        jj();   
+        table += '</div>';
+        var gib = document.getElementById("dyn11");
+        if (gib) { gib.innerHTML = table; }
     }
 
-    function jj(){
-        var input = document.getElementById("checkall");
-        input.addEventListener('change',checkAll);
-    }
 
-    useEffect(()=> {
-        getCou();
+
+    useEffect(() => {
+        getCourse();
         getGrade();
-        // Every time you try to enter this page check if you have a saved key at the local storage. 
-        // If not, then do not allow user to enter this page and redirect to login page
         if (localStorage.getItem('role') !== "student") {
             window.location.href = '/login2'
         }
-    },[])
+    }, [])
 
     return (
         <div>
             <Nav2 />
             <Menu />
             <div className="breadcrumb_body5"><Link to="/students">Αρχική / </Link><span>Βαθμολογίες</span></div>
-            <div class="title">ΒΑΘΜΟΛΟΓΙΕΣ</div>
+            <div class="title">Βαθμολογίες</div>
             <div class="div9">
-                <Button onClick={toggleVisibility} />
-                <Dropdown isVisible={isVisible} />
+
+            <div class="filter-div">
+                <div class="filter-div1" onClick={toggleVisibility}><div class="filter-div1-button">
+                    <div>ΦΙΛΤΡΑ</div>
+                    <div>
+                        <img src="filter-icon1.png" alter="Filter" class="filter-button-m-icon"></img></div></div> </div>
+                <div class="filter-div2" onClick={checkAll2}> <div class="filter-div2-button">
+                    <div>ΕΠΙΛΟΓΗ ΟΛΩΝ</div>
+                    <div>
+                        </div></div> </div>
             </div>
-            <div class="d-div1"> 
-                <div id="dyn11"></div>
-                <div id="grade"></div>
+
+        
+
+
+                <div class="filter-container2" id="f-t-container3">
+                    <div class="filter-container2-s">
+                        <div class="filter1-choice">
+                            <div class="flabel">Προσπάθειες:</div>
+                            <div class="optdiv">
+                                <select name="tries" onChange={handleDChange1} id="tr-drop">
+                                    <option value="Επιλογή" selected={selectedOption1 === "Όλες"}>Επιλέξτε</option>
+                                    <option value="Επιτυχίες" selected={selectedOption1 === "Επιτυχίες"}>Επιτυχίες</option>
+                                    <option value="Αποτυχίες" selected={selectedOption1 === "Αποτυχίες"}>Αποτυχίες</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="d-div2">
+                    <div id="dyn11"></div>
+                    <div id="grade"></div>
+                </div>
+                <div class="grades-next-div">
+                    <div onClick={GetCheckboxValue2} class="grades-next-div-b">ΠΡΟΕΠΙΣΚΟΠΗΣΗ ΕΚΤΥΠΩΣΗΣ</div>
+                </div>
+                <h4 class="error1" id="result"></h4>
+
+
+
             </div>
-            <div className="dilosi_rectangle1">
-                    <div onClick={GetCheckboxValue2} className="dilosi_div">Επόμενο ➜</div>
-            </div>
-            <h4 class="error1" id="result"></h4>  
             <Footer />
-        </div>
+        </div >
+
+
     );
 }
