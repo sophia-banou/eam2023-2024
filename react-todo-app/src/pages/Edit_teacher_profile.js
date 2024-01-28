@@ -94,7 +94,7 @@ export default function Edit_teacher_profile() {
         <div>
             <Nav2 />
             <Menu />
-            <div className="breadcrumb_body2"><Link to ="/teachers">Αρχική / </Link><Link to ="/teacher_profile">Προφίλ / </Link> <span>Επεξεργασία Προφίλ</span></div>
+            <div className="breadcrumb_body5"><Link to ="/teachers">Αρχική / </Link><Link to ="/teacher_profile">Προφίλ / </Link> <span>Επεξεργασία Προφίλ</span></div>
             <div class="icon-div">
                 <Link to="/teacher_profile">
                     <img src="back-arrow.png" class="arrow-icon"></img>
@@ -106,10 +106,9 @@ export default function Edit_teacher_profile() {
 
                 <div class="sp-div1" onLoad={btnTab4}>
                     <div class="sp-div2">
-                        <img src="profile-icon.png" class="sp-icon"></img>
+                        <img src="avatar-icon.png" class="sp-icon"></img>
                         <div class="sp-div3">
                             <div className="sp-text1">{localStorage.getItem("name")} </div>
-                            <div className="sp-text2">{localStorage.getItem("am")} </div>
                         </div>
 
                     </div>
@@ -204,7 +203,9 @@ export default function Edit_teacher_profile() {
                             </tr>
 
                         </table>
-                        <div class="submit-div"><button class="submit" type='submit'> <p>Αποθήκευση</p></button> </div>
+                        <div class="sp-save-div">
+                            <button type="submit" class="sp-save-div-b">Αποθήκευση</button>
+                        </div>
                         </form>
                     </div>
                     

@@ -66,7 +66,7 @@ export default function Oristikopoihsh3() {
         <div>
             <Nav2 />
             <Menu />
-            <div className="breadcrumb_body2"><Link to ="/teachers">Αρχική / </Link> <Link to ="/teacher_bathmologia">Βαθμολόγια / </Link><Link to ="/teacher_create">Δημιουργία Βαθμολογίου / </Link><Link to ="/proswrinh2">Προσωρινή Αποθήκευση / </Link><span>Οριστική Υποβολή</span></div>
+            <div className="breadcrumb_body5"><Link to ="/teachers">Αρχική / </Link> <Link to ="/teacher_bathmologia">Βαθμολόγια / </Link><Link to ="/teacher_create">Δημιουργία Βαθμολογίου / </Link><Link to ="/proswrinh2">Προσωρινή Αποθήκευση / </Link><span>Οριστική Υποβολή</span></div>
             <div class="d-div1">
                 <div class="message">Το βαθμολόγιο καταχωρήθηκε οριστικά.</div>
                 <div class="buttons">
