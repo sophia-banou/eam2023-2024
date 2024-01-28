@@ -71,20 +71,12 @@
     margin:auto;
     width: 100%;
     height: fit-content;
-    min-height: 200px;
-    margin-bottom: none;
-    flex: content;
-    align-items: center;
-}
-.tm-div2 {
-    margin:auto;
-    width: 100%;
-    height: fit-content;
     min-height: 350px;
     margin-bottom: none;
     flex: content;
     align-items: center;
 }
+
 .div-table{
     margin-bottom:100px;
 }

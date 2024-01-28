@@ -94,7 +94,7 @@ export default function Teacher_mathimata() {
         <div>
             <Nav2 />
             <Menu />
-            <div class="tm-div2"> 
+            <div class="tm-div1"> 
                 <div className="breadcrumb_body2"><Link to ="/teachers">Αρχική / </Link> <span>Μαθήματα</span></div>
                 <Button2 onClick={toggleVisibility} />
                 <Dropdown2 isVisible={isVisible} />

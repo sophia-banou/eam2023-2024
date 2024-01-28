@@ -21,7 +21,7 @@ export default function Teachers() {
     <div>
       <Nav2 />
       {/* <Menu /> */}      
-      <div id="header-image-menu-students" className="main-teach">
+      <div id="header-image-menu-students">
         <img src="teach-banner.png" alt="National and Kapodistrian University of Athens" />
         <div className="teachers_body">
             <Link to="/teacher_bathmologia">

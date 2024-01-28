@@ -29,7 +29,7 @@ function Dropdown(props) {
     </div>
   );
 }
-export default function StudentProfile() {
+export default function Teacher_bathmologio() {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {

@@ -23,7 +23,7 @@ export default function Help_teachers() {
             <div className="rectangle-parent">
                 <img className="himage" alt="" src="/bathmologia.png" />
                 <div className="hdiv">Δημιουργία Βαθμολογίου
-                    <div className="hdiv1">Δημιουργία καινούργιου βαθμολογίου, μαζικά ή μεμονωμένα</div>
+                    <div className="hdiv1">Δημιουργία καινούργιου βαθμολογίου μεμονωμένα</div>
                 </div>  
             </div>
             </Link>
