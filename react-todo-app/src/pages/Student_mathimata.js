@@ -159,7 +159,7 @@ export default function Student_mathimata() {
         <div class="breadcrumb_body5"><Link to="/">Αρχική / </Link> <span>Μαθήματα</span></div>
     </div>;
         
-    } else {
+    } else if (localStorage.getItem('role') === "student"){
         var nav = <div> <Nav2 />
             <Menu />
             <div class="breadcrumb_body5"><Link to="/students">Αρχική / </Link> <span>Μαθήματα</span></div>

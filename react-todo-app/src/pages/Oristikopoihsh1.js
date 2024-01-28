@@ -102,7 +102,7 @@ export default function Oristikopoihsh1() {
                         <div>Επιστροφή στην Αρχική Σελίδα </div> <img class="home_icon" src="./home-icon.png"></img>
                     </Link>
                     <Link class="button2" to="/istoriko">
-                        <div>Δείτε την δήλωση σας</div>
+                        <div>Δείτε την δήλωση σας</div> <img class="home_icon" src="./dilosi_white.png"></img>
                     </Link>
                 </div>
             </div>

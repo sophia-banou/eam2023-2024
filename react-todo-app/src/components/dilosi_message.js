@@ -95,7 +95,7 @@ export default function Message() {
         for (var id = 0; id < courses.length; id++){
             var grade = courses[id].grade;
             if (grade < 5){
-                message += `<li>  ${courses[id].name}: Kοπήκατε με βαθμό ${courses[id].grade} στην εξεταστική περίοδο ${courses[id].period} </li> <br> </br>`;
+                message += `<li>  ${courses[id].name}: Σημειώθηκε μη προβιβάσιμος βαθμός (${courses[id].grade}) στην εξεταστική περίοδο ${courses[id].period} </li> <br> </br>`;
             }
         }
         message += '</ul> </div>'; 
