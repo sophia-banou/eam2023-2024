@@ -39,7 +39,7 @@ export default function Student_bathmologies() {
                 if (course.grade >= 5) {
                     sum_of_ects += course.ECTs;
                     sum_of_grade += course.ECTs * course.grade;
-       
+                    
                 }
             }
 
