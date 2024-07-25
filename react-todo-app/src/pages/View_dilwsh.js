@@ -19,8 +19,8 @@ export default function View_dilwsh() {
 
 
         const res1 = await getDoc(doc(db, "diloseis", sessionStorage.getItem("did")));
-        sessionStorage.setItem("ddate", res1.data().date);
-        sessionStorage.setItem("dstatus", res1.data().status);
+        localStorage.setItem("ddate", res1.data().date);
+        localStorage.setItem("dstatus", res1.data().status);
 
         var courses = res1.data().courses;
         console.log(courses);
@@ -60,8 +60,8 @@ export default function View_dilwsh() {
             </Link>
             <div class="div1" >
                 <div class="div2">
-                    <p> Ημερομηνία Δήλωσης: <span> {sessionStorage.getItem("ddate")}</span> <br></br>
-                        Κατάσταση: <span> {sessionStorage.getItem("dstatus")}</span> </p>
+                    <p> Ημερομηνία Δήλωσης: <span> {localStorage.getItem("ddate")}</span> <br></br>
+                        Κατάσταση: <span> {localStorage.getItem("dstatus")}</span> </p>
                 </div>
                 <div id="dyn-t" class="div-table" ></div>
             </div>

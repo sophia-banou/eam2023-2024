@@ -688,14 +688,16 @@
 
 .filter-div{
     height:auto;
-    width: 300px;
+    width: 100%;
     display:flex;
+    
 }
 .filter-div1 {
     height: 70px;
     width: 100px;
+
     padding-top: 10px;
-       margin-bottom: none;
+    margin-bottom: none;
   }
   
   .print-icon1{
